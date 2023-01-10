@@ -1,41 +1,56 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">
-  This is my blog made with Zola.
-</h1>
-
 {% if section.subsections %}
-<h3>Subsections</h3>
+<div class="row">
 
-<ul>
-{% for sectionpath in section.subsections %}
-{% set child = get_section(path=sectionpath, metadata_only=false) %}
-<li>{{child.title}}</li>
-<ul>
-{% for subsectionpath in child.subsections %}
-{% set grandchild = get_section(path=subsectionpath, metadata_only=true) %}
-<li>{{grandchild.title}}</li>
-{% endfor %}
-</ul>
-Pages:
-<ul>
-{% for page in section.pages %}
-<li>{{page.title}}</li>
-{% endfor %}
-</ul>
-{% endfor %}
-</ul>
+  {% for sectionpath in section.subsections %}
+  {% set child = get_section(path=sectionpath, metadata_only=false) %}
+
+  <div class="col s4">
+  <div class="card">
+    <div class="card-content">
+      <span class="card-title"><a href="{{child.permalink}}">{{child.title}}</a></span>
+        <ul>
+          {% for subsectionpath in child.subsections %}
+          {% set grandchild = get_section(path=subsectionpath, metadata_only=true) %}
+          <li><a href="{{grandchild.permalink | safe}}">{{grandchild.title}}</a></li>
+          {% endfor %}
+        </ul>
+
+        <ul>
+          {% for page in child.pages %}
+          <li><a href="{{page.permalink | safe}}">{{page.title}}</a></li>
+          {% endfor %}
+          </ul>
+        </ul>
+    </div>
+  </div>
+  </div>
+
+  {% endfor %}
+
+</div>
 {% endif %}
 
 {% if section.pages %}
-<h3>Pages</h3>
+<div class="row">
 
-<ul>
-{% for page in section.pages %}
-<li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
-{% endfor %}
-</ul>
+  {% for page in section.pages %}
+
+  <div class="col s4">
+  <div class="card">
+    <div class="card-content">
+      <span class="card-title"><a href="{{page.permalink | safe}}">{{page.title}}</a></span>
+      <p>{{page.summary}}</p>
+    </div>
+  </div>
+  </div>
+
+  {% endfor %}
+
+</div>
+
 {% endif %}
 
 {% endblock content %}
