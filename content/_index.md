@@ -1,5 +1,5 @@
 +++
-title = "List of Foo posts"
+title = "Home"
 sort_by = "date"
 template = "index.html"
 +++

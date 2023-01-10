@@ -1,56 +1,33 @@
 {% extends "base.html" %}
+{% import "macros.html" as macros %}
 
 {% block content %}
-{% if section.subsections %}
+
+{{ macros::breadcrumb(ancestors=section) }}
+
 <div class="row">
 
   {% for sectionpath in section.subsections %}
   {% set child = get_section(path=sectionpath, metadata_only=false) %}
 
   <div class="col s4">
-  <div class="card">
-    <div class="card-content">
-      <span class="card-title"><a href="{{child.permalink}}">{{child.title}}</a></span>
-        <ul>
-          {% for subsectionpath in child.subsections %}
-          {% set grandchild = get_section(path=subsectionpath, metadata_only=true) %}
-          <li><a href="{{grandchild.permalink | safe}}">{{grandchild.title}}</a></li>
-          {% endfor %}
-        </ul>
-
-        <ul>
-          {% for page in child.pages %}
-          <li><a href="{{page.permalink | safe}}">{{page.title}}</a></li>
-          {% endfor %}
-          </ul>
-        </ul>
-    </div>
-  </div>
+    {{ macros::sectioncard(section=child) }}
   </div>
 
   {% endfor %}
 
 </div>
-{% endif %}
 
-{% if section.pages %}
 <div class="row">
 
   {% for page in section.pages %}
 
   <div class="col s4">
-  <div class="card">
-    <div class="card-content">
-      <span class="card-title"><a href="{{page.permalink | safe}}">{{page.title}}</a></span>
-      <p>{{page.summary}}</p>
-    </div>
-  </div>
+    {{ macros::pagecard(page=page) }}
   </div>
 
   {% endfor %}
 
 </div>
-
-{% endif %}
 
 {% endblock content %}

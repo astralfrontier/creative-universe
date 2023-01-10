@@ -1,0 +1,40 @@
+{% macro sectioncard(section) %}
+<div class="card">
+    <div class="card-content">
+        <span class="card-title"><a href="{{section.permalink}}">{{section.title}}</a></span>
+        <ul>
+            {% for path in section.subsections %}
+            {% set subsection = get_section(path=path, metadata_only=true) %}
+            <li><a href="{{subsection.permalink | safe}}">{{subsection.title}}</a></li>
+            {% endfor %}
+        </ul>
+
+        <ul>
+            {% for page in section.pages %}
+            <li><a href="{{page.permalink | safe}}">{{page.title}}</a></li>
+            {% endfor %}
+        </ul>
+        </ul>
+    </div>
+</div>
+{% endmacro sectioncard %}
+
+{% macro pagecard(page) %}
+<div class="card">
+    <div class="card-content">
+        <span class="card-title"><a href="{{page.permalink | safe}}">{{page.title}}</a></span>
+        <p>{{page.summary}}</p>
+    </div>
+</div>
+{% endmacro pagecard %}
+
+{# Pass either 'section' or 'page', depending on what you're rendering #}
+{% macro breadcrumb(ancestors) %}
+
+{% for path in ancestors.ancestors %}
+{% set parent = get_section(path=path, metadata_only=true) %}
+<a href="{{parent.permalink | safe}}">{{parent.title}}</a> &Gt;
+{% endfor %}
+<strong>{{ancestors.title}}</strong>
+
+{% endmacro breadcrumb %}
