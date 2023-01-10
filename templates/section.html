@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+  This is my blog made with Zola.
+</h1>
+
+{% if section.subsections %}
+<h3>Subsections</h3>
+
+<ul>
+{% for sectionpath in section.subsections %}
+{% set child = get_section(path=sectionpath, metadata_only=false) %}
+<li>{{child.title}}</li>
+<ul>
+{% for subsectionpath in child.subsections %}
+{% set grandchild = get_section(path=subsectionpath, metadata_only=true) %}
+<li>{{grandchild.title}}</li>
+{% endfor %}
+</ul>
+Pages:
+<ul>
+{% for page in section.pages %}
+<li>{{page.title}}</li>
+{% endfor %}
+</ul>
+{% endfor %}
+</ul>
+{% endif %}
+
+{% if section.pages %}
+<h3>Pages</h3>
+
+<ul>
+{% for page in section.pages %}
+<li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+{% endfor %}
+</ul>
+{% endif %}
+
+{% endblock content %}
