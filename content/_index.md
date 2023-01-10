@@ -1,5 +1,5 @@
 +++
 title = "Home"
-sort_by = "date"
+sort_by = "title"
 template = "index.html"
 +++

@@ -1,9 +1,15 @@
 {% extends "base.html" %}
 {% import "macros.html" as macros %}
 
-{% block content %}
+{% block title %}
+<title>{{section.title}} | {{config.title}}</title>
+{% endblock %}
 
+{% block breadcrumb %}
 {{ macros::breadcrumb(ancestors=section) }}
+{% endblock %}
+
+{% block content %}
 
 <div class="row">
 

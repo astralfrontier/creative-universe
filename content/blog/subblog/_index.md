@@ -1,4 +1,4 @@
 +++
 title = "List of subblog posts"
-sort_by = "date"
+sort_by = "title"
 +++

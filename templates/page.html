@@ -1,8 +1,15 @@
 {% extends "base.html" %}
 {% import "macros.html" as macros %}
 
-{% block content %}
+{% block title %}
+<title>{{page.title}} | {{config.title}}</title>
+{% endblock %}
+
+{% block breadcrumb %}
 {{ macros::breadcrumb(ancestors=page) }}
+{% endblock %}
+
+{% block content %}
 
 <h1 class="title">
   {{ page.title }}
