@@ -1,7 +1,7 @@
 # The URL the site will be built for
-base_url = "https://creative-universe.com"
+base_url = "https://astralfrontier.org"
 
-title = "Creative Universe"
+title = "Astral Frontier"
 description = "A website"
 
 # Whether to automatically compile all Sass files in the sass directory

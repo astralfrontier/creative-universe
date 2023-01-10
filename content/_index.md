@@ -1,5 +1,5 @@
 +++
 title = "Home"
-sort_by = "title"
+sort_by = "weight"
 template = "index.html"
 +++

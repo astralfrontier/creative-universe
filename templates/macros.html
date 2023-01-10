@@ -45,6 +45,31 @@
 </div>
 {% endmacro pagecard %}
 
+{% macro gamecard(page) %}
+<div class="card large sticky-action">
+    {% if page.extra.cover %}
+    <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="{{page.extra.cover | safe}}">
+    </div>
+    <div class="card-content">
+        <span class="card-title">{{page.title}}</span>
+    </div>
+    <div class="card-reveal">
+        <span class="card-title">{{page.title}}</span>
+        {{page.content | safe}}
+    </div>
+    {% else %}
+    <div class="card-content">
+        <span class="card-title">{{page.title}}</span>
+        {{page.content | safe}}
+    </div>
+    {% endif %}
+    <div class="card-action">
+        <a href="{{page.extra.url | default(value=page.permalink) | safe}}">Visit</a>
+    </div>
+</div>
+{% endmacro gamecard %}
+
 {# Pass either 'section' or 'page', depending on what you're rendering #}
 {% macro breadcrumb(ancestors) %}
 

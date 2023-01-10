@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% import "macros.html" as macros %}
+
+{% block title %}
+<title>{{section.title}} | {{config.title}}</title>
+{% endblock %}
+
+{% block breadcrumb %}
+{{ macros::breadcrumb(ancestors=section) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+
+  {% for sectionpath in section.subsections %}
+  {% set child = get_section(path=sectionpath, metadata_only=false) %}
+
+  <div class="col s4">
+    {{ macros::sectioncard(section=child) }}
+  </div>
+
+  {% endfor %}
+
+</div>
+
+<div class="row">
+
+  {% for page in section.pages %}
+
+  <div class="col s4">
+    {{ macros::gamecard(page=page) }}
+  </div>
+
+  {% endfor %}
+
+</div>
+
+{% endblock content %}
