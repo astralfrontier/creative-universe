@@ -33,6 +33,25 @@
 </div>
 {% endmacro sectioncard %}
 
+{% macro categorycard(section) %}
+<div class="card horizontal">
+    {% if section.extra.image %}
+    <div class="card-image">
+        <img src="{{section.extra.image}}" alt="{{section.title}}" />
+    </div>
+    {% endif %}
+    <div class="card-stacked">
+        <div class="card-content">
+            <span class="card-title">{{section.title}}</span>
+            <p>{{section.content | safe}}</p>
+        </div>
+        <div class="card-action">
+            <a href="{{section.permalink | safe}}">Read More</a>
+        </div>
+    </div>
+</div>
+{% endmacro categorycard %}
+
 {% macro pagecard(page) %}
 <div class="card small">
     <div class="card-content">

@@ -9,7 +9,7 @@
 
 <div class="row">
     <div class="col s4">
-        Introductory text goes here
+        {{section.content | safe}}
     </div>
 
     <div class="col s8">
@@ -17,7 +17,7 @@
         {% set child = get_section(path=sectionpath, metadata_only=false) %}
         <div class="row">
             <div class="col s12">
-                {{ macros::sectioncard(section=child) }}
+                {{ macros::categorycard(section=child) }}
             </div>
         </div>
         {% endfor %}
