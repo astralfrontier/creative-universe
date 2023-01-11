@@ -6,7 +6,7 @@ template = "index.html"
 
 ### Contact Me
 
-{{ social(icon="round-evernote", title="@astralfrontier@dice.camp", url="https://dice.camp/astralfrontier") }}
+{{ social(icon="round-evernote", title="@astralfrontier@dice.camp", url="https://dice.camp/@astralfrontier") }}
 
 {{ social(icon="round-twitter", title="@astralfrontier", url="https://twitter.com/astralfrontier") }}
 
