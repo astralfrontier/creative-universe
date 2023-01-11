@@ -26,6 +26,7 @@
             {% endfor %}
         </p>
         {% endif %}
+        {{section.content | safe}}
     </div>
     <div class="card-action">
         <a href="{{section.permalink | safe}}">Read More</a>
