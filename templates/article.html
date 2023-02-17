@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% import "macros.html" as macros %}
+
+{% block title %}
+<title>{{section.title}} | {{config.title}}</title>
+{% endblock %}
+
+{% block breadcrumb %}
+{{ macros::breadcrumb(ancestors=section) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col s3 article-toc">
+        <ul class="collection">
+        {% for page in section.pages %}
+        {{ macros::toc(page=page, maxdepth=2) }}
+        {% endfor %}    
+        </ul>
+    </div>
+
+    <div class="col s9">
+        {% for page in section.pages %}
+        {{ page.content | safe }}
+        {% endfor %}      
+    </div>
+</div>
+
+{% endblock content %}
