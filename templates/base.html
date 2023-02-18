@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+{# Override the "title" block to supply your own page title, e.g "Page Name | Site Name" #}
+
 <head>
   <meta charset="utf-8">
   {% block title %}
@@ -16,19 +18,21 @@
   {% endblock %}
 </head>
 
+{# Header image is 1920x300 pixels. We want to only show it on desktop, and make it responsive. #}
+
 <body>
-  <div class="black show-on-medium-and-up">
+  <header id="header-image" class="is-hidden-mobile">
     <div class="container">
-      <img src="/Logo.png" alt="Astral Frontier logo" class="responsive-img" />
+      <figure class="image">
+        <img src="/Logo.png" alt="Astral Frontier logo" />
+      </figure>
     </div>
-  </div>
+  </header>
   {% block breadcrumb %}
   {% endblock %}
-  <section class="section">
-    <div class="container">
-      {% block content %} {% endblock %}
-    </div>
-  </section>
+  <div class="container">
+    {% block content %} {% endblock %}
+  </div>
   <script type="text/javascript" src="/materialize.min.js"></script>
 </body>
 
