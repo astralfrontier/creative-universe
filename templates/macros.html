@@ -4,7 +4,8 @@
     {% if section.extra.image %}
     <div class="card-image">
         <figure class="image">
-            <img src="{{section.extra.image | safe}}" alt="{{section.title}}" />
+            {% set image = resize_image(path=section.extra.image, width=400, height=300, op="fit") %}
+            <img src="{{image.url}}" alt="{{section.title}}" />
         </figure>
     </div>
     {% endif %}
@@ -52,7 +53,8 @@
     {% if page.extra.image %}
     <div class="card-image">
         <figure class="image">
-            <img src="{{page.extra.image | safe}}" alt="{{page.title}}" />
+            {% set image = resize_image(path=page.extra.image, width=400, height=300, op="fit") %}
+            <img src="{{image.url}}" alt="{{page.title}}" />
         </figure>
     </div>
     {% endif %}
@@ -79,7 +81,8 @@
             {% if section.extra.image %}
             <div class="column">
                 <figure class="image">
-                    <img src="{{section.extra.image}}" alt="{{section.title}}" />
+                    {% set image = resize_image(path=section.extra.image, width=400, height=300, op="fit") %}
+                    <img src="{{image.url}}" alt="{{section.title}}" />
                 </figure>
             </div>
             {% endif %}
@@ -99,9 +102,12 @@
 <div class="card fullheight">
     {% if page.extra.cover %}
     <div class="card-image">
-        <figure class="image is-4by3">
-            <img src="{{page.extra.cover | safe}}" />
-        </figure>
+        <a href="{{page.extra.url | default(to=page.permalink)}}" target="_blank">
+            <figure class="image">
+                {% set image = resize_image(path=page.extra.cover, width=400, height=300, op="fill") %}
+                <img src="{{image.url}}" />
+            </figure>
+        </a>
     </div>
     {% endif %}
     <div class="card-content">
