@@ -11,24 +11,20 @@
 
 {% block content %}
 
-<div class="row">
+<div class="columns">
 
   {% for sectionpath in section.subsections %}
   {% set child = get_section(path=sectionpath, metadata_only=false) %}
 
-  <div class="col s4">
+  <div class="column is-one-third">
     {{ macros::sectioncard(section=child) }}
   </div>
 
   {% endfor %}
 
-</div>
-
-<div class="row">
-
   {% for page in section.pages %}
 
-  <div class="col s4">
+  <div class="column is-one-third">
     {{ macros::pagecard(page=page) }}
   </div>
 

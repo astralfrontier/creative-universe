@@ -1,39 +1,76 @@
 {# TODO fix up #}
 {% macro sectioncard(section) %}
-<div class="card small">
+<div class="card">
+    {% if section.extra.image %}
+    <div class="card-image">
+        <figure class="image">
+            <img src="{{section.extra.image | safe}}" alt="{{section.title}}" />
+        </figure>
+    </div>
+    {% endif %}
     <div class="card-content">
-        <span class="card-title">{{section.title}}</span>
-        {% if section.subsections %}
-        <p>
-            <strong>
-            {% for path in section.subsections %}
-            {% set subsection = get_section(path=path, metadata_only=true) %}
-            <a href="{{subsection.permalink | safe}}">{{subsection.title}}</a>
-            {% if not loop.last %}
-            |
+        <div class="media">
+            <div class="media-content">
+                <p class="title is-size-4">{{section.title}}</p>
+            </div>
+        </div>
+        <div class="content">
+            {% if section.subsections %}
+            <p>
+                <strong>
+                {% for path in section.subsections %}
+                {% set subsection = get_section(path=path, metadata_only=true) %}
+                <a href="{{subsection.permalink | safe}}">{{subsection.title}}</a>
+                {% if not loop.last %}
+                |
+                {% endif %}
+                {% endfor %}
+                </strong>
+            </p>
             {% endif %}
-            {% endfor %}
-            </strong>
-        </p>
-        {% endif %}
-
-        {% if section.pages %}
-        <p>
-            {% for page in section.pages %}
-            <a href="{{page.permalink | safe}}">{{page.title}}</a>
-            {% if not loop.last %}
-            |
+            {% if section.pages %}
+            <p>
+                {% for page in section.pages %}
+                <a href="{{page.permalink | safe}}">{{page.title}}</a>
+                {% if not loop.last %}
+                |
+                {% endif %}
+                {% endfor %}
+            </p>
             {% endif %}
-            {% endfor %}
-        </p>
-        {% endif %}
-        {{section.content | safe}}
+            {{section.content | safe}}
+        </div>
     </div>
-    <div class="card-action">
-        <a href="{{section.permalink | safe}}">Read More</a>
-    </div>
+    <footer class="card-footer">
+        <a href="{{section.permalink | safe}}" class="card-footer-item">Read More</a>
+    </footer>
 </div>
 {% endmacro sectioncard %}
+
+{% macro pagecard(page) %}
+<div class="card">
+    {% if page.extra.image %}
+    <div class="card-image">
+        <figure class="image">
+            <img src="{{page.extra.image | safe}}" alt="{{page.title}}" />
+        </figure>
+    </div>
+    {% endif %}
+    <div class="card-content">
+        <div class="media">
+            <div class="media-content">
+                <p class="title is-size-4">{{section.title}}</p>
+            </div>
+        </div>
+        <div class="content">
+            {{page.content | safe}}
+        </div>
+        <footer class="card-footer">
+            <a href="{{page.permalink | safe}}" class="card-footer-item">Read More</a>
+        </footer>
+    </div>
+</div>
+{% endmacro pagecard %}
 
 {% macro categorycard(section) %}
 <div class="card">
@@ -57,29 +94,6 @@
     </div>
 </div>
 {% endmacro categorycard %}
-
-{% macro pagecard(page) %}
-<div class="card">
-    <div class="card-content">
-        <div class="columns">
-            {% if page.extra.image %}
-            <div class="column">
-                <figure class="image">
-                    <img src="{{page.extra.image}}" alt="{{page.title}}" />
-                </figure>
-            </div>
-            {% endif %}
-            <div class="column">
-                <p class="title is-4">{{page.title}}</p>
-                <div class="content">
-                    {{page.content | safe}}
-                </div>
-                <a class="button is-info" href="{{page.permalink | safe}}">Read More</a>
-            </div>
-        </div>
-    </div>
-</div>
-{% endmacro pagecard %}
 
 {% macro gamecard(page) %}
 <div class="card fullheight">
