@@ -21,14 +21,14 @@
     <div class="column is-one-third">
         <div class="content">
             {{section.content | safe}}
+            <p class="title is-size-4">Contact</p>
+            {% for social in config.extra.social %}
+            <p class="has-text-link is-size-5">
+                {{macros::icon(icon=social.icon)}}
+                <a href="{{social.url | safe}}" target="_blank" rel="external">{{social.title}}</a>
+            </p>
+            {% endfor %}    
         </div>
-        <p class="title is-size-4">Contact</p>
-        {% for social in config.extra.social %}
-        <p class="is-size-4 has-text-link">
-            {{macros::icon(icon=social.icon)}}
-            <a href="{{social.url | safe}}" target="_blank" rel="external">{{social.title}}</a>
-        </p>
-        {% endfor %}
     </div>
 
     <div class="column">
