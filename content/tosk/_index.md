@@ -2,7 +2,7 @@
 title = "Tosk"
 sort_by = "weight"
 template = "article.html"
-weight = 1
+weight = 3
 draft = true
 +++
 
