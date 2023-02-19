@@ -1,3 +1,4 @@
+{# TODO fix up #}
 {% macro sectioncard(section) %}
 <div class="card small">
     <div class="card-content">
@@ -46,7 +47,7 @@
             </div>
             {% endif %}
             <div class="column">
-                <p class="title">{{section.title}}</p>
+                <p class="title is-4">{{section.title}}</p>
                 <div class="content">
                     {{section.content | safe}}
                 </div>
@@ -69,7 +70,7 @@
             </div>
             {% endif %}
             <div class="column">
-                <p class="title">{{page.title}}</p>
+                <p class="title is-4">{{page.title}}</p>
                 <div class="content">
                     {{page.content | safe}}
                 </div>
@@ -81,26 +82,28 @@
 {% endmacro pagecard %}
 
 {% macro gamecard(page) %}
-<div class="card large sticky-action">
+<div class="card fullheight">
     {% if page.extra.cover %}
-    <div class="card-image waves-effect waves-block waves-light">
-        <img class="activator" src="{{page.extra.cover | safe}}">
-    </div>
-    <div class="card-content">
-        <span class="card-title">{{page.title}}</span>
-    </div>
-    <div class="card-reveal">
-        <span class="card-title">{{page.title}}</span>
-        {{page.content | safe}}
-    </div>
-    {% else %}
-    <div class="card-content">
-        <span class="card-title">{{page.title}}</span>
-        {{page.content | safe}}
+    <div class="card-image">
+        <figure class="image is-4by3">
+            <img src="{{page.extra.cover | safe}}" />
+        </figure>
     </div>
     {% endif %}
-    <div class="card-action">
-        <a href="{{page.extra.url | default(value=page.permalink) | safe}}">Visit</a>
+    <div class="card-content">
+        <div class="media">
+            <div class="media-content">
+                <p class="title is-4">{{page.title}}</p>
+            </div>
+        </div>
+        <div class="content">
+            {{page.content | striptags | truncate(length=280) | safe}}
+        </div>
+        {% if page.extra.url %}
+        <a class="button is-info" href="{{page.extra.url | safe}}" target="_blank">Visit</a>
+        {% else %}
+        <a class="button is-info" href="{{page.permalink | safe}}">Read More</a>
+        {% endif %}
     </div>
 </div>
 {% endmacro gamecard %}
@@ -108,19 +111,23 @@
 {# Pass either 'section' or 'page', depending on what you're rendering #}
 {# TODO fix up #}
 {% macro breadcrumb(ancestors) %}
-<nav class="breadcrumb has-bullet-separator has-text-white has-background-info">
-    <ul>
-        {% for path in ancestors.ancestors %}
-        {% set parent = get_section(path=path, metadata_only=true) %}
-        <li>
-            <a href="{{parent.permalink | safe}}">{{parent.title}}</a>
-        </li>
-        {% endfor %}
-        <li class="is-active">
-            {{ancestors.title}}
-        </li>
-    </ul>
-</nav>
+<section class="hero is-small is-info">
+    <div class="hero-body">
+        <nav class="breadcrumb">
+            <ul>
+                {% for path in ancestors.ancestors %}
+                {% set parent = get_section(path=path, metadata_only=true) %}
+                <li>
+                    <a href="{{parent.permalink | safe}}">{{parent.title}}</a>
+                </li>
+                {% endfor %}
+                <li class="is-active">
+                    {{ancestors.title}}
+                </li>
+            </ul>
+        </nav>    
+    </div>
+</section>
 {% endmacro breadcrumb %}
 
 {% macro tocitem(page, entries, maxdepth=2) %}

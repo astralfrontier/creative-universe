@@ -5,11 +5,37 @@
 <title>{{config.title}}</title>
 {% endblock %}
 
-{% block content %}
+{% block breadcrumb %}
+<header class="has-background-black is-hidden-mobile">
+    <div class="container">
+        <figure class="image">
+            <img src="/Logo.png" alt="Astral Frontier logo" />
+        </figure>
+    </div>
+</header>
+{% endblock %}
 
+{% block content %}
 <div class="columns">
     <div class="column is-one-third">
-        {{section.content | safe}}
+        <div class="content">
+            {{section.content | safe}}
+        </div>
+        <p class="title is-size-4">Contact</p>
+        {% for social in config.extra.social %}
+        <article class="media">
+            <figure class="media-left">
+                <p class="image">
+                    <img src="/nucleo-social-icons/social-1_{{social.icon}}.svg" alt="{{social.title}}" />
+                </p>
+            </figure>
+            <div class="media-content">
+                <p class="is-size-4">
+                    <a href="{{social.url | safe}}" target="_blank" rel="external">{{social.title}}</a>
+                </p>
+            </div>
+        </article>
+        {% endfor %}
     </div>
 
     <div class="column">
@@ -28,5 +54,4 @@
         </div>
     </div>
 </div>
-
 {% endblock content %}

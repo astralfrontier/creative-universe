@@ -1,38 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="fullheight">
 
 {# Override the "title" block to supply your own page title, e.g "Page Name | Site Name" #}
 
 <head>
-  <meta charset="utf-8">
-  {% block title %}
-  <title>{{config.title}}</title>
-  {% endblock %}
-  <link rel="me" href="https://dice.camp/@astralfrontier" />
-  <link rel="me" href="https://mstdn.social/@astralfrontier" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="/application.css" media="screen" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  {% block rss %}
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml", trailing_slash=false) }}">
-  {% endblock %}
+    <meta charset="utf-8">
+    {% block title %}
+    <title>{{config.title}}</title>
+    {% endblock %}
+    {% for social in config.extra.social | filter(attribute="mastodon", value=true) %}
+    <link rel="me" href="{{ social.url | safe }}" />
+    {% endfor %}
+    <link rel="stylesheet" type="text/css" href="/application.css" media="screen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block rss %}
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path=" rss.xml", trailing_slash=false)
+        }}">
+    {% endblock %}
 </head>
 
 {# Header image is 1920x300 pixels. We want to only show it on desktop, and make it responsive. #}
 
-<body>
-  <header id="header-image" class="is-hidden-mobile">
-    <div class="container">
-      <figure class="image">
-        <img src="/Logo.png" alt="Astral Frontier logo" />
-      </figure>
+<body class="fullheight">
+    {% block breadcrumb %}
+    {% endblock %}
+    <div class="container mt-4">
+        {% block content %} {% endblock %}
     </div>
-  </header>
-  {% block breadcrumb %}
-  {% endblock %}
-  <div class="container">
-    {% block content %} {% endblock %}
-  </div>
+    <footer class="footer mt-4">
+        <div class="columns is-centered">
+            {% for social in config.extra.social %}
+            <div class="column is-narrow">
+                <a href="{{social.url | safe}}" target="_blank" rel="external">
+                    <figure class="image">
+                        <img src="/nucleo-social-icons/social-1_{{social.icon}}.svg" alt="{{social.title}}" />
+                    </figure>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </footer>
 </body>
 
 </html>
