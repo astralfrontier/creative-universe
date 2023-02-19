@@ -24,18 +24,10 @@
         </div>
         <p class="title is-size-4">Contact</p>
         {% for social in config.extra.social %}
-        <article class="media">
-            <figure class="media-left">
-                <p class="image">
-                    <img src="/nucleo-social-icons/social-1_{{social.icon}}.svg" alt="{{social.title}}" />
-                </p>
-            </figure>
-            <div class="media-content">
-                <p class="is-size-4">
-                    <a href="{{social.url | safe}}" target="_blank" rel="external">{{social.title}}</a>
-                </p>
-            </div>
-        </article>
+        <p class="is-size-4 has-text-link">
+            {{macros::icon(icon=social.icon)}}
+            <a href="{{social.url | safe}}" target="_blank" rel="external">{{social.title}}</a>
+        </p>
         {% endfor %}
     </div>
 

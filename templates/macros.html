@@ -166,3 +166,9 @@
 {% macro toc(page, maxdepth=2) %}
 {{ self::tocitem(page=page, entries=page.toc, maxdepth=maxdepth) }}
 {% endmacro toc %}
+
+{% macro icon(icon) %}
+<span class="icon">
+    <i class="{{icon}}"></i>
+</span>
+{% endmacro %}

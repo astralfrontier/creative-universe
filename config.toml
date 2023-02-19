@@ -17,10 +17,10 @@ highlight_code = true
 
 [extra]
 social = [
-    {icon="round-evernote", title="@astralfrontier@dice.camp", url="https://dice.camp/@astralfrontier", mastodon = true},
-    {icon="round-evernote", title="@astralfrontier@mstdn.social", url="https://mstdn.social/@astralfrontier", mastodon = true},
-    {icon="round-twitter", title="@astralfrontier", url="https://twitter.com/astralfrontier"},
-    {icon="round-tumblr", title="astralfrontier @ Tumblr", url="https://www.tumblr.com/blog/astralfrontier"},
-    {icon="round-youtube", title="astralfrontier", url="https://www.youtube.com/channel/UCzP9xI_Qxw3SW853U_lMQ3g"},
-    {icon="round-github", title="astralfrontier", url="https://github.com/astralfrontier"}
+    {icon="fa-brands fa-mastodon", title="@astralfrontier@dice.camp", url="https://dice.camp/@astralfrontier", mastodon = true},
+    {icon="fa-brands fa-mastodon", title="@astralfrontier@mstdn.social", url="https://mstdn.social/@astralfrontier", mastodon = true},
+    {icon="fa-brands fa-twitter", title="@astralfrontier", url="https://twitter.com/astralfrontier"},
+    {icon="fa-brands fa-tumblr", title="astralfrontier @ Tumblr", url="https://www.tumblr.com/blog/astralfrontier"},
+    {icon="fa-brands fa-youtube", title="astralfrontier", url="https://www.youtube.com/channel/UCzP9xI_Qxw3SW853U_lMQ3g"},
+    {icon="fa-brands fa-github", title="astralfrontier", url="https://github.com/astralfrontier"}
 ]
