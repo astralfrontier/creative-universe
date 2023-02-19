@@ -5,7 +5,7 @@
     <div class="card-image">
         <figure class="image">
             {% set image = resize_image(path=section.extra.image, width=400, height=300, op="fit") %}
-            <img src="{{image.url}}" alt="{{section.title}}" />
+            <img src="{{image.url}}" alt="{{section.title}}" width="{{image.width}}" height="{{image.height}}" />
         </figure>
     </div>
     {% endif %}
@@ -43,7 +43,7 @@
         </div>
     </div>
     <footer class="card-footer">
-        <a href="{{section.permalink | safe}}" class="card-footer-item">Read More</a>
+        <a href="{{section.permalink | safe}}" class="card-footer-item">Visit</a>
     </footer>
 </div>
 {% endmacro sectioncard %}
@@ -54,7 +54,7 @@
     <div class="card-image">
         <figure class="image">
             {% set image = resize_image(path=page.extra.image, width=400, height=300, op="fit") %}
-            <img src="{{image.url}}" alt="{{page.title}}" />
+            <img src="{{image.url}}" alt="{{page.title}}" width="{{image.width}}" height="{{image.height}}" />
         </figure>
     </div>
     {% endif %}
@@ -68,7 +68,7 @@
             {{page.content | safe}}
         </div>
         <footer class="card-footer">
-            <a href="{{page.permalink | safe}}" class="card-footer-item">Read More</a>
+            <a href="{{page.permalink | safe}}" class="card-footer-item">Visit</a>
         </footer>
     </div>
 </div>
@@ -82,7 +82,7 @@
             <div class="column">
                 <figure class="image">
                     {% set image = resize_image(path=section.extra.image, width=400, height=300, op="fit") %}
-                    <img src="{{image.url}}" alt="{{section.title}}" />
+                    <img src="{{image.url}}" alt="{{section.title}}" width="{{image.width}}" height="{{image.height}}" />
                 </figure>
             </div>
             {% endif %}
@@ -91,7 +91,7 @@
                 <div class="content">
                     {{section.content | safe}}
                 </div>
-                <a class="button is-info" href="{{section.permalink | safe}}">Read More</a>
+                <a class="button is-info" href="{{section.permalink | safe}}">Visit</a>
             </div>
         </div>
     </div>
@@ -105,7 +105,7 @@
         <a href="{{page.extra.url | default(to=page.permalink)}}" target="_blank">
             <figure class="image">
                 {% set image = resize_image(path=page.extra.cover, width=400, height=300, op="fill") %}
-                <img src="{{image.url}}" />
+                <img src="{{image.url}}" width="{{image.width}}" height="{{image.height}}" />
             </figure>
         </a>
     </div>
@@ -122,7 +122,7 @@
         {% if page.extra.url %}
         <a class="button is-info" href="{{page.extra.url | safe}}" target="_blank">Visit</a>
         {% else %}
-        <a class="button is-info" href="{{page.permalink | safe}}">Read More</a>
+        <a class="button is-info" href="{{page.permalink | safe}}">Visit</a>
         {% endif %}
     </div>
 </div>

@@ -3,6 +3,7 @@
 
 {% block title %}
 <title>{{page.title}} | {{config.title}}</title>
+<meta name="description" content="{{page.extra.description | default(value=config.description)}}" />
 {% endblock %}
 
 {% block breadcrumb %}
