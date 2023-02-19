@@ -132,15 +132,14 @@
 
 {% macro tocitem(page, entries, maxdepth=2) %}
 {% for entry in entries %}
-<li class="collection-item">
-    <a href="{{entry.permalink | replace(from=page.permalink, to="") }}">
-        {{ [ "", "", ">", "»"] | nth(n=entry.level) | safe }}
-        {{entry.title}}
-    </a>
+<li>
+    <a href="{{entry.permalink | replace(from=page.permalink, to="") }}">{{entry.title}}</a>
+    {% if entry.level < maxdepth %}
+    <ul>
+    {{ self::tocitem(page=page, entries=entry.children, maxdepth=maxdepth) }}
+    </ul>
+    {% endif %}
 </li>
-{% if entry.level < maxdepth %}
-{{ self::tocitem(page=page, entries=entry.children, maxdepth=maxdepth) }}
-{% endif %}
 {% endfor %}
 {% endmacro tocitem %}
 
