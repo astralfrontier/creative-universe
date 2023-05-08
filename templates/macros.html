@@ -39,7 +39,7 @@
                 {% endfor %}
             </p>
             {% endif %}
-            {{section.content | safe}}
+            {{section.content | striptags | truncate(length=280) | safe}}
         </div>
     </div>
     <footer class="card-footer">
@@ -61,11 +61,15 @@
     <div class="card-content">
         <div class="media">
             <div class="media-content">
-                <p class="title is-size-4">{{section.title}}</p>
+                <p class="title is-size-4">{{page.title}}</p>
             </div>
         </div>
         <div class="content">
-            {{page.content | safe}}
+            {% if page.extra.description %}
+            {{page.extra.description | safe}}
+            {% else %}
+            {{page.content | striptags | truncate(length=280) | safe}}
+            {% endif %}
         </div>
         <footer class="card-footer">
             <a href="{{page.permalink | safe}}" class="card-footer-item">Visit</a>
