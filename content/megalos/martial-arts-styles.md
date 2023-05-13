@@ -1,9 +1,9 @@
 +++
 title = "Martial Arts Styles"
 weight = 1
-[extra]
-description = "Unarmed martial arts styles as weapons."
 +++
+
+# Martial Arts Styles
 
 You can attach the following Mod to any weapon, and it does not consume a Mod slot.
 
@@ -19,7 +19,7 @@ In general:
 - Light vs. Heavy helps determine whether a style is hard/external or light/internal, but this distinction can mean other things.
 - Ranged styles exist. This can mean attacks with energy blasts, use of bow & arrow or thrown darts, etc.
 
-Example styles:
+## Example styles
 
 **Starry Serpent Style**. Light, Melee, Accurate, Venomous, Style. Modeled on the quick motions of the snake, and drawing power from a serpentine constellation in the night sky, Practitioners use footwork, deceptive hand strikes, and targeted hits against opponents' pressure points to disable and destroy.
 
