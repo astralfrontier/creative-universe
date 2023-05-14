@@ -134,9 +134,13 @@
 
 {# Pass either 'section' or 'page', depending on what you're rendering #}
 {# TODO fix up #}
-{% macro breadcrumb(ancestors) %}
+{% macro breadcrumb(ancestors, banner="") %}
 <section class="hero is-small is-info">
     <div class="hero-body">
+        {% if banner %}
+        {% set image = resize_image(path=banner, width=1920, height=400, op="fill") %}
+        <img src="{{image.url}}" width="{{image.width}}" height="{{image.height}}" />
+        {% endif %}
         <nav class="breadcrumb">
             <ul>
                 {% for path in ancestors.ancestors %}

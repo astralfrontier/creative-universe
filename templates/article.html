@@ -7,7 +7,11 @@
 {% endblock %}
 
 {% block breadcrumb %}
+{% if section.extra.banner %}
+{{ macros::breadcrumb(ancestors=section, banner=section.extra.banner) }}
+{% else %}
 {{ macros::breadcrumb(ancestors=section) }}
+{% endif %}
 {% endblock %}
 
 {% block content %}
