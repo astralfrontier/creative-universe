@@ -4,7 +4,7 @@ function intializeHtml() {
   // The left side column, holding the grid
   const leftColumn = $(`<div class="column is-narrow" />`);
   for (let row = 0; row < 4; row++) {
-    let rowHtml = $(`<div class="columns" />`);
+    let rowHtml = $(`<div class="columns is-mobile" />`);
     for (let col = 0; col < 4; col++) {
       rowHtml.append(
         $(
