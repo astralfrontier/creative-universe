@@ -65,3 +65,125 @@ You roll from 1 to 4 dice. You can assign the dice to one of the four portions o
 When 4x4 AOE effects come into play, their presence can be telegraphed before the effect actually lands. Let the players know an effect is active, and where it'll land. Have the effect actually land one round later (e.g. if a boss is creating the effect, it should happen during the boss's next action). This gives characters a chance to move out of the way.
 
 Characters in a single zone are only affected once, no matter how many times the zone would be targeted.
+
+## Interactive Tool
+
+<div class="columns">
+<div class="column is-narrow">
+<div class="columns">
+<div class="column is-narrow" id="aoe-4x4-r1c1"></div>
+<div class="column is-narrow" id="aoe-4x4-r1c2"></div>
+<div class="column is-narrow" id="aoe-4x4-r1c3"></div>
+<div class="column is-narrow" id="aoe-4x4-r1c4"></div>
+</div>
+<div class="columns">
+<div class="column is-narrow" id="aoe-4x4-r2c1"></div>
+<div class="column is-narrow" id="aoe-4x4-r2c2"></div>
+<div class="column is-narrow" id="aoe-4x4-r2c3"></div>
+<div class="column is-narrow" id="aoe-4x4-r2c4"></div>
+</div>
+<div class="columns">
+<div class="column is-narrow" id="aoe-4x4-r3c1"></div>
+<div class="column is-narrow" id="aoe-4x4-r3c2"></div>
+<div class="column is-narrow" id="aoe-4x4-r3c3"></div>
+<div class="column is-narrow" id="aoe-4x4-r3c4"></div>
+</div>
+<div class="columns">
+<div class="column is-narrow" id="aoe-4x4-r4c1"></div>
+<div class="column is-narrow" id="aoe-4x4-r4c2"></div>
+<div class="column is-narrow" id="aoe-4x4-r4c3"></div>
+<div class="column is-narrow" id="aoe-4x4-r4c4"></div>
+</div>
+</div>
+<div class="column">
+<div class="columns">
+<div class="column">
+<div class="field"><label class="label">First Die</label>
+<div class="control">
+<div class="select">
+<select id="aoe-4x4-d1" class="aoe-4x4-die" value="R">
+<option value="R">(Roll Randomly)</option>
+<option value="0">(Blank)</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6H">6 (Horizontal)</option>
+<option value="6V">6 (Vertical)</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<div class="column">
+<div class="field"><label class="label">Second Die</label>
+<div class="control">
+<div class="select">
+<select id="aoe-4x4-d2" class="aoe-4x4-die" value="R">
+<option value="R">(Roll Randomly)</option>
+<option value="0">(Blank)</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6H">6 (Horizontal)</option>
+<option value="6V">6 (Vertical)</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<div class="column">
+<div class="field"><label class="label">Third Die</label>
+<div class="control">
+<div class="select">
+<select id="aoe-4x4-d3" class="aoe-4x4-die" value="R">
+<option value="R">(Roll Randomly)</option>
+<option value="0">(Blank)</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6H">6 (Horizontal)</option>
+<option value="6V">6 (Vertical)</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<div class="column">
+<div class="field"><label class="label">Fourth Die</label>
+<div class="control">
+<div class="select">
+<select id="aoe-4x4-d4" class="aoe-4x4-die" value="R">
+<option value="R">(Roll Randomly)</option>
+<option value="0">(Blank)</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6H">6 (Horizontal)</option>
+<option value="6V">6 (Vertical)</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="columns">
+<div class="column is-narrow">
+<button class="is-primary button" id="aoe-4x4-roll">Roll</button>
+<button class="is-warning button" id="aoe-4x4-reset">Reset</button>
+</div>
+<div class="column">
+
+Dice won't randomize when you click "Roll" unless set to "(Roll Randomly)". This lets you designate some values as blank, or to specify values for some dice. Click "Reset" to clear the map and set all dice to be random.
+
+</div>
+</div>
+</div>
+</div>
