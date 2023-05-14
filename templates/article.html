@@ -6,6 +6,15 @@
 <meta name="description" content="{{section.extra.description | default(value=config.description)}}" />
 {% endblock %}
 
+{% block javascript %}
+{% if section.extra.jquery %}
+<script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+{% endif %}
+{% if section.extra.script %}
+<script src="{{section.extra.script}}"></script>
+{% endif %}
+{% endblock %}
+
 {% block breadcrumb %}
 {% if section.extra.banner %}
 {{ macros::breadcrumb(ancestors=section, banner=section.extra.banner) }}

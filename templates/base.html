@@ -20,6 +20,8 @@
     <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path=" rss.xml", trailing_slash=false)
         }}">
     {% endblock %}
+    {% block javascript %}
+    {% endblock %}
 </head>
 
 {# Header image is 1920x300 pixels. We want to only show it on desktop, and make it responsive. #}
