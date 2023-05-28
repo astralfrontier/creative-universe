@@ -28,7 +28,11 @@ Nor does it excuse violence when the two parties are not on equal footing. An ad
 
 ## The Divisions and the Clans
 
-Toskan culture divides people into four roles: the **spear** (hunters and warriors), the **sickle** (farmers and laborers), the **drum** (scholars and shamans),
+> Santino thought about the question.
+>
+> "I think the reason I always thought of orcs as warriors is that the only orcs I tended to meet were warriors. But that makes sense, doesn't it? I was on the battlefield. Who else would you find there but warriors?"
+
+Toskan culture divides people into four roles: the **spear** (hunters and warriors), the **sickle** (farmers and laborers), the **drum** (scholars, artisans, and spiritualists),
 and the **empty hand** (those unable to contribute but deserving of care). It is common to introduce someone with their role, e.g. "this is Virens, spear of the Solitarius Dens clan".
 
 Orcs are further associated with clans. Each clan has a name and a history. While leadership of a clan is often given to a spear, every role is represented within a healthy clan.
@@ -67,11 +71,31 @@ Most Toskans speak 2-3 languages at most. Professional translators sell their se
 
 ## Religion
 
-TODO
+Several religious systems exist within the Empire. The religion most associated with Tosk, though, is known simply as the Drumming.
 
-## Other topics
+This belief system teaches that all living things are on a spiritual journey between realms.
+One realm, the Now, is the physical world. Another, called the Never, is a realm of static and eternal contemplation.
+Intelligent beings, they say, can exist in both these worlds. They use various means, such as music and mind-expanding herbs,
+to bridge these worlds both for themselves and for others.
 
-- Agriculture and Hunting
-- Art and Architecture
-- Economy and Trade
-- Technology
+The Drumming faith doesn't impact most Toskans' lives on a day to day basis.
+Instead, it serves as a philosophical basis for grappling with difficult concepts such as death and loss.
+Drummers also justify the hunting of wild beasts, as devout hunters are said to awaken a beast's spirit upon death
+and help it progress on its journey.
+
+## Hunting and Agriculture
+
+Tosk values both hunting and agriculture to keep its people fed and clothed.
+
+Toskan agriculture makes use of complex irrigation techniques and technologies.
+Members of the sickle incorporate lessons learned in other lands, then put them into practice in test fields nearer to home.
+When not attending to crops, they study the way water moves in the region, and sometimes undertake projects to shift the flow of it (such as constructing aqueducts).
+
+Spears are responsible for game hunting.
+Toskan hunters prefer going after larger beasts, leaving smaller prey for the leaner seasons.
+They typically form hunting parties, rather than hunting solo.
+The Drumming religion treats hunting as a sacred affair, and spears are strongly encouraged to make use of
+as much of a beast's carcass as possible, rather than killing for sport.
+
+Spears are also responsible for the taming and domestication of animals.
+Toskans use a variety of beasts for riding, help in planting and harvesting agricultural fields, and more.

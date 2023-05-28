@@ -5,9 +5,12 @@ weight = 10
 
 # Introduction
 
-There is an Orcish civilization. It is not the only one, of course. It's an empire, centered around Tosk, the "City of Spears".
+There is an Orcish civilization. It is not the only one, of course. This one is an empire, centered around Tosk, the "City of Spears".
 
-This guide is intended to present Tosk and its inhabitants as a system-neutral play aid for TTRPGs.
+The Toskan empire is not interested in conquest. Rather, its clans secure work, resources, and prestige by aiding those in need.
+They are mercenaries, enforcing order in lawless lands by the consent of those living there.
+
+This guide is intended to present Tosk and its inhabitants as a system-neutral play aid for TTRPGs. In addition to the main text, two voices present their perspective on Tosk and its people: Virens, a Toskan orc, and Santino, a human traveler making his way through the empire.
 
 The content of this guide is CC-BY licensed.
 You can grow and expand Tosk as you wish, but you must acknowledge the original author ("Astral Frontier").

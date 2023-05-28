@@ -19,23 +19,24 @@ weight = 50
 >
 > “Things break. That is the harsh truth of this world. And its hope. Evil breaks too.” Virens sits down again, and calmly starts carving a new point onto one of the damaged ends. “And there will always be more spears.”
 
-You are a warrior and hunter. If something needs to die, you kill it. You feed and protect others. If you are injured, you’ll be cared for until you’re ready to serve again, or until you change roles.
+The popular image of the Toskan spear is a brawny, eager warrior, fighting to preserve their homeland.
+In reality, the most commonly encountered spear is a shepherd, tending a flock and fending off predators.
+While all spears are expected to fight, this is more due to the dangerous nature of the orcs' world.
+Danger can come upon a community at any time, from any source.
 
 # The Sickle
 
-> “Orcs are misunderstood.”
->
-> Virens apparently finds great humor in this comment. He chuckles to himself for several seconds. Or, perhaps, laughter is just the shield for other feelings.
->
 > “Tosk is known as the ‘City of Spears’. Leaders of clans are called First Spear. Many people who see orcs only see the hunters and warriors. They think that is all there is. They do not see the farmers toiling in the fields, the herbalists and herders, the builders of brick and wood. Such orcs don’t travel like the clans do. They work the land where they are.”
 > 
 > Virens pulls out his drum. He does not play, but only holds it for inspection. “A member of the One Fang gave this to me as a gift.” The drum is not pretty at all. It’s little more than a gnarled piece of wood, carved into a cylinder with a grip. The drumhead is leather, decorated with an alcohol-based dye depicting a mountain.
 > 
 > “The art of working wood and leather is just the beginning. Before that, what of the animal whose hide this is? Who tended it, fed it, saw its eventual slaughter? What of the drummer who awoke its spirit to send it to its next journey? What of those who fed these artisans, grew the wheat and milked the beasts to give them bread and cheese? Those that harvested apples and berries for them? The strong backs who raised tents and houses for all of them?”
 > 
-Virens smiles, more sadly. “This is what an orc clan is about. The right to live, the opportunity to grow stronger and wiser, the freedom to find and use your talents. Without the Sickle, the Spear would be weak indeed.”
+> Virens smiles, more sadly. “This is what an orc clan is about. The right to live, the opportunity to grow stronger and wiser, the freedom to find and use your talents. Without the Sickle, the Spear would be weak indeed.”
 
-You are a farmer or a laborer. You work the land, gather food, or otherwise serve the community in a non-violent capacity. “The sickle” is still a weapon, and you are still expected to fight if it comes to it.
+The sickles are farmer and laborers. They work the land, gather food, or otherwise serve the community in a non-violent capacity. “The sickle” is still a weapon, and they are still expected to fight if it comes to it.
+
+Sickles are not treated as less than spears. Orcs know where their food and tools come from, and honor the sickles for their hard work and skills. What distinguishes sickles from spears isn't that what they do is unimportant, but what they do isn't chiefly concerned with the taking of life.
 
 # The Drum
 
@@ -53,7 +54,9 @@ You are a farmer or a laborer. You work the land, gather food, or otherwise serv
 > 
 > A smile crosses his coarse features. “I can’t say how much of all this I believe. But, a good drumming is beautiful to me. Should we meet with an orcish clan, I invite you all to participate.”
 
-You are a practitioner of shamanic rites to interact with animal spirits. You use your connection to these spirits to serve the community through divination, communication with other drummers across long distances, and so on.
+While the drummers' role is named for and associated with the Drumming religion, the role itself encompasses most intellectual, social, and spiritual pursuits.
+
+Art in Toskan culture is divided between the sickles and the drummers. More physical works of art - architecture, sculpture, and the like - is typically done by sickles. Drummers are the poets, orators, and storytellers.
 
 # The Empty Hand
 
@@ -61,4 +64,9 @@ You are a practitioner of shamanic rites to interact with animal spirits. You us
 > 
 > “Not every hand is suitable for holding the Spear or Sickle, or beating the Drum. Children and the aged can’t be expected to fight or die for the clan. Parents of children either. The sick or the wounded. Their value to the clan has already been paid, or will be someday. Hunters and workers feed and shelter them, and warriors defend them, for the sake of the clan.”
 
-You benefit from the community but do not contribute to it right now. The very young, the very old, people recovering from illness or distress, and people late in their pregnancy may all claim this status.
+The very young, the very old, people experiencig illness or distress, and people late in their pregnancy may all claim this status.
+
+Members of the empty hand aren't expected to _materially_ contribute to their clan, in the same way as a hunter or farmer might. Instead, they contribute by performing what tasks they can, or supervising children, or sharing their stories and insight with the community. If there is a disagreement between a clan's members, an empty hand might be called on to resolve it.
+
+Orcs don't concern themselves with whether an individual can "pull their weight".
+Instead, they ask whether someone in the clan is willing and able to contribute to that person's needs. If so, the orcs reason, that's all that matters. The occasional truly slothful person will soon find themselves clanless, and that is a problem that has solved itself.
