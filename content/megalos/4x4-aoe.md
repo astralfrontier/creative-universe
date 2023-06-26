@@ -1,6 +1,6 @@
 +++
 title = "4x4 AOE Effects"
-weight = 3
+weight = 30
 +++
 
 # 4x4 AOE Effects

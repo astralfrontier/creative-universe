@@ -1,6 +1,6 @@
 +++
 title = "Martial Arts Styles"
-weight = 1
+weight = 10
 +++
 
 # Martial Arts Styles
