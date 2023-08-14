@@ -61,13 +61,22 @@ they'd be treated no differently.
 
 Five languages are most commonly spoken within the city and throughout the empire:
 
-- **Grubelt** is a rough, growling language. It is economical, expressing common concepts with clarity, and building unusual ideas out of compound terms.
+- **Grubelt** is a rough, growling language. It is economical, expressing common concepts with clarity, and building unusual ideas out of compound terms. While it is in no sense the original or default orcish language, it is the one detractors most often try to associate with orcs.
 - **Injana-Naya** is a flowing language deeply dependent on intonation. It originated with steppe people, who often needed to shout from the backs of riding animals at full gallop.
 - **Saltisam** is a general-purpose language with a rich evolution and numerous loan-words. It originated among river-people who engaged in trade.
 - **Tanarkindi** is an evolution of an earlier language now considered lost. Its written form is elaborate, with pictographs annotated by syllabic symbols. When spoken, it is drawn out and paced. It is widely considered "the language of scholarship" within Tosk, but several groups speak it as a first tongue.
 - **Delkan** is an earthy, passionate language with a rich palette of profanity and descriptive terms. Speakers are sometimes looked down upon by more conservative Toskans, but many Delkan loan-words and terms have entered conversation in other tongues.
 
 Most Toskans speak 2-3 languages at most. Professional translators sell their services to people, both citizens and visitors.
+
+### Other Languages
+
+These are by no means the only languages spoken by the orcs themselves, or other inhabitants of Tosk and its territories.
+Examples include trade-tongues from other regions, tongues associated with ethnic groups that make their home in the city, and cryptolects or jargon spoken within individual clans.
+
+Like everyone else, orcs will invent or borrow terms, and the most useful of these terms enter the city's vocabulary by repetition.
+Sometimes, young orcs will become fascinated by certain words or phrases from other languages, such as terms from elvish or human languages.
+The point of this is not so much communication as experimentation with languages their elders might disapprove of orcs using.
 
 ## Religion
 
