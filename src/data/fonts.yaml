@@ -1,0 +1,3 @@
+- name: Foo
+  url: https://foo
+  desc: Foo Bar
