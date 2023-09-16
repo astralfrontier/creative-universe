@@ -2,17 +2,17 @@ import './App.sass'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-import Home from './Home'
-import Tag from './Tag'
+import HomePage from './HomePage'
+import TagPage from './TagPage'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home />,
+    element: <HomePage />,
   },
   {
     path: '/:tag',
-    element: <Tag />,
+    element: <TagPage />,
   },
 ])
 
