@@ -30,14 +30,14 @@ function Tag() {
           </ul>
         </nav>
         <h1 className="title">{category.tag}</h1>
-        <div className="columns">
+        <div className="columns is-multiline">
           {children.map((category) => (
             <div className="column is-half">
               <CategoryCard category={category} />
             </div>
           ))}
         </div>
-        <div className="columns">
+        <div className="columns is-multiline">
           {category.resources.map((resource) => (
             <div className="column is-one-third">
               <ResourceCard resource={resource} currentTag={tag || ''} />

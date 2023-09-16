@@ -2,6 +2,7 @@ import { assoc, filter, map, reduce } from 'ramda'
 import dict from './dictionary.tags.yaml'
 
 import creativeProcess from './creative-process.data.yaml'
+import projectManagement from './project-management.data.yaml'
 import fonts from './fonts.data.yaml'
 
 // A more formal version of "tag"
@@ -16,7 +17,7 @@ export interface CreativeCategory {
 type CreativeCategoryDb = Record<TagName, CreativeCategory>
 
 // All resources across all data files
-const resources = [...creativeProcess, ...fonts]
+const resources = [...creativeProcess, ...projectManagement, ...fonts]
 
 // A filter function to return only those resources that have a given tag
 const resourcesWithTag = (tag: TagName) =>

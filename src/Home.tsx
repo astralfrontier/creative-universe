@@ -11,7 +11,7 @@ const topLevelCategories = sortBy(
 function Home() {
   return (
     <div className="container">
-      <div className="columns">
+      <div className="columns is-multiline">
         {topLevelCategories.map((category) => (
           <div className="column is-half">
             <CategoryCard category={category} />
