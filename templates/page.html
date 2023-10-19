@@ -1,5 +1,5 @@
-{% extends "base.html" %}
-{% import "macros.html" as macros %}
+{% extends "partials/base.html" %}
+{% import "partials/macros.html" as macros %}
 
 {% block title %}
 <title>{{page.title}}</title>
@@ -7,6 +7,7 @@
 {% endblock %}
 
 {% block content %}
+{{ macros::banner(page=page)}}
 <div class="container">
     {{ macros::article_unwrapped(page=page, force_full=true) }}
 </div>

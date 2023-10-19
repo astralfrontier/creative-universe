@@ -48,6 +48,22 @@
 </section>
 {% endmacro articles %}
 
+{% macro banner(page) %}
+<section class="hero is-info is-medium is-bold">
+    {% if page.extra.banner_image %}
+    <div class="hero-body" style="background-image: url({{page.extra.banner_imag}});">
+    {% else %}
+    <div class="hero-body" style="background-image: url({{config.extra.default_banner}});">
+    {% endif %}
+        <div class="container has-text-centered">
+            {% if page.extra.banner_quote %}
+            <h1 class="title">{{quote}}</h1>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endmacro banner %}
+
 {% macro promo(page) %}
 <section class="hero is-info is-bold is-small promo-block">
     <div class="hero-body">

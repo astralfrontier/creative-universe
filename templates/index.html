@@ -1,5 +1,5 @@
-{% extends "base.html" %}
-{% import "macros.html" as macros %}
+{% extends "partials/base.html" %}
+{% import "partials/macros.html" as macros %}
 
 {% block title %}
 <title>{{config.title}}</title>
@@ -8,14 +8,8 @@
 
 {% block content %}
 {% set section = get_section(path="blog/_index.md") %}
+{{ macros::banner(page=section)}}
 <div class="container">
-    <section class="hero is-info is-medium is-bold">
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                <h1 class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>sed eiusmod tempor incididunt ut labore et dolore magna aliqua</h1>
-            </div>
-        </div>
-    </section>
     {{ macros::articles(pages=section.pages) }}
 </div>
 {% endblock content %}

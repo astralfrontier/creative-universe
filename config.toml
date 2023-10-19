@@ -20,6 +20,7 @@ taxonomies = [
 highlight_code = true
 
 [extra]
+default_banner = "/brand/shutterstock_2284544289.jpg"
 social = [
     {icon="fa-brands fa-mastodon", title="@astralfrontier@dice.camp", url="https://dice.camp/@astralfrontier", mastodon = true},
     {icon="fa-brands fa-mastodon", title="@astralfrontier@mstdn.social", url="https://mstdn.social/@astralfrontier", mastodon = true},
