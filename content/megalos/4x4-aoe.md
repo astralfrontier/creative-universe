@@ -1,6 +1,8 @@
 +++
 title = "4x4 AOE Effects"
 weight = 30
+[extra]
+banner_image = "/shutterstock_1586177053.jpg"
 +++
 
 # 4x4 AOE Effects

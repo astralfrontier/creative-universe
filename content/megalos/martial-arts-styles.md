@@ -1,6 +1,8 @@
 +++
 title = "Martial Arts Styles"
 weight = 10
+[extra]
+banner_image = "/shutterstock_1586177053.jpg"
 +++
 
 # Martial Arts Styles

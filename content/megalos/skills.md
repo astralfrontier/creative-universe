@@ -1,6 +1,8 @@
 +++
 title = "Picking Skills"
 weight = 5
+[extra]
+banner_image = "/shutterstock_1586177053.jpg"
 +++
 
 # Picking Skills

@@ -7,6 +7,7 @@
 {% endblock %}
 
 {% block content %}
+{{ macros::banner(page=section)}}
 <div class="container">
     {{ macros::articles(pages=section.pages) }}
 </div>

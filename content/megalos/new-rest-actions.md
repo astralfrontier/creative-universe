@@ -1,6 +1,8 @@
 +++
 title = "Calling-Specific Rest Actions"
 weight = 20
+[extra]
+banner_image = "/shutterstock_1586177053.jpg"
 +++
 
 # Calling-Specific Rest Actions

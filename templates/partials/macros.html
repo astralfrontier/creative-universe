@@ -5,9 +5,11 @@
     </div>
     <div class="media-content has-text-centered">
         <p class="title article-title"><a href="{{page.permalink}}">{{page.title}}</a></p>
+        {% if page.date %}
         <p class="subtitle is-6 article-subtitle">
             <a href="#">@astralfrontier.org</a> on {{page.date}}
         </p>
+        {% endif %}
         {% if page.taxonomies and page.taxonomies.tags %}
         <div class="tags has-addons level-item">
             {% for tag in page.taxonomies.tags %}
@@ -51,9 +53,9 @@
 {% macro banner(page) %}
 <section class="hero is-info is-medium is-bold">
     {% if page.extra.banner_image %}
-    <div class="hero-body" style="background-image: url({{page.extra.banner_imag}});">
+    <div class="hero-body" style="background-image: url({{page.extra.banner_image | safe}});">
     {% else %}
-    <div class="hero-body" style="background-image: url({{config.extra.default_banner}});">
+    <div class="hero-body" style="background-image: url({{config.extra.default_banner | safe}});">
     {% endif %}
         <div class="container has-text-centered">
             {% if page.extra.banner_quote %}
