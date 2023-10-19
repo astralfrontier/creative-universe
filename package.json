@@ -1,8 +1,12 @@
 {
+  "scripts": {
+    "postinstall": "copyfiles -f node_modules/@fortawesome/fontawesome-free/webfonts/* static/webfonts"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.3.0"
   },
   "devDependencies": {
-    "bulma-scss": "^0.9.4"
+    "bulma-scss": "^0.9.4",
+    "copyfiles": "^2.4.1"
   }
 }
