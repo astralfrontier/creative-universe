@@ -11,7 +11,7 @@
         {% if page.taxonomies and page.taxonomies.tags %}
         <div class="tags has-addons level-item">
             {% for tag in page.taxonomies.tags %}
-            <span class="tag is-rounded"><a href="tags/{{tag}}/">{{tag}}</a></span>
+            <span class="tag is-rounded"><a href="tags/{{tag | slugify}}/">{{tag}}</a></span>
             {% endfor %}
         </div>
         {% endif %}
