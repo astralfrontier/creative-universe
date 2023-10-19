@@ -2,37 +2,12 @@
 {% import "macros.html" as macros %}
 
 {% block title %}
-<title>{{section.title}} | {{config.title}}</title>
+<title>{{section.title}}</title>
 <meta name="description" content="{{section.extra.description | default(value=config.description)}}" />
 {% endblock %}
 
-{% block breadcrumb %}
-{{ macros::breadcrumb(ancestors=section) }}
-{% endblock %}
-
 {% block content %}
-
-<div class="columns">
-
-  {% for sectionpath in section.subsections %}
-  {% set child = get_section(path=sectionpath, metadata_only=false) %}
-
-  <div class="column is-one-third">
-    {{ macros::sectioncard(section=child) }}
-  </div>
-
-  {% endfor %}
-
-  {% for page in section.pages %}
-
-  <div class="column is-one-third">
-    {{ macros::pagecard(page=page) }}
-  </div>
-
-  {% endfor %}
-
+<div class="container">
+    {{ macros::articles(pages=section.pages) }}
 </div>
-
-{{section.content | safe}}
-
 {% endblock content %}

@@ -2,22 +2,12 @@
 {% import "macros.html" as macros %}
 
 {% block title %}
-<title>{{page.title}} | {{config.title}}</title>
-<meta name="description" content="{{page.extra.description | default(value=config.description)}}" />
-{% endblock %}
-
-{% block breadcrumb %}
-{{ macros::breadcrumb(ancestors=page) }}
+<title>{{page.title}}</title>
+<meta name="description" content="{{page.description | default(value=config.description)}}" />
 {% endblock %}
 
 {% block content %}
-
-<h1 class="title is-size-1">
-  {{ page.title }}
-</h1>
-<h4 class="subtitle is-size-4">{{ page.date }}</h4>
-<div class="content">
-  {{ page.content | safe }}
+<div class="container">
+    {{ macros::article(page=page) }}
 </div>
-
 {% endblock content %}

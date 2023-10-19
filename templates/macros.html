@@ -1,182 +1,52 @@
-{# TODO fix up #}
-{% macro sectioncard(section) %}
-<div class="card">
-    {% if section.extra.image %}
-    <div class="card-image">
-        <figure class="image">
-            {% set image = resize_image(path=section.extra.image, width=400, height=300, op="fit") %}
-            <img src="{{image.url}}" alt="{{section.title}}" width="{{image.width}}" height="{{image.height}}" />
-        </figure>
-    </div>
-    {% endif %}
+{% macro article(page) %}
+<div class="card article">
     <div class="card-content">
         <div class="media">
-            <div class="media-content">
-                <p class="title is-size-4">{{section.title}}</p>
+            <div class="media-center">
+                <img src="/brand/avatar-256x256.png" class="author-image" alt="Astral Frontier">
             </div>
-        </div>
-        <div class="content">
-            {% if section.subsections %}
-            <p>
-                <strong>
-                {% for path in section.subsections %}
-                {% set subsection = get_section(path=path, metadata_only=true) %}
-                <a href="{{subsection.permalink | safe}}">{{subsection.title}}</a>
-                {% if not loop.last %}
-                |
-                {% endif %}
-                {% endfor %}
-                </strong>
-            </p>
-            {% endif %}
-            {% if section.pages %}
-            <p>
-                {% for page in section.pages %}
-                <a href="{{page.permalink | safe}}">{{page.title}}</a>
-                {% if not loop.last %}
-                |
-                {% endif %}
-                {% endfor %}
-            </p>
-            {% endif %}
-            {{section.content | striptags | truncate(length=280) | safe}}
-        </div>
-    </div>
-    <footer class="card-footer">
-        <a href="{{section.permalink | safe}}" class="card-footer-item">Visit</a>
-    </footer>
-</div>
-{% endmacro sectioncard %}
-
-{% macro pagecard(page) %}
-<div class="card">
-    {% if page.extra.image %}
-    <div class="card-image">
-        <figure class="image">
-            {% set image = resize_image(path=page.extra.image, width=400, height=300, op="fit") %}
-            <img src="{{image.url}}" alt="{{page.title}}" width="{{image.width}}" height="{{image.height}}" />
-        </figure>
-    </div>
-    {% endif %}
-    <div class="card-content">
-        <div class="media">
-            <div class="media-content">
-                <p class="title is-size-4">{{page.title}}</p>
-            </div>
-        </div>
-        <div class="content">
-            {% if page.extra.description %}
-            {{page.extra.description | safe}}
-            {% else %}
-            {{page.content | striptags | truncate(length=280) | safe}}
-            {% endif %}
-        </div>
-        <footer class="card-footer">
-            <a href="{{page.permalink | safe}}" class="card-footer-item">Visit</a>
-        </footer>
-    </div>
-</div>
-{% endmacro pagecard %}
-
-{% macro categorycard(section) %}
-<div class="card">
-    <div class="card-content">
-        <div class="columns">
-            {% if section.extra.image %}
-            <div class="column">
-                <figure class="image">
-                    {% set image = resize_image(path=section.extra.image, width=400, height=300, op="fit") %}
-                    <img src="{{image.url}}" alt="{{section.title}}" width="{{image.width}}" height="{{image.height}}" />
-                </figure>
-            </div>
-            {% endif %}
-            <div class="column">
-                <p class="title is-4">{{section.title}}</p>
-                <div class="content">
-                    {{section.content | safe}}
+            <div class="media-content has-text-centered">
+                <p class="title article-title">{{page.title}}</p>
+                <p class="subtitle is-6 article-subtitle">
+                    <a href="#">@astralfrontier.org</a> on {{page.date}}
+                </p>
+                {% if page.taxonomies and page.taxonomies.tags %}
+                <div class="tags has-addons level-item">
+                    {% for tag in page.taxonomies.tags %}
+                    <span class="tag is-rounded"><a href="tags/{{tag}}/">{{tag}}</a></span>
+                    {% endfor %}
                 </div>
-                <a class="button is-info" href="{{section.permalink | safe}}">Visit</a>
+                {% endif %}
             </div>
+        </div>
+        <div class="content article-body">
+            {{page.content | safe}}
+            {# TODO: show all of page content if there was a "more" element #}
         </div>
     </div>
 </div>
-{% endmacro categorycard %}
+{% endmacro article %}
 
-{% macro gamecard(page) %}
-<div class="card fullheight">
-    {% if page.extra.cover %}
-    <div class="card-image">
-        <a href="{{page.extra.url | default(to=page.permalink)}}" target="_blank">
-            <figure class="image">
-                {% set image = resize_image(path=page.extra.cover, width=400, height=300, op="fill") %}
-                <img src="{{image.url}}" width="{{image.width}}" height="{{image.height}}" />
-            </figure>
-        </a>
-    </div>
-    {% endif %}
-    <div class="card-content">
-        <div class="media">
-            <div class="media-content">
-                <p class="title is-4">{{page.title}}</p>
-            </div>
-        </div>
-        <div class="content">
-            {{page.content | striptags | truncate(length=280) | safe}}
-        </div>
-        {% if page.extra.url %}
-        <a class="button is-info" href="{{page.extra.url | safe}}" target="_blank">Visit</a>
-        {% else %}
-        <a class="button is-info" href="{{page.permalink | safe}}">Visit</a>
-        {% endif %}
-    </div>
-</div>
-{% endmacro gamecard %}
-
-{# Pass either 'section' or 'page', depending on what you're rendering #}
-{# TODO fix up #}
-{% macro breadcrumb(ancestors, banner="") %}
-<section class="hero is-small is-info">
-    <div class="hero-body">
-        {% if banner %}
-        {% set image = resize_image(path=banner, width=1920, height=400, op="fill") %}
-        <img src="{{image.url}}" width="{{image.width}}" height="{{image.height}}" />
-        {% endif %}
-        <nav class="breadcrumb">
-            <ul>
-                {% for path in ancestors.ancestors %}
-                {% set parent = get_section(path=path, metadata_only=true) %}
-                <li>
-                    <a href="{{parent.permalink | safe}}">{{parent.title}}</a>
-                </li>
-                {% endfor %}
-                <li class="is-active">
-                    {{ancestors.title}}
-                </li>
-            </ul>
-        </nav>    
+{% macro articles(pages) %}
+<section class="articles">
+    <div class="column is-8 is-offset-2">
+        {% for page in pages %}
+            {{ self::article(page=page) }}
+        {% endfor %}
     </div>
 </section>
-{% endmacro breadcrumb %}
+{% endmacro articles %}
 
-{% macro tocitem(page, entries, maxdepth=2) %}
-{% for entry in entries %}
-<li>
-    <a href="{{entry.permalink | replace(from=page.permalink, to="") }}">{{entry.title}}</a>
-    {% if entry.level < maxdepth %}
-    <ul>
-    {{ self::tocitem(page=page, entries=entry.children, maxdepth=maxdepth) }}
-    </ul>
-    {% endif %}
-</li>
-{% endfor %}
-{% endmacro tocitem %}
-
-{% macro toc(page, maxdepth=2) %}
-{{ self::tocitem(page=page, entries=page.toc, maxdepth=maxdepth) }}
-{% endmacro toc %}
-
-{% macro icon(icon) %}
-<span class="icon">
-    <i class="{{icon}}"></i>
-</span>
-{% endmacro %}
+{% macro promo(page) %}
+<section class="hero is-info is-bold is-small promo-block">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">
+                <i class="fa fa-bell-o"></i> Nemo enim ipsam voluptatem quia.</h1>
+            <span class="tag is-black is-medium is-rounded">
+                    Natus error sit voluptatem
+                </span>
+        </div>
+    </div>
+</section>
+{% endmacro promo %}
