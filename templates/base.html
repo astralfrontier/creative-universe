@@ -6,43 +6,33 @@
 {# Override the "title" block to supply your own page title, e.g "Page Name | Site Name" #}
 
 <head>
+    {# HTML nonsense #}
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% include "favicons.html" %}
     {% block title %}
     <title>{{config.title}}</title>
     <meta name="description" content="{{config.description}}" />
     {% endblock %}
+    {# Validation for Mastodon instances #}
     {% for social in config.extra.social | filter(attribute="mastodon", value=true) %}
     <link rel="me" href="{{ social.url | safe }}" />
     {% endfor %}
     <link rel="stylesheet" type="text/css" href="/application.css" media="screen" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% block rss %}
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path=" rss.xml", trailing_slash=false)
-        }}">
-    {% endblock %}
-    {% block javascript %}
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{get_url(path="rss.xml", trailing_slash=false)}}">
     {% endblock %}
 </head>
 
-{# Header image is 1920x300 pixels. We want to only show it on desktop, and make it responsive. #}
-
 <body class="fullheight">
-    {% block breadcrumb %}
-    {% endblock %}
+    {% include "navbar.html" %}
     <div class="container mt-4">
-        {% block content %} {% endblock %}
+        {% block content %}
+        {% endblock %}
     </div>
-    <footer class="footer mt-4">
-        <div class="has-text-centered">
-            {% for social in config.extra.social %}
-            <span class="is-size-4">
-                <a href="{{social.url | safe}}" target="_blank" rel="external">
-                    {{macros::icon(icon=social.icon)}}
-                </a>
-            </span>
-            {% endfor %}
-        </div>
-    </footer>
+    {% block javascript %}
+    {% endblock %}
 </body>
 
 </html>
