@@ -8,6 +8,8 @@ tags = ["Foo", "Bar"]
 
 This is a test post
 
+<!-- more -->
+
 ### Prefix
 
 Blah woof

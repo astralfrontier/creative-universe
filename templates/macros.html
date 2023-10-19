@@ -1,28 +1,39 @@
+{% macro article_unwrapped(page, force_full) %}
+<div class="media">
+    <div class="media-center">
+        <img src="/brand/avatar-256x256.png" class="author-image" alt="Astral Frontier">
+    </div>
+    <div class="media-content has-text-centered">
+        <p class="title article-title"><a href="{{page.permalink}}">{{page.title}}</a></p>
+        <p class="subtitle is-6 article-subtitle">
+            <a href="#">@astralfrontier.org</a> on {{page.date}}
+        </p>
+        {% if page.taxonomies and page.taxonomies.tags %}
+        <div class="tags has-addons level-item">
+            {% for tag in page.taxonomies.tags %}
+            <span class="tag is-rounded"><a href="tags/{{tag}}/">{{tag}}</a></span>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</div>
+<div class="content article-body">
+    {% if not force_full and page.summary %}
+    {{page.summary | safe}}
+    <p>
+        <a href="{{page.permalink}}">More</a>
+    </p>
+    {% else %}
+    {{page.content | safe}}
+    {% endif %}
+    {# TODO: show all of page content if there was a "more" element #}
+</div>
+{% endmacro article_unwrapped %}
+
 {% macro article(page) %}
 <div class="card article">
     <div class="card-content">
-        <div class="media">
-            <div class="media-center">
-                <img src="/brand/avatar-256x256.png" class="author-image" alt="Astral Frontier">
-            </div>
-            <div class="media-content has-text-centered">
-                <p class="title article-title">{{page.title}}</p>
-                <p class="subtitle is-6 article-subtitle">
-                    <a href="#">@astralfrontier.org</a> on {{page.date}}
-                </p>
-                {% if page.taxonomies and page.taxonomies.tags %}
-                <div class="tags has-addons level-item">
-                    {% for tag in page.taxonomies.tags %}
-                    <span class="tag is-rounded"><a href="tags/{{tag}}/">{{tag}}</a></span>
-                    {% endfor %}
-                </div>
-                {% endif %}
-            </div>
-        </div>
-        <div class="content article-body">
-            {{page.content | safe}}
-            {# TODO: show all of page content if there was a "more" element #}
-        </div>
+        {{self::article_unwrapped(page=page, force_full=false)}}
     </div>
 </div>
 {% endmacro article %}

@@ -8,6 +8,6 @@
 
 {% block content %}
 <div class="container">
-    {{ macros::article(page=page) }}
+    {{ macros::article_unwrapped(page=page, force_full=true) }}
 </div>
 {% endblock content %}
