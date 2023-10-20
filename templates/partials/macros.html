@@ -59,7 +59,9 @@
 {% macro banner(page) %}
 <section class="hero is-info is-medium is-bold">
     {% if page.extra.banner_image %}
-    <div class="hero-body" style="background-image: url({{page.extra.banner_image | safe}});">
+    {% set meta = get_image_metadata(path=page.extra.banner_image) %}
+    {% set image = resize_image(path=page.extra.banner_image, width=meta.width, height=500, op="fill") %}
+    <div class="hero-body" style="background-image: url({{image.url}});">
     {% else %}
     <div class="hero-body" style="background-image: url({{config.extra.default_banner | safe}});">
     {% endif %}
