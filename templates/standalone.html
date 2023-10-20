@@ -16,7 +16,7 @@
 {% block javascript %}
 {% if section.extra.scripts %}
 {% for script in section.extra.scripts %}
-<script async type="text/javascript" src="{{script}}"></script>
+<script type="text/javascript" src="{{script}}"></script>
 {% endfor %}
 {% endif %}
 {% endblock %}
