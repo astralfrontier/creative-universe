@@ -15,6 +15,13 @@
             <div class="navbar-end">
                 <a class="navbar-item is-active" href="/">Home</a>
                 <a class="navbar-item" href="/fiction/">Fiction</a>
+                {% for social in config.extra.social %}
+                <a class="navbar-item" href="{{social.url}}">
+                    <span class="icon">
+                        <i class="{{social.icon}}"></i>
+                    </span>
+                </a>
+                {% endfor %}
             </div>
         </div>
     </div>
