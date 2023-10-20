@@ -1,0 +1,22 @@
+{% extends "partials/base.html" %}
+{% import "partials/macros.html" as macros %}
+
+{% block title %}
+<title>{{section.title}}</title>
+<meta name="description" content="{{section.extra.description | default(value=config.description)}}" />
+{% endblock %}
+
+{% block content %}
+{{ macros::banner(page=section)}}
+<div class="container">
+    {{ macros::article_unwrapped(page=section, force_full=true) }}
+</div>
+{% endblock content %}
+
+{% block javascript %}
+{% if section.extra.scripts %}
+{% for script in section.extra.scripts %}
+<script async type="text/javascript" src="{{script}}"></script>
+{% endfor %}
+{% endif %}
+{% endblock %}

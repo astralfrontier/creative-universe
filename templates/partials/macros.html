@@ -1,5 +1,4 @@
 {% macro article_unwrapped(page, force_full) %}
-{% set parent_section = get_section(path=page.ancestors[1], metadata_only=true) %}
 <div class="media">
     <div class="media-center">
         <img src="/brand/avatar-256x256.png" class="author-image" alt="Astral Frontier">
@@ -11,7 +10,10 @@
             {% if page.date %}
             on {{page.date | date(format="%b %e %Y")}}
             {% endif %}
+            {% if page.ancestors and page.ancestors[1] %}
+            {% set parent_section = get_section(path=page.ancestors[1], metadata_only=true) %}
             in <a href="{{parent_section.permalink}}">{{parent_section.title}}</a>
+            {% endif %}
         </p>
         {% if page.taxonomies and page.taxonomies.tags %}
         <div class="tags has-addons level-item">
@@ -85,7 +87,6 @@
 {% endmacro promo %}
 
 {% macro media(page) %}
-{% set parent_section = get_section(path=page.ancestors[1], metadata_only=true) %}
 <article class="media">
     <figure class="media-left">
       <p class="image is-64x64">
@@ -102,7 +103,10 @@
           {% if page.date %}
           <small>{{page.date | date(format="%b %e %Y")}}</small>
           {% endif %}
+          {% if page.ancestors %}
+          {% set parent_section = get_section(path=page.ancestors[1], metadata_only=true) %}
           <small>in <a href="{{parent_section.permalink}}">{{parent_section.title}}</a></small>
+          {% endif %}
           <br>
           </a>
           {{page.description}}
