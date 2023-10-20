@@ -1,15 +1,18 @@
 {% macro article_unwrapped(page, force_full) %}
+{% set parent_section = get_section(path=page.ancestors[1], metadata_only=true) %}
 <div class="media">
     <div class="media-center">
         <img src="/brand/avatar-256x256.png" class="author-image" alt="Astral Frontier">
     </div>
     <div class="media-content has-text-centered">
         <p class="title article-title"><a href="{{page.permalink}}">{{page.title}}</a></p>
-        {% if page.date %}
         <p class="subtitle is-6 article-subtitle">
-            <a href="#">@astralfrontier.org</a> on {{page.date}}
+            <a href="#">@astralfrontier</a>
+            {% if page.date %}
+            on {{page.date}}
+            {% endif %}
+            in <a href="{{parent_section.permalink}}">{{parent_section.title}}</a>
         </p>
-        {% endif %}
         {% if page.taxonomies and page.taxonomies.tags %}
         <div class="tags has-addons level-item">
             {% for tag in page.taxonomies.tags %}
@@ -21,6 +24,7 @@
     </div>
 </div>
 <div class="content article-body">
+    {# TODO TOC #}
     {% if not force_full and page.summary %}
     {{page.summary | safe}}
     <p>
@@ -29,7 +33,6 @@
     {% else %}
     {{page.content | safe}}
     {% endif %}
-    {# TODO: show all of page content if there was a "more" element #}
 </div>
 {% endmacro article_unwrapped %}
 
