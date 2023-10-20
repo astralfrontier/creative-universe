@@ -3,7 +3,7 @@ title = "MEGALOS"
 template = "standalone.html"
 [extra]
 banner_image = "/shutterstock_1586177053.jpg"
-scripts = ["https://code.jquery.com/jquery-3.7.1.min.js", "/megalos.js"]
+scripts = ["megalos.js"]
 +++
 
 # Picking Skills
