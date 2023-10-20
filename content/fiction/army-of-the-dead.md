@@ -2,6 +2,7 @@
 title = "Army of the Dead"
 description = "A letter from a young man in the armed forces"
 date = "2015-09-04T00:00:00.000Z"
+authors = ["astralfrontier"]
 [taxonomies]
 tags = ["Fantasy", "Undead"]
 +++

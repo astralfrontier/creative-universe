@@ -2,6 +2,7 @@
 title = "Duo"
 description = "A priest receives confession from a seasoned warrior"
 date = "2016-08-19T00:00:00.000Z"
+authors = ["astralfrontier"]
 [taxonomies]
 tags = ["Fantasy", "Religion"]
 +++
