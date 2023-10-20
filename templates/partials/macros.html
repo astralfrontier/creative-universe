@@ -85,6 +85,7 @@
 {% endmacro promo %}
 
 {% macro media(page) %}
+{% set parent_section = get_section(path=page.ancestors[1], metadata_only=true) %}
 <article class="media">
     <figure class="media-left">
       <p class="image is-64x64">
@@ -97,10 +98,11 @@
       <div class="content">
         <p>
           <a href="{{page.permalink}}">
-          <strong>{{page.title}}</strong> <small>@astralfrontier</small>
+          <strong>{{page.title}}</strong>
           {% if page.date %}
           <small>{{page.date | date(format="%b %e %Y")}}</small>
           {% endif %}
+          <small>in <a href="{{parent_section.permalink}}">{{parent_section.title}}</a></small>
           <br>
           </a>
           {{page.description}}
