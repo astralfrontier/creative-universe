@@ -9,7 +9,7 @@
         <p class="subtitle is-6 article-subtitle">
             <a href="#">@astralfrontier</a>
             {% if page.date %}
-            on {{page.date}}
+            on {{page.date | date(format="%b %e %Y")}}
             {% endif %}
             in <a href="{{parent_section.permalink}}">{{parent_section.title}}</a>
         </p>
