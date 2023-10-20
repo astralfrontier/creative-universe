@@ -10,6 +10,12 @@
 {% set section = get_section(path="blog/_index.md") %}
 {{ macros::banner(page=section)}}
 <div class="container">
+    {% if paginator %}
+    {{ macros::articles(pages=paginator.pages) }}
+    {{ macros::pagination(paginator=paginator) }}
+    {% include "partials/pagination.html" %}
+    {% else %}
     {{ macros::articles(pages=section.pages) }}
+    {% endif %}
 </div>
 {% endblock content %}

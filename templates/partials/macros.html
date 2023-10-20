@@ -111,3 +111,21 @@
     </div>
   </article>
 {% endmacro media %}
+
+{% macro pagination(paginator) %}
+{# Only show pagination controls if there's enough elements for it to matter #}
+{% if paginator.previous or paginator.next %}
+<nav class="pagination is-centered" role="navigation" aria-label="pagination">
+    {% if paginator.previous %}
+    <a class="pagination-previous" href="{{paginator.previous}}">Previous</a>
+    {% else %}
+    <a class="pagination-previous" disabled>Previous</a>
+    {% endif %}
+    {% if paginator.next %}
+    <a class="pagination-next" href="{{paginator.next}}">Next page</a>
+    {% else %}
+    <a class="pagination-next" disabled>Next page</a>
+    {% endif %}
+</nav>
+{% endif %}
+{% endmacro pagination %}

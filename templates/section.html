@@ -8,7 +8,12 @@
 
 {% block content %}
 {{ macros::banner(page=section)}}
-<div class="container">
+<div class="container">    
+    {% if paginator %}
+    {{ macros::articles(pages=paginator.pages) }}
+    {{ macros::pagination(paginator=paginator) }}
+    {% else %}
     {{ macros::articles(pages=section.pages) }}
+    {% endif %}
 </div>
 {% endblock content %}
