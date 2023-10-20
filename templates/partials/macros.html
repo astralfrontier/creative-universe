@@ -4,7 +4,7 @@
     <div class="media-center">
         <img src="/brand/avatar-256x256.png" class="author-image" alt="Astral Frontier">
     </div>
-    <div class="media-content has-text-centered">
+    <div class="media-content has-text-centered mt-6">
         <p class="title article-title"><a href="{{page.permalink}}">{{page.title}}</a></p>
         <p class="subtitle is-6 article-subtitle">
             <a href="#">@astralfrontier</a>
@@ -83,3 +83,29 @@
     </div>
 </section>
 {% endmacro promo %}
+
+{% macro media(page) %}
+<article class="media">
+    <figure class="media-left">
+      <p class="image is-64x64">
+        <a href="{{page.permalink}}">
+            <img src="/brand/avatar-256x256.png" alt="Astral Frontier">
+        </a>
+      </p>
+    </figure>
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <a href="{{page.permalink}}">
+          <strong>{{page.title}}</strong> <small>@astralfrontier</small>
+          {% if page.date %}
+          <small>{{page.date | date(format="%b %e %Y")}}</small>
+          {% endif %}
+          <br>
+          </a>
+          {{page.description}}
+        </p>
+      </div>
+    </div>
+  </article>
+{% endmacro media %}
