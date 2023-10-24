@@ -6,6 +6,13 @@
 <meta name="description" content="A list of pages containing the term {{term.name}}" />
 {% endblock %}
 
+{% block rss %}
+{% if taxonomy.feed %}
+{% set url = get_taxonomy_url(kind=taxonomy.name, name=term.name) %}
+<link rel="alternate" type="application/atom+xml" title="{{term.name}} Feed" href="{{url | safe}}atom.xml"}}">
+{% endif %}
+{% endblock %}
+
 {% block content %}
 <div class="container">
     <small>

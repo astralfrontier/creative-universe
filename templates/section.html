@@ -6,6 +6,12 @@
 <meta name="description" content="{{section.extra.description | default(value=config.description)}}" />
 {% endblock %}
 
+{% block rss %}
+{% if section.generate_feed %}
+<link rel="alternate" type="application/atom+xml" title="{{section.title}} Feed" href="{{section.permalink | safe}}atom.xml">
+{% endif %}
+{% endblock %}
+
 {% block content %}
 {{ macros::banner(page=section)}}
 <div class="container">    

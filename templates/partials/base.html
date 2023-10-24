@@ -21,7 +21,7 @@
     {% endfor %}
     <link rel="stylesheet" type="text/css" href="/application.css" media="screen" />
     {% block rss %}
-    <link rel="alternate" type="application/atom+xml" title="Atom" href="{{get_url(path="atom.xml", trailing_slash=false)}}">
+    <link rel="alternate" type="application/atom+xml" title="{{config.title}} Feed" href="{{get_url(path="atom.xml", trailing_slash=false)}}">
     {% endblock %}
 </head>
 
