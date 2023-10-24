@@ -31,4 +31,4 @@ I've got new stuff I want to talk about, like progressivism and Charlie Chan and
 
 I've got reactions to things, and opinions, and thoughts and hopes and fears.
 
-All of that is going to live here, at this URL. It's going to be spread to social media, or shared on Discord, or whatever. But it's going to live here.
+All of that is going to live here, at this URL. It's going to be spread to social media, or shared on Discord, or whatever. It's more work, but I can live with that.
