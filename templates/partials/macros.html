@@ -60,10 +60,10 @@
 <section class="hero is-info is-medium is-bold">
     {% if page.extra.banner_image %}
     {% set meta = get_image_metadata(path=page.extra.banner_image) %}
-    {% set image = resize_image(path=page.extra.banner_image, width=meta.width, height=500, op="fill") %}
+    {% set image = resize_image(path=page.extra.banner_image, width=meta.width, height=500, op="fit_height") %}
     {% else %}
     {% set meta = get_image_metadata(path=config.extra.default_banner) %}
-    {% set image = resize_image(path=config.extra.default_banner, width=meta.width, height=500, op="fill") %}
+    {% set image = resize_image(path=config.extra.default_banner, width=meta.width, height=500, op="fit_height") %}
     {% endif %}
     <div class="hero-body" style="background-image: url({{image.url}});">
     <div class="container has-text-centered">
