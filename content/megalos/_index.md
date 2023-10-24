@@ -2,7 +2,7 @@
 title = "MEGALOS"
 template = "standalone.html"
 [extra]
-banner_image = "/shutterstock_1586177053.jpg"
+banner_image = "/stock/shutterstock_1586177053.jpg"
 scripts = ["megalos.js"]
 +++
 
