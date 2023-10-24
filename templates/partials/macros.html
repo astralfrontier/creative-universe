@@ -61,16 +61,17 @@
     {% if page.extra.banner_image %}
     {% set meta = get_image_metadata(path=page.extra.banner_image) %}
     {% set image = resize_image(path=page.extra.banner_image, width=meta.width, height=500, op="fill") %}
+    {% else %}
+    {% set meta = get_image_metadata(path=config.extra.default_banner) %}
+    {% set image = resize_image(path=config.extra.default_banner, width=meta.width, height=500, op="fill") %}
+    {% endif %}
     <div class="hero-body" style="background-image: url({{image.url}});">
-        {% else %}
-        <div class="hero-body" style="background-image: url({{config.extra.default_banner | safe}});">
-            {% endif %}
-            <div class="container has-text-centered">
-                {% if page.extra.banner_quote %}
-                <h1 class="title">{{quote}}</h1>
-                {% endif %}
-            </div>
-        </div>
+    <div class="container has-text-centered">
+        {% if page.extra.banner_quote %}
+        <h1 class="title">{{quote}}</h1>
+        {% endif %}
+    </div>
+    </div>
 </section>
 {% endmacro banner %}
 
