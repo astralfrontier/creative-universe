@@ -32,6 +32,11 @@ external_links_no_referrer = true
 
 [extra]
 default_banner = "/brand/shutterstock_2284544289.jpg"
+navbar = [
+    {title="Home", url="/"},
+    {title="Fiction", url="/fiction/"},
+    {title="MEGALOS", url="/megalos/"},
+]
 social = [
     {icon="fa-brands fa-mastodon", title="@astralfrontier@dice.camp", url="https://dice.camp/@astralfrontier", mastodon = true},
     {icon="fa-brands fa-mastodon", title="@astralfrontier@mstdn.social", url="https://mstdn.social/@astralfrontier", mastodon = true},
