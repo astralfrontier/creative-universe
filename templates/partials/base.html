@@ -1,0 +1,38 @@
+{% import "partials/macros.html" as macros %}
+
+<!DOCTYPE html>
+<html lang="en" class="fullheight">
+
+{# Override the "title" block to supply your own page title, e.g "Page Name | Site Name" #}
+
+<head>
+    {# HTML nonsense #}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% include "partials/favicons.html" %}
+    {% block title %}
+    <title>{{config.title}}</title>
+    <meta name="description" content="{{config.description}}" />
+    {% endblock %}
+    {# Validation for Mastodon instances #}
+    {% for social in config.extra.social | filter(attribute="mastodon", value=true) %}
+    <link rel="me" href="{{ social.url | safe }}" />
+    {% endfor %}
+    <link rel="stylesheet" type="text/css" href="/application.css" media="screen" />
+    {% block rss %}
+    <link rel="alternate" type="application/atom+xml" title="{{config.title}} Feed" href="{{get_url(path="atom.xml", trailing_slash=false)}}">
+    {% endblock %}
+</head>
+
+<body class="fullheight">
+    {% include "partials/navbar.html" %}
+    {% block content %}
+    {% endblock %}
+    <script type="text/javascript" src="/jquery.min.js"></script>
+    <script type="text/javascript" src="/application.js"></script>
+    {% block javascript %}
+    {% endblock %}
+</body>
+
+</html>

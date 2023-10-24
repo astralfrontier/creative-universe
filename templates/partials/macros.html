@@ -1,0 +1,133 @@
+{% macro article_unwrapped(page, force_full) %}
+<div class="media">
+    <div class="media-center">
+        <img src="/brand/avatar-256x256.png" class="author-image" alt="Astral Frontier">
+    </div>
+    <div class="media-content has-text-centered mt-6">
+        <p class="title article-title"><a href="{{page.permalink}}">{{page.title}}</a></p>
+        <p class="subtitle is-6 article-subtitle">
+            <a href="#">@astralfrontier</a>
+            {% if page.date %}
+            on {{page.date | date(format="%b %e %Y")}}
+            {% endif %}
+            {% if page.ancestors and page.ancestors[1] %}
+            {% set parent_section = get_section(path=page.ancestors[1], metadata_only=true) %}
+            in <a href="{{parent_section.permalink}}">{{parent_section.title}}</a>
+            {% endif %}
+        </p>
+        {% if page.taxonomies and page.taxonomies.tags %}
+        <div class="tags has-addons level-item">
+            {% for tag in page.taxonomies.tags %}
+            {% set url = get_taxonomy_url(kind="tags", name=tag) %}
+            <span class="tag is-rounded"><a href="{{url}}">{{tag}}</a></span>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</div>
+<div class="content article-body">
+    {# TODO TOC #}
+    {% if not force_full and page.summary %}
+    {{page.summary | safe}}
+    <p>
+        <a href="{{page.permalink}}">More</a>
+    </p>
+    {% else %}
+    {{page.content | safe}}
+    {% endif %}
+</div>
+{% endmacro article_unwrapped %}
+
+{% macro article(page) %}
+<div class="card article">
+    <div class="card-content">
+        {{self::article_unwrapped(page=page, force_full=false)}}
+    </div>
+</div>
+{% endmacro article %}
+
+{% macro articles(pages) %}
+<section class="articles">
+    <div class="column is-8 is-offset-2">
+        {% for page in pages %}
+        {{ self::article(page=page) }}
+        {% endfor %}
+    </div>
+</section>
+{% endmacro articles %}
+
+{% macro banner(page) %}
+<section class="hero is-info is-medium is-bold">
+    {% if page.extra.banner_image %}
+    {% set meta = get_image_metadata(path=page.extra.banner_image) %}
+    {% set image = resize_image(path=page.extra.banner_image, width=meta.width, height=500, op="fit_height") %}
+    {% else %}
+    {% set meta = get_image_metadata(path=config.extra.default_banner) %}
+    {% set image = resize_image(path=config.extra.default_banner, width=meta.width, height=500, op="fit_height") %}
+    {% endif %}
+    <div class="hero-body" style="background-image: url({{image.url}});">
+    <div class="container has-text-centered">
+        {% if page.extra.banner_quote %}
+        <h1 class="title">{{quote}}</h1>
+        {% endif %}
+    </div>
+    </div>
+</section>
+{% endmacro banner %}
+
+{% macro promo(page) %}
+<section class="hero is-info is-bold is-small promo-block">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">
+                <i class="fa fa-bell-o"></i> Nemo enim ipsam voluptatem quia.
+            </h1>
+            <span class="tag is-black is-medium is-rounded">
+                Natus error sit voluptatem
+            </span>
+        </div>
+    </div>
+</section>
+{% endmacro promo %}
+
+{% macro media(page) %}
+<article class="media">
+
+    <div class="media-content">
+        <div class="content">
+            <p>
+                <a href="{{page.permalink}}">
+                    <strong>{{page.title}}</strong>
+                    {% if page.date %}
+                    <small>{{page.date | date(format="%b %e %Y")}}</small>
+                    {% endif %}
+                </a>
+                {% if page.ancestors %}
+                {% set parent_section = get_section(path=page.ancestors[1], metadata_only=true) %}
+                <small>in <a href="{{parent_section.permalink}}">{{parent_section.title}}</a></small>
+                {% endif %}
+                <br>
+                {{page.description}}
+            </p>
+        </div>
+    </div>
+</article>
+{% endmacro media %}
+
+{% macro pagination(paginator) %}
+{# Only show pagination controls if there's enough elements for it to matter #}
+{% if paginator.previous or paginator.next %}
+<nav class="pagination is-centered" role="navigation" aria-label="pagination">
+    {% if paginator.previous %}
+    <a class="pagination-previous" href="{{paginator.previous}}">Previous</a>
+    {% else %}
+    <a class="pagination-previous" disabled>Previous</a>
+    {% endif %}
+    {% if paginator.next %}
+    <a class="pagination-next" href="{{paginator.next}}">Next page</a>
+    {% else %}
+    <a class="pagination-next" disabled>Next page</a>
+    {% endif %}
+</nav>
+{% endif %}
+{% endmacro pagination %}

@@ -4,18 +4,39 @@ base_url = "https://astralfrontier.org"
 title = "Astral Frontier"
 description = "A website"
 
+default_language = "en"
+
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
+taxonomies = [
+    { name = "tags", feed = true}
+]
+
+# For whatever reason, minifying breaks the banner image
+minify_html = false
+generate_feed = true
+
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = true
+smart_punctuation = true
+
+external_links_target_blank = true
+external_links_no_follow = true
+external_links_no_referrer = true
 
 [extra]
+default_banner = "/brand/shutterstock_2284544289.jpg"
+navbar = [
+    {title="Home", url="/"},
+    {title="Fiction", url="/fiction/"},
+    {title="MEGALOS", url="/megalos/"},
+]
 social = [
     {icon="fa-brands fa-mastodon", title="@astralfrontier@dice.camp", url="https://dice.camp/@astralfrontier", mastodon = true},
     {icon="fa-brands fa-mastodon", title="@astralfrontier@mstdn.social", url="https://mstdn.social/@astralfrontier", mastodon = true},

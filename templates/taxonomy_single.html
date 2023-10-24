@@ -1,0 +1,30 @@
+{% extends "partials/base.html" %}
+{% import "partials/macros.html" as macros %}
+
+{% block title %}
+<title>{{term.name}}</title>
+<meta name="description" content="A list of pages containing the term {{term.name}}" />
+{% endblock %}
+
+{% block rss %}
+{% if taxonomy.feed %}
+{% set url = get_taxonomy_url(kind=taxonomy.name, name=term.name) %}
+<link rel="alternate" type="application/atom+xml" title="{{term.name}} Feed" href="{{url | safe}}atom.xml"}}">
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <small>
+        <a href="..">&#8592; All {{taxonomy.name}}</a>
+    </small>
+    <h1 class="title">{{term.name}}</h1>
+    <div class="columns is-multiline">
+    {% for page in term.pages | sort(attribute="title") %}
+    <div class="column">
+    {{ macros::media(page=page) }}
+    </div>
+    {% endfor %}
+    </div>
+</div>
+{% endblock content %}

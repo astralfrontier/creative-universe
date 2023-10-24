@@ -1,50 +1,21 @@
-{% extends "base.html" %}
-{% import "macros.html" as macros %}
+{% extends "partials/base.html" %}
+{% import "partials/macros.html" as macros %}
 
 {% block title %}
 <title>{{config.title}}</title>
 <meta name="description" content="{{section.extra.description | default(value=config.description)}}" />
 {% endblock %}
 
-{% block breadcrumb %}
-<header class="has-background-black is-hidden-mobile">
-    <div class="container">
-        <figure class="image">
-            <img src="/Logo.png" alt="Astral Frontier logo" />
-        </figure>
-    </div>
-</header>
-{% endblock %}
-
 {% block content %}
-<div class="columns">
-    <div class="column is-one-third">
-        <div class="content px-2">
-            {{section.content | safe}}
-            <p class="title is-size-4">Contact</p>
-            {% for social in config.extra.social %}
-            <p class="has-text-link is-size-5">
-                {{macros::icon(icon=social.icon)}}
-                <a href="{{social.url | safe}}" target="_blank" rel="external">{{social.title}}</a>
-            </p>
-            {% endfor %}    
-        </div>
-    </div>
-
-    <div class="column">
-        <div class="columns is-multiline">
-            {% for sectionpath in section.subsections %}
-            {% set child = get_section(path=sectionpath, metadata_only=false) %}
-            <div class="column is-full">
-                {{ macros::categorycard(section=child) }}
-            </div>
-            {% endfor %}
-            {% for page in section.pages %}
-            <div class="column is-full">
-                {{ macros::pagecard(page=page) }}
-            </div>
-            {% endfor %}
-        </div>
-    </div>
+{% set section = get_section(path="blog/_index.md") %}
+{{ macros::banner(page=section)}}
+<div class="container">
+    {% if paginator %}
+    {{ macros::articles(pages=paginator.pages) }}
+    {{ macros::pagination(paginator=paginator) }}
+    {% include "partials/pagination.html" %}
+    {% else %}
+    {{ macros::articles(pages=section.pages) }}
+    {% endif %}
 </div>
 {% endblock content %}

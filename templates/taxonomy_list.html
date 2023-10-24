@@ -1,0 +1,20 @@
+{% extends "partials/base.html" %}
+{% import "partials/macros.html" as macros %}
+
+{% block title %}
+<title>All {{taxonomy.name}}</title>
+<meta name="description" content="A list of all {{taxonomy.name}}" />
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="title">{{taxonomy.name | capitalize()}}</h1>
+    <div class="columns is-multiline">
+    {% for term in terms | sort(attribute="name") %}
+    <div class="column">
+        <a href="{{term.permalink}}">{{term.name}}</a>
+    </div>
+    {% endfor %}
+    </div>
+</div>
+{% endblock content %}
