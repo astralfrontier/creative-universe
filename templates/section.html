@@ -6,6 +6,21 @@
 <meta name="description" content="{{section.extra.description | default(value=config.description)}}" />
 {% endblock %}
 
+{% block ogp %}
+<meta property="og:title" content="{{section.title}}" />
+<meta property="og:description" content="{{section.extra.description | default(value=config.description)}}" />
+<meta property="og:type" content="website" />
+{% if current_url %}
+<meta property="og:url" content="{{current_url | safe}}" />
+{% endif %}
+{% if section.extra.banner_image %}
+{% set banner_image = get_url(path=section.extra.banner_image, trailing_slash=false) %}
+{% else %}
+{% set banner_image = get_url(path=config.extra.default_banner, trailing_slash=false) %}
+{% endif %}
+<meta property="og:image" content="{{banner_image | safe}}" />
+{% endblock %}
+
 {% block rss %}
 {% if section.generate_feed %}
 <link rel="alternate" type="application/atom+xml" title="{{section.title}} Feed" href="{{section.permalink | safe}}atom.xml">

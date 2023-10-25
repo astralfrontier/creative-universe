@@ -20,6 +20,17 @@
     <link rel="me" href="{{ social.url | safe }}" />
     {% endfor %}
     <link rel="stylesheet" type="text/css" href="/application.css" media="screen" />
+    {# OpenGraph Protocol #}
+    {% block ogp %}
+    <meta property="og:title" content="{{config.title}}" />
+    <meta property="og:description" content="{{config.description}}" />
+    <meta property="og:type" content="website" />
+    {% if current_url %}
+    <meta property="og:url" content="{{current_url | safe}}" />
+    {% endif %}
+    {% set banner_image = get_url(path=config.extra.default_banner, trailing_slash=false) %}
+    <meta property="og:image" content="{{banner_image | safe}}" />
+    {% endblock %}
     {% block rss %}
     <link rel="alternate" type="application/atom+xml" title="{{config.title}} Feed" href="{{get_url(path="atom.xml", trailing_slash=false)}}">
     {% endblock %}
