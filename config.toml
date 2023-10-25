@@ -36,12 +36,11 @@ navbar = [
     {title="Home", url="/"},
     {title="Fiction", url="/fiction/"},
     {title="MEGALOS", url="/megalos/"},
-]
-social = [
-    {icon="fa-brands fa-mastodon", title="@astralfrontier@dice.camp", url="https://dice.camp/@astralfrontier", mastodon = true},
-    {icon="fa-brands fa-mastodon", title="@astralfrontier@mstdn.social", url="https://mstdn.social/@astralfrontier", mastodon = true},
-    {icon="fa-brands fa-twitter", title="@astralfrontier", url="https://twitter.com/astralfrontier"},
-    {icon="fa-brands fa-tumblr", title="astralfrontier @ Tumblr", url="https://www.tumblr.com/blog/astralfrontier"},
-    {icon="fa-brands fa-youtube", title="astralfrontier", url="https://www.youtube.com/channel/UCzP9xI_Qxw3SW853U_lMQ3g"},
-    {icon="fa-brands fa-github", title="astralfrontier", url="https://github.com/astralfrontier"}
+    {title="Itch.io", url="https://astralfrontier.itch.io/", external = true},
+    {title="@astralfrontier@dice.camp", url="https://dice.camp/@astralfrontier", icon="fa-brands fa-mastodon", external = true, mastodon = true},
+    {title="@astralfrontier@mstdn.social", url="https://mstdn.social/@astralfrontier", icon="fa-brands fa-mastodon", external = true, mastodon = true},
+    {title="@astralfrontier", url="https://twitter.com/astralfrontier", icon="fa-brands fa-twitter", external = true},
+    {title="astralfrontier @ Tumblr", url="https://www.tumblr.com/blog/astralfrontier", icon="fa-brands fa-tumblr", external = true},
+    {title="astralfrontier", url="https://www.youtube.com/channel/UCzP9xI_Qxw3SW853U_lMQ3g", icon="fa-brands fa-youtube", external = true},
+    {title="astralfrontier", url="https://github.com/astralfrontier", icon="fa-brands fa-github", external = true}
 ]

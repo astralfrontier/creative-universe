@@ -16,7 +16,7 @@
     <meta name="description" content="{{config.description}}" />
     {% endblock %}
     {# Validation for Mastodon instances #}
-    {% for social in config.extra.social | filter(attribute="mastodon", value=true) %}
+    {% for social in config.extra.navbar | filter(attribute="mastodon", value=true) %}
     <link rel="me" href="{{ social.url | safe }}" />
     {% endfor %}
     <link rel="stylesheet" type="text/css" href="/application.css" media="screen" />

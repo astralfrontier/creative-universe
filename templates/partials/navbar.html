@@ -13,13 +13,18 @@
         <div id="navbarMenu" class="navbar-menu">
             <div class="navbar-end">
                 {% for link in config.extra.navbar %}
-                <a class="navbar-item is-active" href="{{link.url}}">{{link.title}}</a>
-                {% endfor %}
-                {% for social in config.extra.social %}
-                <a class="navbar-item" rel="noopener nofollow noreferrer" href="{{social.url}}" target="_blank">
+                {% if link.external %}
+                <a class="navbar-item" rel="noopener nofollow noreferrer" href="{{link.url}}" target="_blank">
+                {% else %}
+                <a class="navbar-item" href="{{link.url}}">
+                {% endif %}
+                    {% if link.icon %}
                     <span class="icon">
-                        <i class="{{social.icon}}"></i>
+                        <i class="{{link.icon}}" aria-hidden="true" title="{{link.title}}"></i>
                     </span>
+                    {% elif link.title %}
+                    {{link.title}}
+                    {% endif %}
                 </a>
                 {% endfor %}
             </div>
