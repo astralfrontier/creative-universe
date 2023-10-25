@@ -3,6 +3,8 @@ title = "Eternal Slumber"
 description = "A story about the importance of funerary rites"
 date = "2015-09-04"
 authors = ["astralfrontier"]
+[extra]
+banner_image = "/stock/death-164761_1280.jpg"
 [taxonomies]
 tags = ["Horror"]
 +++

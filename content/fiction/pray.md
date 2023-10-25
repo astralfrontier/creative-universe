@@ -3,6 +3,8 @@ title = "Pray"
 description = "What we worship is not always what we think"
 date = "2015-09-04T00:00:00.000Z"
 authors = ["astralfrontier"]
+[extra]
+banner_image = "/stock/death-164761_1280.jpg"
 [taxonomies]
 tags = ["Religion"]
 +++
