@@ -8,7 +8,7 @@
 
 {% block ogp %}
 <meta property="og:title" content="{{page.title}}" />
-<meta property="og:description" content="{{page.extra.description | default(value=config.description)}}" />
+<meta property="og:description" content="{{page.description | default(value=config.description)}}" />
 <meta property="og:type" content="website" />
 {% if current_url %}
 <meta property="og:url" content="{{current_url | safe}}" />
