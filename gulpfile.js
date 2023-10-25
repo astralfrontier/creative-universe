@@ -1,6 +1,8 @@
 const { src, dest, series, parallel } = require("gulp");
 const htmlmin = require("gulp-htmlmin");
+const postcss = require("gulp-postcss");
 const cp = require("child_process");
+const purgecss = require("@fullhuman/postcss-purgecss");
 
 function fontAwesome(_cb) {
   return src("node_modules/@fortawesome/fontawesome-free/webfonts/*").pipe(
@@ -39,7 +41,19 @@ function minify(_cb) {
     .pipe(dest("public"));
 }
 
+const postcssPlugins = [
+  purgecss({
+    content: ["public/**/*.html"],
+  }),
+];
+
+function css(_cb) {
+  return src("public/**/*.css")
+    .pipe(postcss(postcssPlugins))
+    .pipe(dest("public"));
+}
+
 exports.preinstall = parallel(fontAwesome, jquery);
-exports.build = series(exports.preinstall, zolaBuild, minify);
+exports.build = series(exports.preinstall, zolaBuild, minify, css);
 exports.serve = series(exports.preinstall, zolaServe);
 exports.default = exports.build;
