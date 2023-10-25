@@ -13,11 +13,8 @@
 {% if current_url %}
 <meta property="og:url" content="{{current_url | safe}}" />
 {% endif %}
-{% if section.extra.banner_image %}
-{% set banner_image = get_url(path=section.extra.banner_image, trailing_slash=false) %}
-{% else %}
-{% set banner_image = get_url(path=config.extra.default_banner, trailing_slash=false) %}
-{% endif %}
+{% set banner_image_path = macros::banner_image(page=section) %}
+{% set banner_image = get_url(path=banner_image_path, trailing_slash=false) %}
 <meta property="og:image" content="{{banner_image | safe}}" />
 {% endblock %}
 

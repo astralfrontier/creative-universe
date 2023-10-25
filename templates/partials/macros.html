@@ -1,3 +1,18 @@
+{# Look for the banner image on a given page and all its ancestors #}
+{% macro banner_image(page) -%}
+{% set candidate = config.extra.default_banner -%}
+{% if page.extra.banner_image -%}
+{% set candidate = page.extra.banner_image -%}
+{% else -%}
+{% for ancestor_name in page.ancestors -%}
+{% set ancestor = get_section(path=ancestor_name, metadata_only=true) -%}
+{% if ancestor.extra.banner_image -%}
+{% set_global candidate = ancestor.extra.banner_image -%}
+{% endif -%}
+{% endfor -%}
+{% endif -%}
+{{ candidate }}{% endmacro banner_image -%}
+
 {% macro article_unwrapped(page, force_full) %}
 <div class="media">
     <div class="media-center">
@@ -56,13 +71,9 @@
 
 {% macro banner(page) %}
 <section class="hero is-info is-medium is-bold">
-    {% if page.extra.banner_image %}
-    {% set meta = get_image_metadata(path=page.extra.banner_image) %}
-    {% set image = resize_image(path=page.extra.banner_image, width=meta.width, height=500, op="fit_height") %}
-    {% else %}
-    {% set meta = get_image_metadata(path=config.extra.default_banner) %}
-    {% set image = resize_image(path=config.extra.default_banner, width=meta.width, height=500, op="fit_height") %}
-    {% endif %}
+    {% set banner_image_path = self::banner_image(page=page) -%}
+    {% set meta = get_image_metadata(path=banner_image_path) %}
+    {% set image = resize_image(path=banner_image_path, width=meta.width, height=500, op="fit_height") %}
     <div class="hero-body" style="background-image: url({{image.url | safe}});">
     <div class="container has-text-centered">
         {% if page.extra.banner_quote %}
