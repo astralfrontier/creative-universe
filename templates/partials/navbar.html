@@ -16,11 +16,11 @@
                 {% if link.external %}
                 <a class="navbar-item" rel="noopener nofollow noreferrer" href="{{link.url | safe}}" target="_blank">
                 {% else %}
-                <a class="navbar-item" href="{{link.url | safe}}">
+                <a class="navbar-item" href="{{link.url | safe}}" aria-label="{{link.title}}">
                 {% endif %}
                     {% if link.icon %}
                     <span class="icon">
-                        <i class="{{link.icon}}" aria-hidden="true" title="{{link.title}}"></i>
+                        <i class="{{link.icon}}" aria-hidden="true"></i>
                     </span>
                     {% elif link.title %}
                     {{link.title}}
