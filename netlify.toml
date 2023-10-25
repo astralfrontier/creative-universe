@@ -14,4 +14,4 @@ ZOLA_VERSION = "0.17.2"
 # `$DEPLOY_PRIME_URL`.
 
 [context.deploy-preview]
-command = "zola build --base-url $DEPLOY_PRIME_URL"
+command = "npm install && npm run gulp -- --base-url $DEPLOY_PRIME_URL"
