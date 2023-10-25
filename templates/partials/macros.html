@@ -45,7 +45,7 @@
     {% if not force_full and page.summary %}
     {{page.summary | safe}}
     <p>
-        <a href="{{page.permalink | safe}}">More</a>
+        <a href="{{page.permalink | safe}}">Read more &quot;{{page.title}}&quot; &raquo;</a>
     </p>
     {% else %}
     {{page.content | safe}}
