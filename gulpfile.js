@@ -12,7 +12,12 @@ function jquery(_cb) {
 }
 
 function zolaBuild(_cb) {
-  return cp.exec("zola build");
+  const i = process.argv.indexOf("--base-url");
+  if (i > -1 && process.argv[i + 1]) {
+    return cp.exec(`zola build --base-url ${process.argv[i + 1]}`);
+  } else {
+    return cp.exec(`zola build`);
+  }
 }
 
 function zolaServe(_cb) {
