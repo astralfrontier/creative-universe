@@ -4,7 +4,7 @@
         <img src="/brand/avatar-256x256.png" class="author-image" alt="Astral Frontier">
     </div>
     <div class="media-content has-text-centered mt-6">
-        <p class="title article-title"><a href="{{page.permalink}}">{{page.title}}</a></p>
+        <p class="title article-title"><a href="{{page.permalink | safe}}">{{page.title}}</a></p>
         <p class="subtitle is-6 article-subtitle">
             <a href="#">@astralfrontier</a>
             {% if page.date %}
@@ -12,14 +12,14 @@
             {% endif %}
             {% if page.ancestors and page.ancestors[1] %}
             {% set parent_section = get_section(path=page.ancestors[1], metadata_only=true) %}
-            in <a href="{{parent_section.permalink}}">{{parent_section.title}}</a>
+            in <a href="{{parent_section.permalink | safe}}">{{parent_section.title}}</a>
             {% endif %}
         </p>
         {% if page.taxonomies and page.taxonomies.tags %}
         <div class="tags has-addons level-item">
             {% for tag in page.taxonomies.tags %}
             {% set url = get_taxonomy_url(kind="tags", name=tag) %}
-            <span class="tag is-rounded"><a href="{{url}}">{{tag}}</a></span>
+            <span class="tag is-rounded"><a href="{{url | safe}}">{{tag}}</a></span>
             {% endfor %}
         </div>
         {% endif %}
@@ -30,7 +30,7 @@
     {% if not force_full and page.summary %}
     {{page.summary | safe}}
     <p>
-        <a href="{{page.permalink}}">More</a>
+        <a href="{{page.permalink | safe}}">More</a>
     </p>
     {% else %}
     {{page.content | safe}}
@@ -48,11 +48,9 @@
 
 {% macro articles(pages) %}
 <section class="articles">
-    <div class="column is-8 is-offset-2">
-        {% for page in pages %}
-        {{ self::article(page=page) }}
-        {% endfor %}
-    </div>
+    {% for page in pages %}
+    {{ self::article(page=page) }}
+    {% endfor %}
 </section>
 {% endmacro articles %}
 
@@ -65,7 +63,7 @@
     {% set meta = get_image_metadata(path=config.extra.default_banner) %}
     {% set image = resize_image(path=config.extra.default_banner, width=meta.width, height=500, op="fit_height") %}
     {% endif %}
-    <div class="hero-body" style="background-image: url({{image.url}});">
+    <div class="hero-body" style="background-image: url({{image.url | safe}});">
     <div class="container has-text-centered">
         {% if page.extra.banner_quote %}
         <h1 class="title">{{quote}}</h1>
@@ -92,11 +90,10 @@
 
 {% macro media(page) %}
 <article class="media">
-
     <div class="media-content">
         <div class="content">
             <p>
-                <a href="{{page.permalink}}">
+                <a href="{{page.permalink | safe}}">
                     <strong>{{page.title}}</strong>
                     {% if page.date %}
                     <small>{{page.date | date(format="%b %e %Y")}}</small>
@@ -104,7 +101,7 @@
                 </a>
                 {% if page.ancestors %}
                 {% set parent_section = get_section(path=page.ancestors[1], metadata_only=true) %}
-                <small>in <a href="{{parent_section.permalink}}">{{parent_section.title}}</a></small>
+                <small>in <a href="{{parent_section.permalink | safe}}">{{parent_section.title}}</a></small>
                 {% endif %}
                 <br>
                 {{page.description}}
@@ -119,12 +116,12 @@
 {% if paginator.previous or paginator.next %}
 <nav class="pagination is-centered" role="navigation" aria-label="pagination">
     {% if paginator.previous %}
-    <a class="pagination-previous" href="{{paginator.previous}}">Previous</a>
+    <a class="pagination-previous" href="{{paginator.previous | safe}}">Previous</a>
     {% else %}
     <a class="pagination-previous" disabled>Previous</a>
     {% endif %}
     {% if paginator.next %}
-    <a class="pagination-next" href="{{paginator.next}}">Next page</a>
+    <a class="pagination-next" href="{{paginator.next | safe}}">Next page</a>
     {% else %}
     <a class="pagination-next" disabled>Next page</a>
     {% endif %}

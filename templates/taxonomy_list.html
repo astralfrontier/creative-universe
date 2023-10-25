@@ -12,7 +12,7 @@
     <div class="columns is-multiline">
     {% for term in terms | sort(attribute="name") %}
     <div class="column">
-        <a href="{{term.permalink}}">{{term.name}}</a>
+        <a href="{{term.permalink | safe}}">{{term.name}}</a>
     </div>
     {% endfor %}
     </div>
