@@ -12,13 +12,21 @@ function jquery(_cb) {
   return src("node_modules/jquery/dist/jquery.min.js").pipe(dest("static/"));
 }
 
-function zolaBuild(_cb) {
+function zolaBuild(cb) {
   const i = process.argv.indexOf("--base-url");
+  let cmd = "zola build";
   if (i > -1 && process.argv[i + 1]) {
-    return cp.exec(`zola build --base-url ${process.argv[i + 1]}`);
-  } else {
-    return cp.exec(`zola build`);
+    cmd = `zola build --base-url ${process.argv[i + 1]}`;
   }
+  cp.exec(cmd, (err, stdout, stderr) => {
+    console.log(stdout);
+    console.log(stderr);
+    if (err) {
+      cb(new Error(err));
+    } else {
+      cb();
+    }
+  });
 }
 
 function zolaServe(_cb) {
