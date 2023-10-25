@@ -1,4 +1,5 @@
 const { src, dest, series, parallel } = require("gulp");
+const htmlmin = require("gulp-htmlmin");
 const cp = require("child_process");
 
 function fontAwesome(_cb) {
@@ -24,7 +25,13 @@ function zolaServe(_cb) {
   return cp.exec("zola serve --open");
 }
 
+function minify(_cb) {
+  return src("public/**/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(dest("public"));
+}
+
 exports.preinstall = parallel(fontAwesome, jquery);
-exports.build = series(exports.preinstall, zolaBuild);
+exports.build = series(exports.preinstall, zolaBuild, minify);
 exports.serve = series(exports.preinstall, zolaServe);
 exports.default = exports.build;
