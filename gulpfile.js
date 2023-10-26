@@ -54,6 +54,6 @@ function css(_cb) {
 }
 
 exports.preinstall = parallel(fontAwesome, jquery);
-exports.build = series(exports.preinstall, zolaBuild, minify, css);
+exports.build = series(exports.preinstall, zolaBuild, minify);
 exports.serve = series(exports.preinstall, zolaServe);
 exports.default = exports.build;
