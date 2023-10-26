@@ -14,17 +14,30 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
-    <small>
-        <a href="..">&#8592; All {{taxonomy.name}}</a>
-    </small>
-    <h1 class="title">{{term.name}}</h1>
-    <div class="columns is-multiline">
-    {% for page in term.pages | sort(attribute="title") %}
-    <div class="column">
-    {{ macros::media(page=page) }}
+<section class="hero is-info is-medium is-bold">
+    {% if config.extra.tag_banner_images[term.name] %}
+    {% set banner_image_path = config.extra.tag_banner_images[term.name] %}
+    {% else %}
+    {% set banner_image_path = config.extra.default_banner %}
+    {% endif %}
+    {% set meta = get_image_metadata(path=banner_image_path) %}
+    {% set image = resize_image(path=banner_image_path, width=meta.width, height=500, op="fit_height") %}
+    <div class="hero-body" style="background-image: url({{image.url | safe}});">
+        <div class="container has-text-centered">
+            <small>
+                <a href="..">&#8592; All {{taxonomy.name}}</a>
+            </small>
+            <h1 class="title">{{term.name}}</h1>
+        
+        </div>
     </div>
-    {% endfor %}
-    </div>
+</section>
+<div class="container">    
+    {% if paginator %}
+    {{ macros::articles(pages=paginator.pages) }}
+    {{ macros::pagination(paginator=paginator) }}
+    {% else %}
+    {{ macros::articles(pages=term.pages) }}
+    {% endif %}
 </div>
 {% endblock content %}
