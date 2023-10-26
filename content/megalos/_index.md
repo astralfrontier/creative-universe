@@ -161,8 +161,3 @@ Characters in a single zone are only affected once, no matter how many times the
 
 <div id="interactive-tool-root"></div>
 
-<div class="is-hidden">
-  <div class="columns column is-narrow is-mobile field control select content"></div>
-  <label class="label"></label>
-  <button class="button is-primary is-warning"></button>
-</div>
