@@ -13,6 +13,27 @@
 {% endif -%}
 {{ candidate }}{% endmacro banner_image -%}
 
+{% macro toc2(headers, level) %}
+<ul>
+    {% for header in headers %}
+    <li>
+        <a href="{{header.permalink | safe}}">{{header.title}}</a>
+        {% if header.children %}
+        {{ self::toc2(headers=header.children, level=header.level + 1) }}
+        {% endif %}    
+    </li>
+    {% endfor %}
+</ul>
+{% endmacro toc2 %}
+
+{# Show the table of contents at a given level #}
+{% macro toc(headers) %}
+{% if headers %}
+{{ self::toc2(headers=headers, level=1) }}
+{% endif %}
+{% endmacro toc %}
+
+{# Show an article without the card wrapper - the media object of the header, plus content #}
 {% macro article_unwrapped(page, force_full) %}
 <div class="media">
     <div class="media-center">
@@ -41,18 +62,27 @@
     </div>
 </div>
 <div class="content article-body">
-    {# TODO TOC #}
     {% if not force_full and page.summary %}
     {{page.summary | safe}}
     <p>
         <a href="{{page.permalink | safe}}">Read more &quot;{{page.title}}&quot; &raquo;</a>
     </p>
+    {% elif page.toc %}
+    <div class="columns">
+        <div class="column is-one-third is-article-toc">
+            {{self::toc(headers=page.toc)}}
+        </div>
+        <div class="column">
+            {{page.content | safe}}
+        </div>
+    </div>
     {% else %}
     {{page.content | safe}}
     {% endif %}
 </div>
 {% endmacro article_unwrapped %}
 
+{# Show an article, which coudld be abbreviated #}
 {% macro article(page) %}
 <div class="card article">
     <div class="card-content">
@@ -61,6 +91,7 @@
 </div>
 {% endmacro article %}
 
+{# Show an array of articles #}
 {% macro articles(pages) %}
 <section class="articles">
     {% for page in pages %}
@@ -69,6 +100,7 @@
 </section>
 {% endmacro articles %}
 
+{# Show a banner image, based on page properties. #}
 {% macro banner(page) %}
 <section class="hero is-info is-medium is-bold">
     {% set banner_image_path = self::banner_image(page=page) -%}
@@ -84,6 +116,7 @@
 </section>
 {% endmacro banner %}
 
+{# CURRENTLY UNUSED #}
 {% macro promo(page) %}
 <section class="hero is-info is-bold is-small promo-block">
     <div class="hero-body">
@@ -99,6 +132,8 @@
 </section>
 {% endmacro promo %}
 
+{# Show an abbreviated media object for an article #}
+{# CURRENTLY UNUSED #}
 {% macro media(page) %}
 <article class="media">
     <div class="media-content">
@@ -122,6 +157,7 @@
 </article>
 {% endmacro media %}
 
+{# Show the pagination controls for the current page #}
 {% macro pagination(paginator) %}
 {# Only show pagination controls if there's enough elements for it to matter #}
 {% if paginator.previous or paginator.next %}
