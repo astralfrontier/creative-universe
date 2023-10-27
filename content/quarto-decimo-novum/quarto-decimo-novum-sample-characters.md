@@ -3,6 +3,7 @@ title = "Quarto Decimo Novum: Sample Characters"
 description = "Sample characters using the provided rules"
 date = "2019-12-05T20:10:05.000Z"
 authors = ["astralfrontier"]
+weight = 99
 
 [taxonomies]
 tags = ["Game Design Diary", "Final Fantasy XIV", "Genesys"]
@@ -13,6 +14,8 @@ hide_toc = true
 +++
 
 Here's a sample character: [Ardbert](https://finalfantasy.fandom.com/wiki/Ardbert), a young Marauder on a mission. He is a natural, compulsive hero, and can't stop helping people, even when it puts him in danger.
+
+<!-- more -->
 
 ![](/quarto-decimo-novum/a1-1.jpg)
 

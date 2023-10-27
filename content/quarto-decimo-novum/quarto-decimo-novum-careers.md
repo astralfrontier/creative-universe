@@ -3,6 +3,7 @@ title = "Quarto Decimo Novum: Careers"
 description = "Character careers for adventurers of all kinds"
 date = "2019-11-20T02:23:22.000Z"
 authors = ["astralfrontier"]
+weight = 30
 
 [taxonomies]
 tags = ["Game Design Diary", "Final Fantasy XIV", "Genesys"]
@@ -14,15 +15,11 @@ hide_toc = true
 
 These are the careers available for starting characters. These are not the final "jobs" (e.g. Paladin, Black Mage, Scholar) - those will be introduced in a separate post.
 
+<!-- more -->
+
 ### Disciples of War and Magic
 
 These careers specialize in combat.
-
-![](sp5mrWVjVxTfzVZbsKE0YJlLx0.png)
-
-![](wCYPhfqOddtXkUkBQf6_7eWUjc.png)
-
-![](eaJatBZQrhQOU3V6FBnuxzR4iU.png)
 
 ### Arcanist
 
@@ -36,12 +33,6 @@ Hunters, sentries, and soldiers in the Twelveswood, specializing in the bow. Man
 
 Masters of healing magic, conjurers are the protectors and healers of Gridania. They mediate between the elemental spirits and the spoken races of the Twelveswood. **Skills**: Charm, Conjury Aether, Knowledge (Aether), Knowledge (Nature), Medicine, Negotiation, Perception, Survival.
 
-![](Jk768MD2Ejd7XopHym7bnXJTWg-1.png)
-
-![](8yYujJqsxOUYkOkAU8VauXyQNg-1.png)
-
-![](hHGPApK849prbuKia2EFZ6Y6Cs-1.png)
-
 ### Gladiator
 
 Battle-hardened fighters who hone their skills in the arenas of Ul'Dah. A successful gladiator is more than a warrior: they are a performer and charmer as well, who must win over the crowd as well as their opponent. **Skills**: Athletics, Charm, Deception, Leadership, Melee, Resilience, Streetwise, Vigilance.
@@ -53,12 +44,6 @@ Wielders of the spear, halberd, trident, and other polearms. Composure and resol
 ### Marauder
 
 The rough-and-tumble protectors of peace in Limsa Lominsa. Many are former pirates, with skills to match, while others are brutal slayers given gainful employment. **Skills**: Athletics, Coercion, Cool, Melee, Negotiation, Resilience, Streetwise, Vigilance.
-
-![](eFLTJj757yr7EFtZTtew4nL0nk-1.png)
-
-![](4ogkA8yk-ntmuqc-yaad4iJ3cQ-1.png)
-
-![](qe5SQjWAk8dVGAScWycVflA5pg-1.png)
 
 ### Pugilist
 

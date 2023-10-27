@@ -1,6 +1,6 @@
 +++
 title = "Quarto Decimo Novum"
-sort_by = "date"
+sort_by = "weight"
 
 [extra]
 banner_image = "quarto-decimo-novum/quarto-decimo-novum-introduction.jpg"

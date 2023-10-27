@@ -3,6 +3,7 @@ title = "Quarto Decimo Novum: Soul Crystals"
 description = "A draft on how to implement soul crystals"
 date = "2019-11-30T08:17:21.000Z"
 authors = ["astralfrontier"]
+weight = 38
 
 [taxonomies]
 tags = ["Game Design Diary", "Final Fantasy XIV", "Genesys"]
@@ -15,6 +16,8 @@ hide_toc = true
 > This is an early draft of how soul crystals and jobs might work. This material is probably subject to change.
 
 Soul crystals are small, aetherically-charged crystals carried by character in a way that harmonizes body and soul, and brings the wisdom and power of past wielders of the crystal. When someone with the Soul Crystal Attunement talent holds a soul crystal for a Job they've unlocked (e.g. Paladin), they gain the benefits of the talent.
+
+<!-- more -->
 
 ### Bard
 

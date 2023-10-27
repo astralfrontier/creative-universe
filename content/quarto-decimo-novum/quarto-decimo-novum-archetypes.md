@@ -3,6 +3,7 @@ title = "Quarto Decimo Novum: Archetypes"
 description = "Eorzean racial archetypes"
 date = "2019-11-22T09:42:11.000Z"
 authors = ["astralfrontier"]
+weight = 20
 
 [taxonomies]
 tags = ["Game Design Diary", "Final Fantasy XIV", "Genesys"]
@@ -11,6 +12,10 @@ tags = ["Game Design Diary", "Final Fantasy XIV", "Genesys"]
 banner_image = "quarto-decimo-novum/quarto-decimo-novum-archetypes.jpg"
 hide_toc = true
 +++
+
+A list of racial archetypes for the typical Eorzean races - Elezen, Hyur, Lalafell, Miqo'te, and Roegadyn.
+
+<!-- more -->
 
 ### Elezen
 

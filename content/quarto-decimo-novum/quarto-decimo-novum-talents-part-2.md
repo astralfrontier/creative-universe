@@ -3,6 +3,7 @@ title = "Quarto Decimo Novum: Talents Part 2"
 description = "Second-tier talents for FFXIV characters"
 date = "2019-12-15T00:20:36.000Z"
 authors = ["astralfrontier"]
+weight = 45
 
 [taxonomies]
 tags = ["Game Design Diary", "Final Fantasy XIV", "Genesys"]
@@ -11,6 +12,10 @@ tags = ["Game Design Diary", "Final Fantasy XIV", "Genesys"]
 banner_image = "quarto-decimo-novum/quarto-decimo-novum-talents-part-2.jpg"
 hide_toc = true
 +++
+
+Second-tier talents for experienced characters.
+
+<!-- more -->
 
 ### New Talents (Tier 2)
 

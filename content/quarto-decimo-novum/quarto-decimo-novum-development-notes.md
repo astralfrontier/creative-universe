@@ -3,6 +3,7 @@ title = "Quarto Decimo Novum: Development Notes"
 description = "Brief notes on upcoming system design, and a pause for thought"
 date = "2019-11-22T00:00:03.000Z"
 authors = ["astralfrontier"]
+weight = 15
 
 [taxonomies]
 tags = ["Game Design Diary", "Final Fantasy XIV", "Genesys"]

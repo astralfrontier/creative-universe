@@ -3,6 +3,7 @@ title = "Quarto Decimo Novum: Introduction"
 description = "Building an FFXIV fan game in Genesys"
 date = "2019-11-19T01:48:45.000Z"
 authors = ["astralfrontier"]
+weight = 10
 
 [taxonomies]
 tags = ["Game Design Diary", "Final Fantasy XIV", "Genesys"]
@@ -17,6 +18,8 @@ I love the world of [Final Fantasy XIV](https://www.finalfantasyxiv.com/). I've 
 How best to bring this to the gaming table? I've talked about the Genesys system before, and I feel like its mixture of mechanical and narrative systems is a good mix for FFXIV. I don't want something tied to the Dungeons & Dragons universe, and I don't want to create something too far gone or too unique for gamers.
 
 So I'm going to start writing "Quarto Decimo Novum", an adaption of the FFXIV universe for Genesys. This is a fan-produced project only, and will not be sold or marketed in any way. I think both Fantasy Flight Games and Square Enix have produced great products, and if you feel the need to spend money, spend it with them.
+
+<!-- more -->
 
 So what will be included?
 

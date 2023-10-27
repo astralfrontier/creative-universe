@@ -3,6 +3,7 @@ title = "Quarto Decimo Novum: Skills"
 description = "The core Genesys skills for player characters"
 date = "2019-11-19T04:20:25.000Z"
 authors = ["astralfrontier"]
+weight = 35
 
 [taxonomies]
 tags = ["Game Design Diary", "Final Fantasy XIV", "Genesys"]
