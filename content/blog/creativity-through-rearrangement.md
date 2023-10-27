@@ -66,13 +66,9 @@ Example pitches:
 
 > **Don't** try to write your _ending_ pitch! The process you're going through will help you get there. Only write the parts you're already sure of.
 
-If you are writing the plot of your story, the Pitch is also called a "logline". There is an excellent Twitter thread on how to write these:
+If you are writing the plot of your story, the Pitch is also called a "logline". There is an excellent Twitter thread on how to write these: [https://twitter.com/juliayorks/status/1371872855173050370?s=20&t=OKx9Bj1sRlZrRDD4JU_9Rw](https://twitter.com/juliayorks/status/1371872855173050370)
 
-https://twitter.com/juliayorks/status/1371872855173050370?s=20&t=OKx9Bj1sRlZrRDD4JU_9Rw
-
-This page lists 101 loglines from famous films, which can be useful starting points:
-
-https://screencraft.org/blog/101-best-movie-loglines-screenwriters-can-learn-from/
+This page lists 101 loglines from famous films, which can be useful starting points: [https://screencraft.org/blog/101-best-movie-loglines-screenwriters-can-learn-from/](https://screencraft.org/blog/101-best-movie-loglines-screenwriters-can-learn-from/)
 
 ## The Menu
 
@@ -84,7 +80,6 @@ You can't always write a pitch. This usually happens in two cases:
 A good menu will have between two and five items on it. These are the inspirations or examples that are a vital part of your idea.
 
 > You might have more items in mind. Instead of adding them to the main menu, think of them as garnish that you add once your idea has taken shape. For example, you might say "I want Babylon 5 meets Law & Order, but with Star Wars lightsabers". Star Wars doesn't go on the menu.
-{.is-success}
 
 # Split
 
@@ -99,7 +94,6 @@ Look for the interesting nouns, verbs, adjectives, and adverbs in your inventory
 For example, your Pitch was "A war story about good and evil space knights". Your Bits are "war", "good", "evil", "space", and "knights".
 
 > It's okay to include both a noun or verb by itself, and that word plus any modifiers. For example, you might include "space", "knights", and "space knights".
-{.is-success}
 
 You can create evocative names by Splitting along syllables and individual letters. Many names are anagrams of something else, for example.
 
