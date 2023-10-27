@@ -13,6 +13,18 @@
         <div id="navbarMenu" class="navbar-menu">
             <div class="navbar-end">
                 {% for link in config.extra.navbar %}
+                {% if link.items %}
+                <div class="navbar-item has-dropdown is-hoverable" aria-label="{{link.title}}">
+                    <a class="navbar-link">{{link.title}}</a>
+                    <div class="navbar-dropdown">
+                        {% for item in link.items %}
+                        <a class="navbar-item" href="{{item.url | safe}}">
+                          {{item.title}}
+                        </a>
+                        {% endfor %}
+                      </div>
+                </div>
+                {% else %}
                 {% if link.external %}
                 <a class="navbar-item" rel="noopener nofollow noreferrer" href="{{link.url | safe}}" target="_blank"  aria-label="{{link.title}}">
                 {% else %}
@@ -26,6 +38,7 @@
                     {{link.title}}
                     {% endif %}
                 </a>
+                {% endif %}
                 {% endfor %}
             </div>
         </div>

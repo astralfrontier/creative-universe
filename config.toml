@@ -36,7 +36,11 @@ tag_banner_images = { Vampire = "blog/gothic-2097966_1280.jpg" }
 navbar = [
     {title="Home", url="/"},
     {title="Fiction", url="/fiction/"},
-    {title="MEGALOS", url="/megalos/"},
+    {title="Projects", url="#", items = [
+        {title="MEGALOS", url="/megalos/"},
+        {title="Quarto Decimo Novum", url="/quarto-decimo-novum/"},
+        {title="Tosk", url="/tosk/"},
+    ]},
     {title="All Tags", url="/tags/"},
     {title="Itch.io", url="https://astralfrontier.itch.io/", external = true},
     {title="@astralfrontier@dice.camp", url="https://dice.camp/@astralfrontier", icon="fa-brands fa-mastodon", external = true, mastodon = true},
