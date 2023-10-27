@@ -67,7 +67,7 @@
     <p>
         <a href="{{page.permalink | safe}}">Read more &quot;{{page.title}}&quot; &raquo;</a>
     </p>
-    {% elif page.toc %}
+    {% elif page.toc and not page.extra.hide_toc %}
     <div class="columns">
         <div class="column is-one-quarter is-article-toc">
             {{self::toc(headers=page.toc)}}

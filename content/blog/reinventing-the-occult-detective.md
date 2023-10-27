@@ -9,6 +9,7 @@ tags = ["Worldbuilding","Fantasy"]
 
 [extra]
 banner_image = "blog/detective-6677956_1280.jpg"
+hide_toc = true
 +++
 
 Shows like "Supernatural" and "Lucifer", as well as older stuff like "Forever Knight",
