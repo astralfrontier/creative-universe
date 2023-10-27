@@ -182,7 +182,7 @@ You can Drift to an unusual synonym, or a translation into another language. For
 
 The most common letters in English: E, T, A, I, N, O, S, H, R, D, L, U, C, M, F, W, Y, G, P, B, V, K, Q, J, X, and Z.
 
-The 200 most used syllables in English: https://medium.com/wugs/high-frequency-syllables-in-english-ab75159618a0
+The 200 most used syllables in English: [https://medium.com/wugs/high-frequency-syllables-in-english-ab75159618a0](https://medium.com/wugs/high-frequency-syllables-in-english-ab75159618a0)
 
 You can create colorful and interesting names by transposing a few letters in a word or name. A key part of this process is to think about the dimension along which you'll be Drifting. For example, letter order (A B C...) is a dimension. But so is letter frequency (E T A...). The dimension and direction you choose will affect how the outcome feels.
 
@@ -190,7 +190,7 @@ You can inject an element of mystery or strangeness by replacing a more common B
 
 You can randomly replace syllables by rolling 1d100 and looking at the table in the link above. For example, you are creating an underwater realm in a fantasy world. You Split "Atlantis" into "at", "lan", and "tis" as syllables. Rolling 1d100 gives you 97, or "gou". You give your new realm the name "Goulantis", or just "Goulant".
 
-You can also create original starting points by searching for anagrams of words, using tools like this: https://wordsmith.org/anagram/
+You can also create original starting points by searching for anagrams of words, using tools like this: [https://wordsmith.org/anagram/](https://wordsmith.org/anagram/)
 
 ## Drifting Names
 
@@ -222,7 +222,7 @@ If a name doesn't work for you, you can Shuffle the syllables or letters. For ex
 
 # Remix
 
-A Remix is plugging the Bits you want back into a template, then asking questions about the result. Essentially, you're recreating your [Pitch](/cct/inventory), or writing a new Pitch, but with updated Bits.
+A Remix is plugging the Bits you want back into a template, then asking questions about the result. Essentially, you're recreating your Pitch, or writing a new Pitch, but with updated Bits.
 
 For example, your Pitch started out as "A game about a post-capitalist society on another planet". "Post-capitalist" and became "solarpunk". "Another planet" became a specific name: "Alpha Tenet" ("Alpha Tenet Nor" is an anagram of "another planet", and you dropped "Nor"). It's a simple matter to substitute these new Bits into the old Bits' place: "A game about a solarpunk society on Alpha Tenet".
 
