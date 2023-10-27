@@ -11,8 +11,8 @@
     <h1 class="title">{{taxonomy.name | capitalize()}}</h1>
     <div class="columns is-multiline">
     {% for term in terms | sort(attribute="name") %}
-    <div class="column">
-        <a href="{{term.permalink | safe}}">{{term.name}}</a>
+    <div class="column is-2">
+        <a href="{{term.permalink | safe}}">{{term.name}}</a> &raquo;
     </div>
     {% endfor %}
     </div>
