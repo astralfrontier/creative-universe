@@ -30,6 +30,12 @@ external_links_target_blank = true
 external_links_no_follow = true
 external_links_no_referrer = true
 
+[search]
+include_title = true
+include_description = true
+include_content = true
+index_format = "elasticlunr_json"
+
 [extra]
 default_banner = "/brand/shutterstock_2284544289.jpg"
 tag_banner_images = { Vampire = "blog/gothic-2097966_1280.jpg" }

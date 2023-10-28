@@ -12,6 +12,17 @@
         </div>
         <div id="navbarMenu" class="navbar-menu">
             <div class="navbar-end">
+                <div class="navbar-item has-dropdown" id="navbar-search-element">
+                    <a class="navbar-link is-arrowless">
+                        <input class="input is-rounded" type="text" placeholder="Search" id="navbar-search-input">
+                    </a>
+                    <div class="navbar-dropdown" id="navbar-search-dropdown">
+                        <a class="navbar-item">
+                          Overview
+                        </a>
+                      </div>
+                </div>
+                <a class="navbar-item"></a>
                 {% for link in config.extra.navbar %}
                 {% if link.items %}
                 <div class="navbar-item has-dropdown is-hoverable" aria-label="{{link.title}}">
