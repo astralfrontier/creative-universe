@@ -51,11 +51,13 @@
             in <a href="{{parent_section.permalink | safe}}">{{parent_section.title}}</a>
             {% endif %}
         </p>
-        {% if page.taxonomies and page.taxonomies.tags %}
+        {% if page.taxonomies %}
         <div class="tags has-addons level-item">
-            {% for tag in page.taxonomies.tags %}
-            {% set url = get_taxonomy_url(kind="tags", name=tag) %}
+            {% for type in config.taxonomies %}
+            {% for tag in page.taxonomies[type.name] | default(value=[]) %}
+            {% set url = get_taxonomy_url(kind=type.name, name=tag) %}
             <span class="tag is-rounded"><a href="{{url | safe}}">{{tag}}</a></span>
+            {% endfor %}
             {% endfor %}
         </div>
         {% endif %}
