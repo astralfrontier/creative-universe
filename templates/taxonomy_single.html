@@ -15,8 +15,9 @@
 
 {% block content %}
 <section class="hero is-info is-medium is-bold">
-    {% if config.extra.tag_banner_images[term.name] %}
-    {% set banner_image_path = config.extra.tag_banner_images[term.name] %}
+    {% set banner_image_match = config.extra.tag_banner_images | filter(attribute="tag", value=term.name) %}
+    {% if banner_image_match[0] %}
+    {% set banner_image_path = banner_image_match[0].banner_image %}
     {% else %}
     {% set banner_image_path = config.extra.default_banner %}
     {% endif %}
