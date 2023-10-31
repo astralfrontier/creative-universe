@@ -25,8 +25,25 @@
 {% endblock %}
 
 {% block content %}
+{% if section.subsections or section.ancestors | length > 1 %}
+<div class="columns is-centered">
+    {% if section.ancestors | length > 1 %}
+    {% set subsection = get_section(path=section.ancestors[1], metadata_only=true) %}
+    <div class="column is-narrow">
+        <a class="button is-link" href="{{subsection.permalink | safe}}">&laquo; {{ subsection.title }}</a>
+    </div>
+    {% endif %}
+    {% for subsection_path in section.subsections %}
+    {% set subsection = get_section(path=subsection_path, metadata_only=true) %}
+    <div class="column is-narrow">
+        <a class="button is-link" href="{{subsection.permalink | safe}}">{{ subsection.title }} &raquo;</a>
+    </div>
+    {% endfor %}
+</div>
+</div>
+{% endif %}
 {{ macros::banner(page=section)}}
-<div class="container">    
+<div class="container">
     {% if paginator %}
     {{ macros::articles(pages=paginator.pages) }}
     {{ macros::pagination(paginator=paginator) }}
