@@ -46,8 +46,8 @@
             {% if page.date %}
             on {{page.date | date(format="%b %e %Y")}}
             {% endif %}
-            {% if page.ancestors and page.ancestors[1] %}
-            {% set parent_section = get_section(path=page.ancestors[1], metadata_only=true) %}
+            {% if page.ancestors | length > 1 %}
+            {% set parent_section = get_section(path=page.ancestors | last, metadata_only=true) %}
             in <a href="{{parent_section.permalink | safe}}">{{parent_section.title}}</a>
             {% endif %}
         </p>
@@ -147,8 +147,8 @@
                     <small>{{page.date | date(format="%b %e %Y")}}</small>
                     {% endif %}
                 </a>
-                {% if page.ancestors %}
-                {% set parent_section = get_section(path=page.ancestors[1], metadata_only=true) %}
+                {% if page.ancestors | length > 1 %}
+                {% set parent_section = get_section(path=page.ancestors | last, metadata_only=true) %}
                 <small>in <a href="{{parent_section.permalink | safe}}">{{parent_section.title}}</a></small>
                 {% endif %}
                 <br>

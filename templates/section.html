@@ -28,7 +28,7 @@
 {% if section.subsections or section.ancestors | length > 1 %}
 <div class="columns is-centered">
     {% if section.ancestors | length > 1 %}
-    {% set subsection = get_section(path=section.ancestors[1], metadata_only=true) %}
+    {% set subsection = get_section(path=section.ancestors | last, metadata_only=true) %}
     <div class="column is-narrow">
         <a class="button is-link" href="{{subsection.permalink | safe}}">&laquo; {{ subsection.title }}</a>
     </div>
