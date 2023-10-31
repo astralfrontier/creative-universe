@@ -3,10 +3,9 @@ title = "Unwinnable Fights In Masks"
 description = "How to create encounters where the PCs don't just beat up the NPCs"
 date = "2021-08-09T01:23:22.667Z"
 authors = ["astralfrontier"]
-weight = 1002
 
 [taxonomies]
-tags = ["Game Advice"]
+tags = ["Game Advice", "Masks"]
 
 [extra]
 +++

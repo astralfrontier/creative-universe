@@ -1,6 +1,6 @@
 +++
-title = "The Compleat Villain"
-sort_by = "date"
+title = "Characters"
+sort_by = "title"
 generate_feed = false
 +++
 

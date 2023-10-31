@@ -3,7 +3,6 @@ title = "Ex-Factor"
 description = "an alternate angle for in-character romance"
 date = "2021-08-09T01:22:52.394Z"
 authors = ["astralfrontier"]
-weight = 1001
 
 [taxonomies]
 tags = ["Game Advice"]

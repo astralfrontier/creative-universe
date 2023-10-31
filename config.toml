@@ -46,6 +46,7 @@ navbar = [
     {title="Home", url="/"},
     {title="Fiction", url="/fiction/"},
     {title="Projects", url="#", items = [
+        {title="The Compleat Villain", url="/compleat-villain/"},
         {title="MEGALOS", url="/megalos/"},
         {title="Quarto Decimo Novum", url="/quarto-decimo-novum/"},
         {title="Tosk", url="/tosk/"},
