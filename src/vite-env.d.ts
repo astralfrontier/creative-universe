@@ -5,14 +5,14 @@ type TagName = string
 interface CreativeResource {
   name: string
   url: string
-  desc?: string
+  description?: string
   tags?: TagName[]
 }
 
 interface Tag {
   tag: TagName
   parents?: TagName[]
-  desc?: string
+  description?: string
 }
 
 declare module '*.module.sass'

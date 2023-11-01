@@ -19,7 +19,7 @@ function ResourceCard(props: ResourceCardProps) {
               {resource.name}
             </a>
           </p>
-          <div className="content">{resource.desc}</div>
+          <div className="content">{resource.description}</div>
         </div>
         <footer className="card-footer">
           {without([currentTag], tags).map((tag) => (

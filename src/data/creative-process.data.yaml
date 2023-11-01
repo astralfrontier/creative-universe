@@ -1,5 +1,5 @@
 - name: Foo
   url: https://foo
-  desc: Foo Bar
+  description: Foo Bar
   tags:
     - Creative Process

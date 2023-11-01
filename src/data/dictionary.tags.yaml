@@ -1,6 +1,6 @@
 - tag: Creative Process
-  desc: The overall process of producing something, including workflow tools, tips, and templates.
+  description: The overall process of producing something, including workflow tools, tips, and templates.
 - tag: Project Management
-  desc: TODO
+  description: TODO
   parents:
     - Creative Process

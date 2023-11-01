@@ -15,7 +15,7 @@ function CategoryCard(props: CategoryCardProps) {
           <p className="is-size-4">
             <a href={categoryUrl(category)}>{category.tag}</a>
           </p>
-          <div className="content">{category.desc}</div>
+          <div className="content">{category.description}</div>
         </div>
       </div>
     </>

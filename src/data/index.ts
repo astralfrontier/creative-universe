@@ -8,7 +8,7 @@ import fonts from './fonts.data.yaml'
 // A more formal version of "tag"
 export interface CreativeCategory {
   tag: TagName
-  desc: string
+  description: string
   parents: TagName[]
   children: TagName[]
   resources: CreativeResource[]
@@ -42,7 +42,7 @@ const creativeCategories: CreativeCategoryDb = reduce(
   (db, tag) => {
     const category: CreativeCategory = {
       tag: tag.tag,
-      desc: tag.desc || '',
+      description: tag.description || '',
       parents: tag.parents || [],
       children: childrenOfThisTag(tag.tag),
       resources: resourcesWithTag(tag.tag),
