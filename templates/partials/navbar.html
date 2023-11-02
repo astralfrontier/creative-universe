@@ -37,7 +37,7 @@
                 </div>
                 {% else %}
                 {% if link.external %}
-                <a class="navbar-item" rel="noopener nofollow noreferrer" href="{{link.url | safe}}" target="_blank"  aria-label="{{link.title}}">
+                <a class="navbar-item" rel="noopener noreferrer me" href="{{link.url | safe}}" target="_blank"  aria-label="{{link.title}}">
                 {% else %}
                 <a class="navbar-item" href="{{link.url | safe}}" aria-label="{{link.title}}">
                 {% endif %}
