@@ -15,6 +15,8 @@
     <title>{{config.title}}</title>
     <meta name="description" content="{{config.description}}" />
     {% endblock %}
+    {# Webmention.io support #}
+    <link rel="webmention" href="https://webmention.io/astralfrontier.org/webmention" />
     {# Validation for Mastodon instances #}
     {% for social in config.extra.navbar | filter(attribute="mastodon", value=true) %}
     <link rel="me" href="{{ social.url | safe }}" />
