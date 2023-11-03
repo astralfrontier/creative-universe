@@ -39,12 +39,13 @@
     <div class="media-center">
         <img src="/brand/avatar-256x256.png" class="author-image" alt="Astral Frontier">
     </div>
-    <div class="media-content has-text-centered mt-6">
-        <p class="title article-title"><a href="{{page.permalink | safe}}">{{page.title}}</a></p>
+    {# h-entry, p-name, etc. are part of the microformats protocol - http://microformats.org/wiki/h-entry #}
+    <div class="media-content has-text-centered mt-6 h-entry">
+        <p class="title article-title"><a href="{{page.permalink | safe}}" class="p-name">{{page.title}}</a></p>
         <p class="subtitle is-6 article-subtitle">
-            <a href="#">@astralfrontier</a>
+            <a class="p-author h-card" href="https://astralfrontier.org">@astralfrontier</a>
             {% if page.date %}
-            on {{page.date | date(format="%b %e %Y")}}
+            on <time class="dt-published" datetime="{{page.date}}">{{page.date | date(format="%b %e %Y")}}</time>
             {% endif %}
             {% if page.ancestors | length > 1 %}
             {% set parent_section = get_section(path=page.ancestors | last, metadata_only=true) %}
@@ -56,14 +57,14 @@
             {% for type in config.taxonomies %}
             {% for tag in page.taxonomies[type.name] | default(value=[]) %}
             {% set url = get_taxonomy_url(kind=type.name, name=tag) %}
-            <span class="tag is-rounded"><a href="{{url | safe}}">{{tag}}</a></span>
+            <span class="tag is-rounded"><a class="p-category" href="{{url | safe}}">{{tag}}</a></span>
             {% endfor %}
             {% endfor %}
         </div>
         {% endif %}
     </div>
 </div>
-<div class="content article-body mt-5">
+<div class="content article-body mt-5 e-content">
     {% if not force_full and page.summary %}
     {{page.summary | safe}}
     <p>
