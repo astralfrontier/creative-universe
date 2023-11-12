@@ -15,6 +15,8 @@ I've been working on Constellation Cards (formerly "flip-a-card", my branding is
 Recently, some positive encouragement motivated me to bring it back to life
 and try to get it ship-shape.
 
+You can try the Tabletop Simulator version of the game by subscribing to [Constellation Cards on Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=3080002958).
+
 I want to talk about the technical aspects of how I created the cards in their current form,
 and what my next steps are for the game.
 
