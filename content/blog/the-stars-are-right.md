@@ -5,7 +5,7 @@ date = "2023-11-11 20:49:15"
 authors = ["astralfrontier"]
 
 [taxonomies]
-tags = ["Game Design Diary"]
+tags = ["Constellation Cards", "Game Design Diary"]
 
 [extra]
 banner_image = "blog/north-star-2869817_1280.jpg"
