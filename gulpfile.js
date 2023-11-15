@@ -1,6 +1,7 @@
 const { src, dest, series, parallel } = require("gulp");
 const htmlmin = require("gulp-htmlmin");
 const postcss = require("gulp-postcss");
+const cheerio = require("gulp-cheerio");
 const cp = require("child_process");
 const purgecss = require("@fullhuman/postcss-purgecss");
 
@@ -53,7 +54,28 @@ function css(_cb) {
     .pipe(dest("public"));
 }
 
+// function modifyHtml(_cb) {
+//   return src("public/**/*.html")
+//     .pipe(
+//       cheerio(($, file) => {
+//         const usesLightbox = $("a[data-lightbox]").length > 0;
+//         if (usesLightbox) {
+//           $("head").append(
+//             `<link href="/lightbox/lightbox.min.css" rel="stylesheet"></link>`
+//           );
+//           $("body").append(`<script src="/lightbox/lightbox.min.js"></script>`);
+//         }
+//       })
+//     )
+//     .pipe(dest("public/"));
+// }
+
 exports.preinstall = parallel(fontAwesome, jquery);
-exports.build = series(exports.preinstall, zolaBuild, minify, css);
+exports.build = series(
+  exports.preinstall,
+  zolaBuild,
+  /* modifyHtml, */ minify,
+  css
+);
 exports.serve = series(exports.preinstall, zolaServe);
 exports.default = exports.build;

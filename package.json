@@ -12,6 +12,7 @@
     "@fullhuman/postcss-purgecss": "^5.0.0",
     "bulma-scss": "^0.9.4",
     "gulp": "^4.0.2",
+    "gulp-cheerio": "^1.0.0",
     "gulp-cli": "^2.3.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-postcss": "^9.0.1",
