@@ -50,13 +50,15 @@ He sees the farm animals as loud hindrances, always doing whatever they feel lik
 He wants to be out _doing_! He's restless - all the time. Even when the elders overwork him to try and drain some of that nervous energy,
 he gets the work done. He's just not happy about it.
 
+After all, there's a war to fight.
+
 {% message() %}
 His Aspect will, of course, be Flame! He gets +5 to Vigor. His Aspect relationships are Frost (opposed), Aero (complementary), and Wave (weakened).
 
 His Background is Smallfolk. This is worth another +5 to Vigor. He'll take +1 to Create and +1 to Restore, and the Country Mouse trait.
 {% end %}
 
-War? Of course. Not a week goes by that the villagers don't see someone on the road.
+War? Of course there's a war. Not a week goes by that the villagers don't see someone on the road.
 Nobles escorted by their armored guard, or furtive couriers carrying dispatches to the castle,
 or an increasing number of injured soldiers warning of battles that began in far-off places but whose names are growing more and more familiar.
 
