@@ -210,8 +210,8 @@ had the pair come across them instead of him.
 
 {% message() %}
 Roland rolls his battle dice and gets 5, 4, 4, and 6.
-This is enough to buy a four-hit combo!
-This is an ATK of 10 + (19 + 5) * 4, or 106!
+This is enough to buy a four-hit combo, but he's capped at 3 hits with his current weapon.
+This is an ATK of 10 + (19 + 5) * 3, or 82.
 This is enough to pierce the Soldier's PDEF
 and break through his Counter.
 {% end %}
