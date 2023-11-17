@@ -39,6 +39,9 @@
     <div class="media-center">
         <img src="/brand/avatar-256x256.png" class="author-image" alt="Astral Frontier">
     </div>
+    {% if force_full %}
+    <a id="article-top"></a>
+    {% endif %}    
     {# h-entry, p-name, etc. are part of the microformats protocol - http://microformats.org/wiki/h-entry #}
     <div class="media-content has-text-centered mt-6 h-entry">
         <p class="title article-title"><a href="{{page.permalink | safe}}" class="p-name">{{page.title}}</a></p>
@@ -83,6 +86,24 @@
     {{page.content | safe}}
     {% endif %}
 </div>
+{% if force_full %}
+<hr />
+<div class="columns is-vcentered">
+    <div class="column is-one-third has-text-centered">
+        {% if page.lower %}
+        <a href="{{page.lower.permalink | safe}}">&laquo; {{page.lower.title | default(value="Previous page")}}</a>
+        {% endif %}
+    </div>
+    <div class="column is-one-third has-text-centered">
+        <a href="#article-top">Back to top</a>
+    </div>
+    <div class="column is-one-third has-text-centered">
+        {% if page.higher %}
+        <a href="{{page.higher.permalink | safe}}">{{page.higher.title | default(value="Previous page")}} &raquo;</a>
+        {% endif %}
+    </div>
+</div>
+{% endif %}
 {% endmacro article_unwrapped %}
 
 {# Show an article, which coudld be abbreviated #}
