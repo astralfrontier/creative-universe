@@ -26,6 +26,11 @@ const section = await select({
       value: "fiction",
       description: "Alphabetical fiction posts",
     },
+    {
+      name: "Arise",
+      value: "fiction/arise",
+      description: "The Arise playtest",
+    },
   ],
 });
 console.log("Hit enter, Inquiry is stupid");
