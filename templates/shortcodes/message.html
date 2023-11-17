@@ -1,8 +1,10 @@
 <article class="message {% if class %}{{class}}{% endif %}">
+  {% if title %}
   <div class="message-header">
     <p>{{title}}</p>
   </div>
+  {% endif %}
   <div class="message-body">
-    {{body}}
+    {{body | markdown | safe}}
   </div>
 </article>
