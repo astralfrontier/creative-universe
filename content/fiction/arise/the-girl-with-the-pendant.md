@@ -10,6 +10,8 @@ You can find the first part [here](@/fiction/arise/once-upon-a-time.md).
 
 The party's stats can be found [here](https://docs.google.com/spreadsheets/d/1QqLpA2g9iKBnC2W0MKc9dYUDJCFcCuMtcGI0L4JxLKQ/edit?usp=sharing).
 
+<!-- more -->
+
 ----
 
 Roland, a fiery farmboy with grand dreams of adventure,
