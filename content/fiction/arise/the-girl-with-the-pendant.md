@@ -92,7 +92,7 @@ The girl thinks, and nods at last. She lays a hand on the pendant she wears.
 "The first thing I remember is this gem. I felt sure I had to put it on. So I did.
 If this is what defines me for the moment, then please call me 'Gem'."
 
-{% message() %}
+{% message(class="is-info") %}
 This is Gem's introduction as a character.
 
 First, let's talk about her as an Arise character.
@@ -123,7 +123,7 @@ There's no mechanical effect here - it just tells us what kind of world this wil
 Roland grins. "Okay. 'Gem'. My name's Roland. It's nice ta meetcha."
 He sticks out a hand, for a country handshake, but Gem is already checking the fallen soldiers.
 
-{% message() %}
+{% message(class="is-info") %}
 Roland fought a pair of Rank 2 soldiers. Now we roll on their loot table, getting 5 and 3.
 This yields 6 Gold and 1 Normal Crafting Supply, which go into the party inventory.
 {% end %}
@@ -160,7 +160,7 @@ minding the rustle of her clothing, breathing evenly.
 As a hunter, Roland has learned to be quiet from watching his elders during his formative years.
 But she's better at it than he is.
 
-{% message() %}
+{% message(class="is-info") %}
 This is a Skill Challenge, using Sneak.
 At stake is the risk of another encounter with hunting soldiers.
 The difficulty is Average (DC 9).
@@ -188,7 +188,7 @@ massive wagons of riveted black iron.
 There are a few soldiers - commanders, Roland thinks - that seem to be
 mounted into horse bodies, their upper torsos where a horse's head ought to be.
 
-{% message() %}
+{% message(class="is-info") %}
 These are "Mecha-taurs", our world's equivalent of something like FFVI's magitek armor.
 Officers are partially enclosed in centaur-like mecha suits.
 These suits can also be equipped with turreted weapons or other gadgets,
@@ -280,7 +280,7 @@ The only way Roland knows of going to the City is to get a wagon,
 load it with supplies, and follow the road.
 He can't do any of that - no wagon, no supplies, no road.
 
-{% message() %}
+{% message(class="is-info") %}
 The party is going to make a Navigation check.
 Fortunately the journey is short, only 5 days' travel - 10 marks.
 Unfortunately, it's dangerous! In addition to that, our heroes aren't properly
@@ -325,7 +325,7 @@ All of these things have names and uses.
 Gem listens, and nods appreciatively, and makes comments or asks questions.
 But none of it seems familiar.
 
-{% message() %}
+{% message(class="is-info") %}
 The second day's roll is a 1 and 4. This is another point of Drive to the GM,
 and a failure on the check. The party only advances 1 mark, putting them at 3/10.
 {% end %}
@@ -336,7 +336,7 @@ It's gloomy, and dark, but at least they only get damp instead of drenched.
 Still, the mud and the mood slow them down.
 There's less conversation and more determined marching.
 
-{% message() %}
+{% message(class="is-info") %}
 The third day's roll is a 5 and 6. Finally, a point of Drive for the party!
 It's not quite a critical success, but the group is at 5/10 marks.
 {% end %}
@@ -364,7 +364,7 @@ Roland tugs, arm over arm, fighting the weight of the rope and the raft
 and the strength of the current, until the raft is near enough to hop onto.
 More hauling gets the pair across the river and on their way.
 
-{% message() %}
+{% message(class="is-info") %}
 The fourth day's roll is 4 and 5, another success.
 The party marks process, 7/10 marks.
 Another two days will get them to the City.
@@ -392,7 +392,7 @@ And he's realizing that she can protect him too.
 Her quick wit, her healing gifts, and her force of will
 give him comfort when he needs it.
 
-{% message() %}
+{% message(class="is-info") %}
 Day five rolls a 13, another success. The party marks progress, 9/10.
 Even a failure tomorrow would get the group to its destination,
 so we simply skip to that.
@@ -495,7 +495,7 @@ Roland blinks and turns to her. "You speak that language?"
 
 "We cannot afford that," Roland apologizes. "Isn't there some other way you could take us over there, to the City I mean?"
 
-{% message() %}
+{% message(class="is-info") %}
 With Omniglot, Gem can speak the language the Turtle greeted them with,
 and maybe it's lonely and hasn't heard anyone else speak that lately? Would that be worth passage?
 
@@ -517,7 +517,7 @@ Valder kleft idel seri,
 Rubo bibo illo sacro,  
 Maile rile tero tari..._"
 
-{% message() %}
+{% message(class="is-info") %}
 The party wants to make a Perform check to cover passage.
 Success (DC 9) will waive the 10 gold fee for everyone.
 Failure won't impress Paterschildt so much, and they'll only waive it for Gem.

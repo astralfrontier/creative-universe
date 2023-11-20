@@ -30,7 +30,7 @@ Once, he even chased off three bandits! Well, there were two at the time, but th
 Roland doesn't belong here. He should be a _knight_, up at the _castle_. He should be going to war!
 All the old storybooks, with their gallant champions in their bright and invulnerable armor - that's where he belongs. He knows it in his soul.
 
-{% message() %}
+{% message(class="is-info") %}
 We're going to be creating the first of our characters, a typical JRPG protagonist named Roland.
 
 Roland's concept is "Young hothead from a sleepy farming village". He dreams big, he's impatient, he wants to leave and make something of himself,
@@ -52,7 +52,7 @@ he gets the work done. He's just not happy about it.
 
 After all, there's a war to fight.
 
-{% message() %}
+{% message(class="is-info") %}
 His Aspect will, of course, be Flame! He gets +5 to Vigor. His Aspect relationships are Frost (opposed), Aero (complementary), and Wave (weakened).
 
 His Background is Smallfolk. This is worth another +5 to Vigor. He'll take +1 to Create and +1 to Restore, and the Country Mouse trait.
@@ -68,7 +68,7 @@ He's good with a spear, even if it's supposed to be for hunting.
 And he's got a shield, and special armor, made for him by a blacksmith who seemed like he was humoring him more than anything.
 He can fight. He _should_ be out there fighting. For himself, for his village--
 
-{% message() %}
+{% message(class="is-info") %}
 For Cath, we'll take the human-like Hyulan. He'll take +5 to Vigor. For traits, he'll take Heart of the Party and Roadcath.
 
 For Discipline, we'll take the Hoplite. Roland is going to be the party tank, and we'll give him abilities appropriate to the role:
@@ -77,7 +77,7 @@ Closing Step for his free action, and Shield Wall for his free boost.
 
 Two armed men in strange leather armor emerge from the underbrush nearby.
 
-{% message() %}
+{% message(class="is-info") %}
 Let's make a skill check to see if Roland was aware of their passage.
 The difficulty is Average - the men aren't particularly trying to be sneaky, they're searching for something.
 The DC is therefore 8 + (Disc) or 9, since we're on Disc 1. Fortunately Roland rolls a 4 and a 3, plus 2 for his Watch skill, giving him a total of 9!
@@ -89,7 +89,7 @@ The DC is therefore 8 + (Disc) or 9, since we're on Disc 1. Fortunately Roland r
 
 Roland gulps. He - he's going to be fighting!
 
-{% message() %}
+{% message(class="is-info") %}
 True to form for a JRPG, if the sleepyhead hero isn't being woken up by his mother,
 he's going to be dropped into a battle immediately.
 
@@ -110,7 +110,7 @@ Whoever these guys are, they mean business--!
 He isn't thinking of being a soldier any more. He isn't thinking of anything.
 He's just charging forward.
 
-{% message() %}
+{% message(class="is-info") %}
 Roland's spear has an Attack Cost of 3 and is a Combo weapon. Its Damage Value one-handed is 19.
 Its Guard Cost is 3 and Guard Value is 1.
 
@@ -124,7 +124,7 @@ The soldier draws a cruelly curved blade from his belt, raises it in a practiced
 
 Roland's instincts guide his hand. _These guys are the enemy. I can't let them get to the village._
 
-{% message() %}
+{% message(class="is-info") %}
 Roland wants to use the rest of his dice to attack.
 The Soldiers are Metal-aspected and Roland is wielding an ordinary spear, so there's no elemental interaction.
 
@@ -145,7 +145,7 @@ This is Dash -1, Melee Attack +0, increase DEF by 5 until next turn.
 The man groans at the impact of the spear, but does not fall - not yet.
 With Roland close, he swings his wicked blade.
 
-{% message() %}
+{% message(class="is-info") %}
 GM-controlled units don't have battle dice, so Soldier 1 will just inflict his ATK of 30
 against Roland's PDEF of 25. This is enough to inflict 1 HP of harm - Roland didn't save any dice for Counters.
 {% end %}
@@ -157,7 +157,7 @@ He feels like a rider atop a horse that's going wild.
 He's almost too distracted to notice the second soldier charging forward,
 pulling a knife out, and throwing it.
 
-{% message() %}
+{% message(class="is-info") %}
 Soldier 2 uses his **Boot Knife** move. This is a ranged attack at +5,
 plus the **Territorial Advantage** the soldiers now have of +10.
 This is a total of 45 against Roland's PDEF of 25 - enough to inflict 3 HP.
@@ -169,7 +169,7 @@ _That guy threw a knife at me._
 
 The wounded soldier's blade descends, catching Roland unprepared.
 
-{% message() %}
+{% message(class="is-info") %}
 Soldier 1's **Careful Strike** didn't move him quite to the bottom of the initiative order,
 so he's now acting again. This time he's making a melee attack, with an ATK of 45
 for another 3 HP.
@@ -192,7 +192,7 @@ The second soldier is naturally more wary thanks to the fate of his comrade.
 He swings his blade in a series of quick feints, trying to create an opening to exploit.
 Roland can feel his blood flowing. Can the soldier simply outwait him?
 
-{% message() %}
+{% message(class="is-info") %}
 Soldier 2 Dashes to south of Roland, at F3, and attacks at +5.
 His ATK of 35 goes against Roland's modified PDEF of 29, enough to hit for 1 HP.
 Roland spends his spear's Guard Cost with his remaining 5, and reduces the damage by the Guard Value of 1.
@@ -208,7 +208,7 @@ It's not because of grand dreams of knighthood and adventure.
 It's because these two men would have killed any of his village neighbors,
 had the pair come across them instead of him.
 
-{% message() %}
+{% message(class="is-info") %}
 Roland rolls his battle dice and gets 5, 4, 4, and 6.
 This is enough to buy a four-hit combo, but he's capped at 3 hits with his current weapon.
 This is an ATK of 10 + (19 + 5) * 3, or 82.
