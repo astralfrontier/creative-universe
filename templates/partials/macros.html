@@ -115,11 +115,31 @@
 </div>
 {% endmacro article %}
 
+{% macro quip(page) %}
+<section class="hero is-info is-bold is-small promo-block">
+    {% set banner_image_path = self::banner_image(page=page) -%}
+    {% set meta = get_image_metadata(path=banner_image_path) %}
+    {% set image = resize_image(path=banner_image_path, width=meta.width, height=500, op="fit_height") %}
+    <div class="hero-body" style="background-image: url({{image.url | safe}});">
+        <div class="container has-text-centered">
+            <h1 class="title">{{page.title}}</h1>
+            <div class="quip-content is-size-3">
+                {{page.content | safe}}
+            </div>
+        </div>
+    </div>
+</section>
+{% endmacro quip %}
+
 {# Show an array of articles #}
 {% macro articles(pages) %}
 <section class="articles">
     {% for page in pages %}
+    {% if page.taxonomies.tags and page.taxonomies.tags is containing("Quip") %}
+    {{ self::quip(page=page) }}
+    {% else %}
     {{ self::article(page=page) }}
+    {% endif %}
     {% endfor %}
 </section>
 {% endmacro articles %}
@@ -139,22 +159,6 @@
     </div>
 </section>
 {% endmacro banner %}
-
-{# CURRENTLY UNUSED #}
-{% macro promo(page) %}
-<section class="hero is-info is-bold is-small promo-block">
-    <div class="hero-body">
-        <div class="container">
-            <h1 class="title">
-                <i class="fa fa-bell-o"></i> Nemo enim ipsam voluptatem quia.
-            </h1>
-            <span class="tag is-black is-medium is-rounded">
-                Natus error sit voluptatem
-            </span>
-        </div>
-    </div>
-</section>
-{% endmacro promo %}
 
 {# Show an abbreviated media object for an article #}
 {# CURRENTLY UNUSED #}
