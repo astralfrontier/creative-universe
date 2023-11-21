@@ -26,7 +26,7 @@
                 {% for link in config.extra.navbar %}
                 {% if link.items %}
                 <div class="navbar-item has-dropdown is-hoverable" aria-label="{{link.title}}">
-                    <a class="navbar-link">{{link.title}}</a>
+                    <a class="navbar-link" {% if link.url %} href="{{link.url | safe}}" {% endif %}>{{link.title}}</a>
                     <div class="navbar-dropdown">
                         {% for item in link.items %}
                         <a class="navbar-item" href="{{item.url | safe}}">
