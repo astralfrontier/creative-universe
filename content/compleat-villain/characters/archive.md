@@ -32,9 +32,9 @@ If I don't, it's going to burn out of me, like a fire inside my head, like there
 Maybe they can help me control this. If they can't, maybe they can survive me.
 
 # The Nova
-**Hero Name**: Archive
-**Real Name**: Lewis Carter
-**Look**: Man, White, marked skin, fashionable clothing, 
+**Hero Name**: Archive  
+**Real Name**: Lewis Carter  
+**Look**: Man, White, marked skin, fashionable clothing,   
 **Abilities**: Cosmic energies (a civilization's collected knowledge encoded in cosmic radiation)
 
 **Labels**: Danger +1, Freak +2, Savior +0, Superior +1, Mundane -1

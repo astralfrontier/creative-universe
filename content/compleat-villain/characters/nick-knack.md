@@ -33,9 +33,9 @@ What use is it to sense how people feel, if I can't make them feel better?
 I can keep them safe, and they can help me find ways to help other people.
 
 # The Nova
-**Hero Name**: Nick Knack
-**Real Name**: Nicholai Hel
-**Look**: man, white (Russian/Tajik), normal skin, normal clothing, fantastical costume
+**Hero Name**: Nick Knack  
+**Real Name**: Nicholai Hel  
+**Look**: man, white (Russian/Tajik), normal skin, normal clothing, fantastical costume  
 **Abilities**: telekinesis and telepathy - Broad-spectrum psychic powers fueled by psychometry, or absorbing emotional energy from physical items. Out-of-control powers mean that some channeled emotional energy takes over, and the story behind that item takes over whatever Nick wanted to do.
 
 **Labels**: Danger +1, Freak +2, Savior +0, Superior +0, Mundane +0

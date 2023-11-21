@@ -40,9 +40,9 @@ He wants to meet some of the other children from the program, and fight them. Ho
 Apparently there's other things to do than fighting. What's up with that?
 
 # The Bull
-**Hero Name**: Reckoner
-**Real Name**: Erik Drake
-**Look**: man, mixed-race (Swiss, German, Thai), calloused hands, ragged clothing, simple costume (skintight leather, crafted from Titalion's hide, covered by a long black coat)
+**Hero Name**: Reckoner  
+**Real Name**: Erik Drake  
+**Look**: man, mixed-race (Swiss, German, Thai), calloused hands, ragged clothing, simple costume (skintight leather, crafted from Titalion's hide, covered by a long black coat)  
 **Abilities**: superhumanly tough, incredibly strong, slow regeneration, mega-beam breath weapon, predator's instinct
 
 **Labels**: Danger +0, Freak +0, Savior +0, Superior +0, Mundane +0

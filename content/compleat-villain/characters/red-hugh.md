@@ -32,10 +32,10 @@ TBD
 TBD
 
 # The Doomed
-**Hero Name**: Red Hugh
-**Real Name**: Hugh Curran
-**Look**: man, White, haunted eyes, unassuming clothing, grim costume
-**Abilities**: body transmutation, memory manipulation, superhuman strength and speed
+**Hero Name**: Red Hugh  
+**Real Name**: Hugh Curran  
+**Look**: man, White, haunted eyes, unassuming clothing, grim costume  
+**Abilities**: body transmutation, memory manipulation, superhuman strength and speed  
 **Nemesis**: The Woman in White (who turned him into a vampire)
 
 **Labels**: Danger +1, Freak +2, Savior +1, Superior -1, Mundane +0

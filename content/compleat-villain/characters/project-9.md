@@ -43,9 +43,9 @@ So is the team, by the way.
 I guess most statics can't do things like I can do, so I'm putting my native abilities to good use. Plus, my normal shows are a total loss on you all, so they're helping me learn what impresses people here.
 
 # The Outsider
-**Hero Name**: Project 9
-**Real Name**: (indecipherable)
-**Look**: shifting, strange body, bizarre eyes, mismatched clothing, humanizing costume
+**Hero Name**: Project 9  
+**Real Name**: (indecipherable)  
+**Look**: shifting, strange body, bizarre eyes, mismatched clothing, humanizing costume  
 **Abilities**: density control, radical shapeshifting (their body is a 3D projection from the hyperdimension)
 
 **Labels**: Danger -1, Freak +2, Savior +0, Superior +2, Mundane +0

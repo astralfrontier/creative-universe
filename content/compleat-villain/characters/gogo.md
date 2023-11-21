@@ -37,10 +37,10 @@ Aside from Jacques Rabbit, I got spotted as Gogo one time wearing a school jerse
 The team is a bunch of fun weirdos and I finally have somewhere I can be myself! Whoever that is...
 
 # The Janus
-**Hero Name**: Gogo
-**Real Name**: Robby/Robin Rhodes
-**Look**: shifting, White, boring clothing, flashy costume, full disguise. Gogo is lanky, with long dirty blonde hair in a ponytail, in either human incarnation. Pronouns are he or she depending on form. They wear a loose-fitting orange martial arts gi as a costume.
-**Abilities**: supernatural senses, impossible mobility. Gogo can transform into a humanoid galago form, regenerate, and also switch from male to female forms. They have amazing senses, mostly their sense of smell, and a galago's agility, leaping, and gripping when transformed.
+**Hero Name**: Gogo  
+**Real Name**: Robby/Robin Rhodes  
+**Look**: shifting, White, boring clothing, flashy costume, full disguise. Gogo is lanky, with long dirty blonde hair in a ponytail, in either human incarnation. Pronouns are he or she depending on form. They wear a loose-fitting orange martial arts gi as a costume.  
+**Abilities**: supernatural senses, impossible mobility. Gogo can transform into a humanoid galago form, regenerate, and also switch from male to female forms. They have amazing senses, mostly their sense of smell, and a galago's agility, leaping, and gripping when transformed.  
 
 **Labels**: Danger +0, Freak +3, Savior +2, Superior +0, Mundane -2
 

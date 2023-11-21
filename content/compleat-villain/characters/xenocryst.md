@@ -34,9 +34,9 @@ Xuzotl won't let me. The earth-god has an agenda, but won't tell me what it is. 
 Sometimes, I get so angry, and I start breaking things. And maybe they'll help me understand if that's Xuzotl affecting my behavior... or if that's just me.
 
 # The Transformed
-**Hero Name**: Xenocryst
-**Real Name**: Kiana Mostafi
-**Look**: woman, Middle Eastern, strange eyes, plated flesh, no costume
+**Hero Name**: Xenocryst  
+**Real Name**: Kiana Mostafi  
+**Look**: woman, Middle Eastern, strange eyes, plated flesh, no costume  
 **Abilities**: impenentrable armor, inhuman might (a hulking creature made of animated black rock, with glowing red shining through cracks and fissures)
 
 **Labels**: Danger +2, Freak +3, Savior +0, Superior -1, Mundane -1

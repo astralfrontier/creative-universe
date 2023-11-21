@@ -36,9 +36,9 @@ A cheerful not-so-ex villain. He's doing his best, but he's still troublingly vi
 "I could tell the truth, but here's an obvious lie instead. It's because I enjoy being around these other kids and fooling around and doing dumb things with them. And that's it. That's really it. That's the sole reason, yep yep."
 
 # The Reformed
-**Hero Name**: Rivet
-**Real Name**: Jun Kasui
-**Look**: man, Asian, gorgeous eyes, school uniform, tattered costume
+**Hero Name**: Rivet  
+**Real Name**: Jun Kasui  
+**Look**: man, Asian, gorgeous eyes, school uniform, tattered costume  
 **Abilities**: Ferrokinesis: can manipulate and shape metals. Surgically provided with metal implants in the joints.
 
 **Labels**: Danger +3, Freak +1, Savior +0, Superior +1, Mundane -2

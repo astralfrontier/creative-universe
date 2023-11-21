@@ -36,9 +36,9 @@ Well the cops hate me, because some detective figured out I'd actually been part
 Well it's a nice change, this whole "being legit" thing, hanging out with heroes who didn't make the HCPD's shit list. I mean, they don't know what life is like either, but at least it's refreshing to hear how optimistic they are about the system.
 
 # The Star
-**Hero Name**: iSpider
-**Real Name**: Craig Gardener
-**Look**: man, White, warm smile, casual clothing, flashy costume
+**Hero Name**: iSpider  
+**Real Name**: Craig Gardener  
+**Look**: man, White, warm smile, casual clothing, flashy costume  
 **Abilities**: body plasticity and stretching (agility and webbing provided by a super-suit)
 
 **Labels**: Danger +0, Freak +1, Savior +1, Superior +2, Mundane -1

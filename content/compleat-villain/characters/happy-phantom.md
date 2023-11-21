@@ -43,10 +43,10 @@ What happened to me shouldn't happen to anyone. Being away from that situation, 
 ## Why do you care about the team?
 Answer
 
-# The PLAYBOOK
-**Hero Name**: Happy Phantom
-**Real Name**: Jerry "Jersey" Saylor
-**Look**: man, white, smiling face, casual clothing, iconic costume (bedsheet with holes cut out of it)
+# The Beacon
+**Hero Name**: Happy Phantom  
+**Real Name**: Jerry "Jersey" Saylor  
+**Look**: man, white, smiling face, casual clothing, iconic costume (bedsheet with holes cut out of it)  
 **Abilities**: camouflage and stealth (invisibility), phasing
 
 **Labels**: Danger -1, Freak -1, Savior +2, Superior +0, Mundane +2

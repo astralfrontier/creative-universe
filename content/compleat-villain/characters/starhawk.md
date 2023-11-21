@@ -62,9 +62,9 @@ The rest of this team feels like it kinda needs some support too, honestly.
   - What makes legacy members proud: giving a memorable, worthwhile experience to your partner, and using its gift of power well
 
 # The Legacy
-**Hero Name**: Starhawk ("the Starhawk of Sol")
-**Real Name**: Finn Lund
-**Look**: man, mixed (Irish/German/Pakistani), comfortable clothing, traditional costume, animal insignia (the Starhawk symbol)
+**Hero Name**: Starhawk ("the Starhawk of Sol")  
+**Real Name**: Finn Lund  
+**Look**: man, mixed (Irish/German/Pakistani), comfortable clothing, traditional costume, animal insignia (the Starhawk symbol)  
 **Abilities**: Super strength, invincibility, flight
 
 **Labels**: Danger -1, Freak +0, Savior +2, Superior +0, Mundane +2
@@ -92,7 +92,5 @@ Your legacy is an important part of Halcyon City. Name the different members of 
 - Stellar Shroud (the Starhawk of Procyon) is retired and quite judgemental
 
 # Media
-
-![finnlund.jpg](/finnlund.jpg =25%x25%)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oUh-BAe0DwE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

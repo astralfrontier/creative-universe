@@ -59,9 +59,9 @@ Armiger is the black sheep of the Grail Knights. He's a lowly Aspirant, and he d
 * The sword's powers are not under the wielder's full control, but learning more about what the sword represents will unlock new powers or more control.
 
 # The Legacy
-**Hero Name**: Armiger
-**Real Name**: William Eddison
-**Look**: man, Black, comfortable clothing, unique costume ("knight hoodie"), no insignia (other than the sword)
+**Hero Name**: Armiger  
+**Real Name**: William Eddison  
+**Look**: man, Black, comfortable clothing, unique costume ("knight hoodie"), no insignia (other than the sword)  
 **Abilities**: Grail Knight; bearer of an Excaliber fragment ("divine armor, magic weaponry, mythic might")
 
 **Labels**: Danger +0, Freak +0, Savior +2, Superior +0, Mundane +1
@@ -75,7 +75,7 @@ Answer
 
 **Influence**: Give three teammates influence
 
-## PLAYBOOK Moves
+## Legacy Moves
 
 **I Know What I Am**: (Will is the eternal protector)
 

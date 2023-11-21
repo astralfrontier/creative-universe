@@ -40,9 +40,9 @@ Aldous Ashton, a writer and journalist, who condemned the role of superheroes in
 Well, all these people seem to have something to do with the war, somehow or other. Maybe they can give me some pointers on how to go about doing this hero thing!
 
 # The Janus
-**Hero Name**: Spitfire
-**Real Name**: Victor "Vic" Venture
-**Look**: man, White, boring clothing, iconic costume, helmet
+**Hero Name**: Spitfire  
+**Real Name**: Victor "Vic" Venture  
+**Look**: man, White, boring clothing, iconic costume, helmet  
 **Abilities**: Heightened physical abilities (the "Icarus Potential"), plus impossible mobility (jet pack, plus an excellent 3D spatial sense) and energy absorption (the "Z-Gun")
 
 **Labels**: Danger +1, Freak -1, Savior +0, Superior +0, Mundane +3
