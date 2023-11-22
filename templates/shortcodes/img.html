@@ -1,0 +1,20 @@
+{# img(src="url" alt="Text" href="url" class="CSS class list" #}
+<a
+    {% if href %}
+    href="{{href | safe}}"
+    {% else %}
+    href="{{src | safe}}"
+    {% endif %}
+    target="_blank">
+    <img
+        src="{{src | safe}}"
+        {% if alt %}
+        alt="{{alt}}"
+        {% else %}
+        alt="Image has no description"
+        {% endif %}
+        {% if class %}
+        class="{{class}}"
+        {% endif %}
+    />
+</a>

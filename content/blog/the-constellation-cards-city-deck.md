@@ -27,7 +27,7 @@ The numbers are arbitrary - I could have started with two Neighborhoods, or four
 
 Here's a sample spread:
 
-![A Tabletop Simulator view of Constellation Cards City cards](/blog/constellation-cards-city-2003-11-14.png)
+{{ img(src="/blog/constellation-cards-city-2003-11-14.png" alt="A Tabletop Simulator view of Constellation Cards City cards")}}
 
 - Three neighborhoods: a prosperous Warren, a prosperous Marketplace, and a prosperous Uptown
 - The Warren and the Marketplace are connected by a stable Criminal relationship
