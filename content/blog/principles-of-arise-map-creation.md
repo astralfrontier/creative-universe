@@ -54,7 +54,7 @@ In addition, many maps have what I think of as "catwalks": highly elevated strip
 hard to reach, where ranged attackers can command good chunks of the battlefield beneath them.
 In the urban maps, these are often rooftops, reachable from one side of the building.
 
-# Construcing Arise maps
+# Constructing Arise maps
 
 With these things in mind, let's think about how we create an Arise map.
 It might be helpful to sketch out key map features on paper before committing to an actual 8x8 grid.
