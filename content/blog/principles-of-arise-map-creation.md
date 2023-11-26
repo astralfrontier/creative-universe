@@ -80,3 +80,18 @@ to the other, maybe there's a shorter path with a chokepoint,
 but a longer and more open path.
 If the enemy controls the chokepoint, you can either fight them or go the long way around.
 But there's no single point where the map bogs down.
+
+# Practical limitations
+
+If you are playing in an environment where you can't have an actual 3D map,
+only a 2D image of it, you may be able to design maps with tiles that you can't actually see during play.
+For example, if you build a mountain at the center of your map,
+and we can only see the west side of it, how will characters move around to the east?
+
+You can solve this in two ways: by making another view of the map, e.g. a top down view
+or view from the other side of the obstacle, or by designing maps using V- or L-type
+terrain.
+
+If you are [creaeting isometric battlemaps in Blender](@/blog/creating-isometric-battlemaps-in-blender.md),
+those instructions talk about how to set up both a top-down and an isomorphic camera.
+You can render the same map twice, then add both maps side-by-side in your Virtual Tabletop.
