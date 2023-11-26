@@ -5,7 +5,7 @@ date = "2023-11-25 16:40:15"
 authors = ["astralfrontier"]
 
 [taxonomies]
-tags = ["Blender"]
+tags = ["Arise", "Blender"]
 
 [extra]
 banner_image = "blog/Arise.png"
