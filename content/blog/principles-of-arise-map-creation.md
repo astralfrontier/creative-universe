@@ -29,11 +29,13 @@ which we can't easily replicate. So we'll focus on the shape, not the appearance
 
 You can see 3D models of the FFT maps [here](https://www.cavesofnarshe.com/fft/maps/index.php).
 
-**Implied Extension**. The maps don't feel like isolated places, but rather arbitrarily chosen squares
-of some hypothetical larger map.
-You aren't fighting at the castle walls, you're fighting at a specific gate within those walls.
-The actual walls, a moat, or the castle within don't exist on your map, but they're implied
-by the incompleteness of your actual map.
+What qualities do these maps have?
+
+**The Implied Surroundings**. You don't fight FFT battles at "the castle"
+or in the entire town. You fight at one gate in one part of the castle wall,
+or between a few buildings on one street.
+Each map feels like a tiny chunk of a larger whole,
+and the world feels bigger for it.
 
 **Verticality**. Many of the maps are more like cubes than squares at their highest point.
 From this, we can suggest a guideline: design maps with a maximum height of 5 to 8.
@@ -43,7 +45,7 @@ Pick the one that makes the most sense for you.
 
 - A-type maps. The terrain rises from a low outer ring to an elevated center. This can be a map built around a tower, hill, or some other singular feature.
 - V-type maps. The terrain is a valley between two or more elevated sections. This can represent an alleyway in a city.
-- L-type maps. These rise from low terrain on one side of the map to high terrain on the other. The anchor point for elevation can be on one side, or it can be in a corner.
+- L-type maps. Inclines where the low and high terrain are on opposite sides of the map. The anchor point for elevation can be on one side, or it can be in a corner. This can be the slope of a hill or a collapsed basement.
 - S-type maps. These intermingle high and low terrain, as in a set of canyons or small buildings on either side of a road.
 
 **Chokepoints, Cover, and Catwalks**. It's uncommon for a map to have an actual chokepoint - a place
@@ -70,6 +72,9 @@ but it's not going to get in the way of enemies charging at each other.
 A defense quadrant has lots of elevation differences, and some cover or catwalks.
 Units get into positions there, and attack enemies who get close.
 
+Decide whether you want your objectives to be fought over (offense quadrants)
+or maneuvered toward (defense quadrants), and place them appropriately.
+
 **Pick a verticality model and stick with it**. This is the A-, V-, L-, or S-type map mentioned above.
 Decide on where your highest points will be anchored on the map,
 and include one to three tall locations accordingly.
@@ -80,6 +85,16 @@ to the other, maybe there's a shorter path with a chokepoint,
 but a longer and more open path.
 If the enemy controls the chokepoint, you can either fight them or go the long way around.
 But there's no single point where the map bogs down.
+
+**Tile types**. Arise includes several types of special tiles:
+Damaging, Difficult, Obscuring, Slippery, and Charged terrain, as well as Obstacles.
+Try to include a couple of these tile types in your maps, and tie
+them closely to your chokepoints or objectives.
+
+For example, you might design two quadrants. One has high elevation tiles with limited access,
+letting enemies with ranged attacks pelt your guys.
+The other has a stream running through it, which acts as Charged tiles
+and reduces the MP cost for your casters to counterattack or heal allies.
 
 # Practical limitations
 
