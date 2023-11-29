@@ -145,3 +145,16 @@ Upranked Skrint at rank 4 get +1 SPD, +1 Counter, +2 HP, and a +5 to ATK, PDEF, 
 - Pelting Rocks (3-4): Dash +0, Ranged Attack +5, Range 4. Sharp Rocks: Roll d6: on 1-2, the target is BLEEDING.
 - Battle Frenzy (5): I gain HASTE heal 1 HP
 - Summon Pack (6): add one Skrint (Basic) to the bottom of the turn tracker, otherwise as per the Grave Thrall's "Howlcall" move.
+
+## Skrint Encounters
+
+An encounter with a Skrint hivemind should include at least one upranked Skrint,
+who can summon more units.
+
+The map should include the "shiny" - an object, or a doorway to a place - that
+the Skrint have latched onto. An objective of the battle should be to deprive
+the hivemind of the shiny, thus bringing the Skrint to their senses.
+
+The GM can stipulate that Downed Skrint aren't killed, merely injured,
+and that they'll be treated by their comrades once the hivemind is dispelled.
+The PCs can help with this task, perhaps during a Camp scene.
