@@ -9,6 +9,9 @@ tags = ["Arise", "Blender"]
 
 [extra]
 banner_image = "blog/Arise.png"
+pullquote = """
+Blender is a free, open source 3D application. It does 3D modeling, texture painting, compositing, and even video editing. It can be downloaded for free at blender.org.
+"""
 +++
 
 Here's what I did to create a battlemap for Arise in Blender.

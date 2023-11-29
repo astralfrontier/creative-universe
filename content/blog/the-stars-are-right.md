@@ -9,6 +9,9 @@ tags = ["Constellation Cards", "Game Design Diary"]
 
 [extra]
 banner_image = "blog/north-star-2869817_1280.jpg"
+pullquote = """
+ConTeXt is a more modern LaTeX engine that supports PDF/X, TrueType and OpenType fonts, and other features I needed.
+"""
 +++
 
 I've been working on Constellation Cards (formerly "flip-a-card", my branding is crap) for the better part of 6 years.

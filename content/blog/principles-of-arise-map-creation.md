@@ -9,6 +9,10 @@ tags = ["Arise"]
 
 [extra]
 banner_image = "blog/Arise.png"
+pullquote = """
+What’s the nature of this place? Why are we fighting here? What objectives can be found here?
+Pick a few key points on the map, understand what’s at stake if someone can hold or reach those points, and build terrain around those things.
+"""
 +++
 
 Arise is different from other tactical games in a few key ways:

@@ -6,6 +6,9 @@ authors = ["astralfrontier"]
 
 [extra]
 banner_image = "blog/batman-2216148_1280.jpg"
+pullquote = """
+I like these stories because they remind me that whoever you are, whatever power you have, it’s not only okay to be a good person, it’s expected.
+"""
 +++
 
 I started a tweet with these words: "I'll never be off superheroes in some form". And it's true!

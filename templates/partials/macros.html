@@ -78,6 +78,13 @@
         <div class="columns">
             <div class="column is-one-quarter is-article-toc">
                 {{self::toc(headers=page.toc)}}
+                {% if page.extra.pullquote %}
+                <article class="message is-success">
+                    <div class="message-body is-size-4">
+                      {{ page.extra.pullquote | markdown | safe }}
+                    </div>
+                  </article>
+                {% endif %}
             </div>
             <div class="column">
                 {{page.content | safe}}

@@ -9,6 +9,9 @@ tags = ["Constellation Cards","Game Design Diary"]
 
 [extra]
 banner_image = "blog/north-star-2869817_1280.jpg"
+pullquote = """
+The idea is that you deal a set of Neighborhood cards to represent different parts of the city, then Dynamic cards to connect them. The goal is to create a city that will serve as a good basis for drama.
+"""
 +++
 
 I made a lot of progress on the game recently. This includes finishing up work on an optional deck:

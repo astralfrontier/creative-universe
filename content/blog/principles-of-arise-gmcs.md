@@ -9,6 +9,11 @@ tags = ["Arise"]
 
 [extra]
 banner_image = "blog/Arise.png"
+pullquote = """
+Skrint are small goblinkind
+with a worrying quality: when a band of Skrint latch onto something
+beautiful or interesting, they develop a hivemind with each other.
+"""
 +++
 
 The [Arise playtest](https://mataramg.itch.io/arise-trpg) is out,
