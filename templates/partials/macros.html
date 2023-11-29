@@ -198,6 +198,27 @@
 </article>
 {% endmacro media %}
 
+{# Show an array of pages as media objects #}
+{% macro medias(pages) %}
+<section class="articles">
+    {% set pagecount = pages | length /2 %}
+    <div class="box">
+        <div class="columns">
+            <div class="column is-half">
+            {% for page in pages | slice(end=pagecount) %}
+                {{ self::media(page=page) }}
+            {% endfor %}
+            </div>
+            <div class="column is-half">
+            {% for page in pages | slice(start=pagecount) %}
+                {{ self::media(page=page) }}
+            {% endfor %}
+            </div> 
+        </div>   
+    </div> 
+</section>
+{% endmacro medias %}
+
 {# Show the pagination controls for the current page #}
 {% macro pagination(paginator) %}
 {# Only show pagination controls if there's enough elements for it to matter #}

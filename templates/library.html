@@ -1,0 +1,54 @@
+{% extends "partials/base.html" %}
+{% import "partials/macros.html" as macros %}
+
+{% block title %}
+<title>{{section.title}}</title>
+<meta name="description" content="{{section.extra.description | default(value=config.description)}}" />
+{% endblock %}
+
+{% block ogp %}
+<meta property="og:title" content="{{section.title}}" />
+<meta property="og:description" content="{{section.extra.description | default(value=config.description)}}" />
+<meta property="og:type" content="website" />
+{% if current_url %}
+<meta property="og:url" content="{{current_url | safe}}" />
+{% endif %}
+{% set banner_image_path = macros::banner_image(page=section) %}
+{% set banner_image = get_url(path=banner_image_path, trailing_slash=false) %}
+<meta property="og:image" content="{{banner_image | safe}}" />
+{% endblock %}
+
+{% block rss %}
+{% if section.generate_feed %}
+<link rel="alternate" type="application/atom+xml" title="{{section.title}} Feed" href="{{section.permalink | safe}}atom.xml">
+{% endif %}
+{% endblock %}
+
+{% block content %}
+{% if section.subsections or section.ancestors | length > 1 %}
+<div class="columns is-centered">
+    {% if section.ancestors | length > 1 %}
+    {% set subsection = get_section(path=section.ancestors | last, metadata_only=true) %}
+    <div class="column is-narrow">
+        <a class="button is-link" href="{{subsection.permalink | safe}}">&laquo; {{ subsection.title }}</a>
+    </div>
+    {% endif %}
+    {% for subsection_path in section.subsections %}
+    {% set subsection = get_section(path=subsection_path, metadata_only=true) %}
+    <div class="column is-narrow">
+        <a class="button is-link" href="{{subsection.permalink | safe}}">{{ subsection.title }} &raquo;</a>
+    </div>
+    {% endfor %}
+</div>
+</div>
+{% endif %}
+{{ macros::banner(page=section)}}
+<div class="container">
+    {% if paginator %}
+    {{ macros::medias(pages=paginator.pages) }}
+    {{ macros::pagination(paginator=paginator) }}
+    {% else %}
+    {{ macros::medias(pages=section.pages) }}
+    {% endif %}
+</div>
+{% endblock content %}
