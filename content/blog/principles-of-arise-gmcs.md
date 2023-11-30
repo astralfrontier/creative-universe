@@ -46,11 +46,14 @@ the closer I was.
 
 The result goes something like this:
 
-- You start with SPD 1, Dash 2, ATK or MGK 5, PDEF 5, MDEF 5, 1 Counter, 5 HP
-- Your budget is 30 points per rank, +/- 5 points per rank (so you can go between 100 and 140 at rank 4, being 120 +/- 20)
-- Spend 5 points per +1 to SPD, Dash, or HP
-- Spend 5 points to raise Counters to 2 for upranked monsters
-- Spend 5 point per +5 to ATK, MGK, PDEF, or MDEF
+- Your budget is 6 BP (build points) per Rank of GMC, plus or minus 1 per rank (e.g. a rank 5 GMC has 25-35 BP available)
+- **SPD** is 1, +1 per 1 BP spent
+- **Dash** is 2, +1 per 1 BP spent
+- Either **ATK** or **MGK** starts at 5, while the other starts at 0, +5 to either ATK or MGK per 1 BP spent
+- **PDEF** and **MDEF** start at 5, +5 to either PDEF or MDEF per 1 BP spent
+- **Counters** is 1, +1 per BP spent for upranked enemies
+- **HP** is 5, +1 per 1 BP spent
+- **RES** is equal to rank, -1 if you lowered the BP budget, +1 if you raised it, +1 for Elite GMCs
 
 If you roughly balance your points spent, favoring stats appropriate to the GMC (for example,
 more PDEF for tankier monsters, more SPD or Dash for fast guys),
