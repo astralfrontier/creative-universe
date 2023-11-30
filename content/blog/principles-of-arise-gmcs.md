@@ -129,29 +129,33 @@ otherwise makes them empathetic and sensitive to the needs and feelings of other
 
 We'll start Skrint as a rank 2 GMC with the Metal aspect (when they are in their hivemind).
 
-Their base stats are SPD 1 Dash 2 ATK 5 PDEF 5 MDEF 5 Counters 1 HP 5.
-Our point budget is (30 * 2) or 60, plus or minus (5 * 2) or 10 points.
-We'll give them the standard 60 points.
+Their base stats are SPD 1 Dash 2 ATK 5 PDEF 5 MDEF 5 Counters 1 HP 5 RES 2.
+Our point budget is (6 * 2) or 12, plus or minus 2.
+We'll give them the standard 12 BP.
 
-We spend 10 points for SPD 3, 5 points for Dash 3, and nothing for HP.
-We'll spend 10 points on both PDEF and MDEF, bringing them to 15.
-25 points gives us an ATK of 30, and we leave MGK at 5.
-That's 60 points.
+We spend 2 BP for SPD 3, 1 BP for Dash 3, and nothing for HP.
+We'll spend 2 BP each on both PDEF and MDEF, bringing them to 15.
+5 BP gives us an ATK of 30, and we leave MGK at 5.
+That's 12 points.
 
 Comparing our stats to the rank 2 soldier, we see it has
 SPD 2, Dash 3, ATK 30, MGK 0, PDEF 15, MDEF 5, HP 6.
-The Skrint is a little faster but a little more frail by comparison.
+The Skrint is a little faster but a little more frail by comparison,
+with SPD 3, Dash 3, ATK 30, MGK 5, PDEF 15, MDEF 15, HP 5, RES 2, 1 Counter.
 
 We'll give the Skrint the following moves:
 
 - Raking Claws (1-3): Dash +0, Melee Attack +5.
-- Pelting Rocks (4-5): Dash +0, Ranged Attack +5, Range 4. Sharp Rocks: Roll d6: on 1-2, the target is BLEEDING.
+- Pelting Rocks (4-5): Dash +0, Ranged Attack +5, Range 4. _Sharp Rocks_: Roll d6: on 1-2, the target is BLEEDING.
 - Battle Frenzy (6): I gain HASTE heal 1 HP
 
-Upranked Skrint at rank 4 get +1 SPD, +1 Counter, +2 HP, and a +5 to ATK, PDEF, and MDEF. Their move list is:
+Upranked Skrint at rank 4 get +1 SPD, +1 Counter, +2 HP, and a +5 to ATK, PDEF, and MDEF,
+for a total of SPD 4, Dash 3, ATK 35, MGK 5, PDEF 20, MDEF 20, HP 7, RES 4, 2 Counters.
+
+Their move list is:
 
 - Raking Claws (1-2): Dash +0, Melee Attack +5.
-- Pelting Rocks (3-4): Dash +0, Ranged Attack +5, Range 4. Sharp Rocks: Roll d6: on 1-2, the target is BLEEDING.
+- Pelting Rocks (3-4): Dash +0, Ranged Attack +5, Range 4. _Sharp Rocks_: Roll d6: on 1-2, the target is BLEEDING.
 - Battle Frenzy (5): I gain HASTE heal 1 HP
 - Summon Pack (6): add one Skrint (Basic) to the bottom of the turn tracker, otherwise as per the Grave Thrall's "Howlcall" move.
 
@@ -162,8 +166,10 @@ who can summon more units.
 
 The map should include the "shiny" - an object, or a doorway to a place - that
 the Skrint have latched onto. An objective of the battle should be to deprive
-the hivemind of the shiny, thus bringing the Skrint to their senses.
+the hivemind of the shiny, either by destroying it or carrying it off the map
+boundary. This will bring the Skrint to their senses, ending the battle.
 
 The GM can stipulate that Downed Skrint aren't killed, merely injured,
 and that they'll be treated by their comrades once the hivemind is dispelled.
-The PCs can help with this task, perhaps during a Camp scene.
+The PCs can help with this task, perhaps during a Camp scene,
+or leave it to the goblinkind themselves.
