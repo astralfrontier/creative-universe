@@ -44,7 +44,8 @@ Ideally, a correctly weighted rank would balance against the sum of correctly we
 I kept a running total of the standard deviation for the difference - the lower that deviation,
 the closer I was.
 
-The result goes something like this:
+Start by picking a Rank for the GMC. This is roughly equal to a level for PCs,
+and encounter design suggests that 1 PC vs. 2 equivalent GMCs should be a fair fight.
 
 - Your budget is 6 BP (build points) per Rank of GMC, plus or minus 1 per rank (e.g. a rank 5 GMC has 25-35 BP available)
 - **SPD** is 1, +1 per 1 BP spent
@@ -53,7 +54,7 @@ The result goes something like this:
 - **PDEF** and **MDEF** start at 5, +5 to either PDEF or MDEF per 1 BP spent
 - **Counters** is 1, +1 per BP spent for upranked enemies
 - **HP** is 5, +1 per 1 BP spent
-- **RES** is equal to rank, -1 if you lowered the BP budget, +1 if you raised it, +1 for Elite GMCs
+- **RES** is equal to Rank, -1 if you lowered the BP budget, +1 if you raised it, +1 for Elite GMCs
 
 If you roughly balance your points spent, favoring stats appropriate to the GMC (for example,
 more PDEF for tankier monsters, more SPD or Dash for fast guys),
