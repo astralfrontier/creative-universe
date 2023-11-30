@@ -8,6 +8,9 @@ authors = ["astralfrontier"]
 tags = ["Masks Character", "Janus Playbook"]
 
 [extra]
+pullquote = """
+If Jacques Rabbit ever found out it was me that took the serum, he'd come back and hurt my family!
+"""
 +++
 
 A delivery driver who drank the wrong vial of Super-Soldier serum.

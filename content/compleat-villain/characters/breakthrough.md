@@ -8,6 +8,9 @@ authors = ["astralfrontier"]
 tags = ["Character"]
 
 [extra]
+pullquote = """
+Breakthrough's powers were granted by an alien artifact buried under the family house since ancient times, requiring her to revisit the location daily or become sick and weak.
+"""
 +++
 
 "Home and family are fragile, and worth fighting for."
@@ -53,5 +56,3 @@ He currently works as a mobile mechanic, driving a white van and fixing broken-d
 ## Roleplaying Guidelines
 
 You're still Over There, and people around you don't realize that they are too. If there's no distant sounds of gunfire, it means They're just biding their time. It's tough to sleep, because you have to be ready to act at any time. Anything around you could explode at any time, and people are going through their daily lives far too casually, and it's frustrating that they aren't more careful. Stay comfortable in your routines and try to cope however you can.
-
-

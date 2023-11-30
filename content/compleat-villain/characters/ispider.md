@@ -8,6 +8,9 @@ authors = ["astralfrontier"]
 tags = ["Masks Character", "Star Playbook"]
 
 [extra]
+pullquote = """
+The audience loves me because I'm just like them; I'm a dangerous person, a bad seed.
+"""
 +++
 
 A particularly bright henchman of a particularly dim inventor, who's making a name clowning on his former criminal comrades.

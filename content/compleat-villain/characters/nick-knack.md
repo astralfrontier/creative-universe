@@ -8,6 +8,9 @@ authors = ["astralfrontier"]
 tags = ["Masks Character", "Nova Playbook"]
 
 [extra]
+pullquote = """
+What use is it to sense how people feel, if I can't make them feel better?
+"""
 +++
 
 > **sonder**

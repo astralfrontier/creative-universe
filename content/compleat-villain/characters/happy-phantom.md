@@ -8,6 +8,9 @@ authors = ["astralfrontier"]
 tags = ["Masks Character", "Beacon Playbook"]
 
 [extra]
+pullquote = """
+What happened to me shouldn't happen to anyone.
+"""
 +++
 
 A Beacon who became convinced he's a ghost.

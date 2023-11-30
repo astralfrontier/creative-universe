@@ -8,6 +8,9 @@ authors = ["astralfrontier"]
 tags = ["Masks Character", "Reformed Playbook"]
 
 [extra]
+pullquote = """
+I could tell the truth, but here's an obvious lie instead.
+"""
 +++
 
 A cheerful not-so-ex villain. He's doing his best, but he's still troublingly violent at times...
@@ -23,10 +26,12 @@ A cheerful not-so-ex villain. He's doing his best, but he's still troublingly vi
 
 ## Who first showed you that you could do good?			
 "There was a student at the school here. Everywhere Kevin, who has duplication powers. Everyone likes him, not much of a fighter, but easily makes friends with folks."
+
 ## What was your goal as a villain?			
 "I didn't really have a goal. You see, Lifehack was kind of like a Fagin for kids with powers. If you don't know Fagin, think of him like a pimp, but for thieves. If you don't know what a pimp is, well, I'm fifteen and not supposed to know that yet! So you could say that my goal was to avoid being punished for not performing. And that meant doing whatever crimes I could think of."
 
 "She didn't tell us what to do. She just told us where the money was, or might be. She made us study. And then we'd come up with a plan, and go out and do it!"
+
 ## What caused you to switch sides?			
 "I don't know. Well that's not true, but I lie all the time, so that's okay. If I had to tell the truth, I would say that it was just thinking about how the heroes actually worked. Who was bossing them? Nobody. Who would punish them if they failed to perform? Nobody. Well… that sounded like… it was kind of fun. I mean, when I'm doing things I like, it's because it's fun, not because I'm told to. So… I thought maybe, being a hero would feel good."
 

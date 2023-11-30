@@ -8,6 +8,9 @@ authors = ["astralfrontier"]
 tags = ["Masks Character", "Outsider Playbook"]
 
 [extra]
+pullquote = """
+This whole "planet" thing is a novelty to me
+"""
 +++
 
 A mysterious alien whose true form is an ever-changing blur, due to their extension into 3D space from the hyperdimension. But they can take on humanoid forms to interact with people. They're an entertainer by profession, and are trying to continue that here on Earth.

@@ -8,6 +8,9 @@ authors = ["astralfrontier"]
 tags = ["Masks Character", "Nova Playbook"]
 
 [extra]
+pullquote = """
+I tore apart the observatory's equipment to build a device, just so I could explain what I was talking about.
+"""
 +++
 
 Lewis Carter's visit to an experimental observatory ended when he was struck by a cosmic beam that encoded a dying civilization's collective wisdom. Now he's got all this knowledge and all this power, and it's threatening to burn its way out of his skull - unless he does something with it...

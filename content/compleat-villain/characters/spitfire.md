@@ -8,6 +8,9 @@ authors = ["astralfrontier"]
 tags = ["Masks Character", "Janus Playbook"]
 
 [extra]
+pullquote = """
+The Rocket Rangers were, of course, super duper top secret.
+"""
 +++
 
 A Golden Age hero with a jetpack. This version of the character is from a Golden Age game, but there's a modern-era Innocent version of the same concept.

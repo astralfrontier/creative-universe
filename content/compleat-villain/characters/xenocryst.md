@@ -8,6 +8,9 @@ authors = ["astralfrontier"]
 tags = ["Masks Character", "Legacy Playbook"]
 
 [extra]
+pullquote = """
+Sometimes, I get so angry, and I start breaking things. And maybe they'll help me understand if that's Xuzotl affecting my behavior... or if that's just me.
+"""
 +++
 
 An archaeologist's child transformed into an earth elemental by a chthonic god, and now bound to them in a rocky relationship.

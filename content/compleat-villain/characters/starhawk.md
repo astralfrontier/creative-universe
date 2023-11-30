@@ -8,6 +8,9 @@ authors = ["astralfrontier"]
 tags = ["Masks Character", "Legacy Playbook"]
 
 [extra]
+pullquote = """
+Finn's goal is just to take care of his little unhatched Starhawk.
+"""
 +++
 
 "I take care of this baby bird. It's going to hatch into something amazing someday, so I look after it until then. Keeping an eye on it taught me to look after anyone or anything else that needs it."

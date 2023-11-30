@@ -8,6 +8,9 @@ authors = ["astralfrontier"]
 tags = ["Masks Character", "Bull Playbook"]
 
 [extra]
+pullquote = """
+Apparently there's other things to do than fighting. Sounds like nonsense, but worth investigating.
+"""
 +++
 
 High concept: "human Godzilla"
@@ -37,7 +40,7 @@ Erik stays at a shelter or encampment, protecting people there in exchange for s
 He wants to meet some of the other children from the program, and fight them. Honestly, fighting other strong opponents would be good too.
 
 ## Why do you care about the team?
-Apparently there's other things to do than fighting. What's up with that?
+Apparently there's other things to do than fighting. Sounds like nonsense, but worth investigating.
 
 # The Bull
 **Hero Name**: Reckoner  

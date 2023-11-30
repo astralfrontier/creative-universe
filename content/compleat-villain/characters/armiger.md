@@ -8,6 +8,9 @@ authors = ["astralfrontier"]
 tags = ["Masks Character", "Legacy Playbook"]
 
 [extra]
+pullquote = """
+All Grail Knights wield a fragment of Excalibur, the weapon of kings.
+"""
 +++
 
 Adonis Creed, if he joined a group like the Green Lanterns, but instead of magic green rings, it's Thor's hammer, but a fantasy sword.

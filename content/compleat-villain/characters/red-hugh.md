@@ -8,6 +8,9 @@ authors = ["astralfrontier"]
 tags = ["Masks Character", "Doomed Playbook"]
 
 [extra]
+pullquote = """
+...an ancient castle in a shadow sub-dimension...
+"""
 +++
 
 A vampire with a crush on his diabolical sire.
