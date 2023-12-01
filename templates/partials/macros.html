@@ -179,18 +179,35 @@
 <article class="media">
     <div class="media-content">
         <div class="content">
-            <p>
-                <a href="{{page.permalink | safe}}">
-                    <strong>{{page.title}}</strong>
-                    {% if page.date %}
-                    <small>{{page.date | date(format="%b %e %Y")}}</small>
-                    {% endif %}
-                </a>
-                {% if page.ancestors | length > 1 %}
-                {% set parent_section = get_section(path=page.ancestors | last, metadata_only=true) %}
-                <small>in <a href="{{parent_section.permalink | safe}}">{{parent_section.title}}</a></small>
+            <nav class="level">
+                <div class="level-left">
+                    <div class="level-item">
+                        <a href="{{page.permalink | safe}}">
+                            <strong>{{page.title}}</strong>
+                            {% if page.date %}
+                            <small>{{page.date | date(format="%b %e %Y")}}</small>
+                            {% endif %}
+                        </a>
+                        {% if page.ancestors | length > 1 %}
+                        {% set parent_section = get_section(path=page.ancestors | last, metadata_only=true) %}
+                        <small>&nbsp;in <a href="{{parent_section.permalink | safe}}">{{parent_section.title}}</a></small>
+                        {% endif %}        
+                    </div>
+                </div>
+                {% if page.taxonomies %}
+                <div class="level-right">
+                    <div class="level-item">
+                    {% for type in config.taxonomies %}
+                    {% for tag in page.taxonomies[type.name] | default(value=[]) %}
+                    {% set url = get_taxonomy_url(kind=type.name, name=tag) %}
+                    <span class="tag is-rounded"><a class="p-category" href="{{url | safe}}">{{tag}}</a></span>
+                    {% endfor %}
+                    {% endfor %}
+                    </div>
+                </div>
                 {% endif %}
-                <br>
+            </nav>
+            <p>
                 {{page.description}}
             </p>
         </div>
