@@ -74,6 +74,7 @@ then extrude the ramp face separately, then manipulate its edges.
 I experimented with models and textures from the following sources:
 
 - Tiny Texture Pack 1-3 from [Screaming Brain Studios](https://screamingbrainstudios.itch.io/)
+- Pixel Art textures from [FlakDeau](https://flakdeau19.itch.io/)
 - Kenney's 3D models at [kenney.nl](https://kenney.nl/)
 
 Before adding any other textures or graphics, you should set up a default material for the map.
