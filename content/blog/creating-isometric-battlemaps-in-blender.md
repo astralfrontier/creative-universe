@@ -158,7 +158,7 @@ to open it. Then, under Item, set the Camera's properties like this:
 
 In the Properties panel, look for the Camera properties. Inside, set the Lens Type to "Orthographic".
 
-Finally, hit `F12` to render the image, and click the `Image > Save As` menu to save your map file!
+Set "Orthographic Scale" to 30. This controls the "zoom" on the map.
 
 ## Delineating squares
 
@@ -169,4 +169,4 @@ To include lines showing the boundaries of each square:
 3. In Render Properties, turn on "Freestyle"
 4. In View Layer, turn on "Freestyle"
 
-Then, render your image as before, with `F12`.
+Finally, hit `F12` to render the image, and click the `Image > Save As` menu to save your map file!
