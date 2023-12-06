@@ -102,9 +102,13 @@ Examples off the top of my head:
 
 Another option is to create some scene-setting cards.
 The idea here is to break up the things you could ask for from a game,
-then let players pick one of these to commit to. Examples:
+then let players pick one of these and commit to it. Examples:
 
-- Game based on a book/series/movie
+- Activity, e.g. urban spelunking, exorcism, diplomacy
+- Place and Time, e.g. Edwardian England in 1905
+- Perspective, e.g. aliens, war survivors, chosen heroes
+- Scope, e.g. a single neighborhood, a continent-wide empire, a star system
 - Genre, e.g. scifi, dark fantasy, cosmic horror
 - Tone, e.g. comedy, drama, romance, mystery
+- Based on a specific book, movie, series, etc., e.g. Gideon the Ninth
 - Pole Star, e.g. characters explore a specific topic by taking different stances on it
