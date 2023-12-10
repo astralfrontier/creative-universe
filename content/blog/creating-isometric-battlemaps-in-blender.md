@@ -145,29 +145,42 @@ to represent lamps.
 You can also add objects with an Emission texture that emit their own light,
 such as a campfire or magical circle.
 
-# Exporting an image
-
-When you're ready to render your map as a 2D image, you'll want to create a Camera.
-Hit `Shift-a` and select Camera.
-
-Next, decide whether you want to export an isometric image, or a top-down image.
-Then, select the Camera object. If the right-side toolbar isn't visible, hit `n`
-to open it. Then, under Item, set the Camera's properties like this:
-
-- For an isometric view, set the camera Rotation to X = 54.7 degrees, Y = 0.000004 degrees, Z = 45 degrees, and the Location to about X = 24m, Y = -24m, Z = 26m
-- For a top-down view, set the camera Rotation to Z = 90 degrees, and the Location to about Z = 45m, with other Location and Rotation values set to zero
-
-In the Properties panel, look for the Camera properties. Inside, set the Lens Type to "Orthographic".
-
-Set "Orthographic Scale" to 30. This controls the "zoom" on the map.
-
 ## Delineating squares
 
 To include lines showing the boundaries of each square:
 
 1. Select your grid object, and under the "Modifiers" properties, add a "Wireframe" modifier
-2. Uncheck the "Replace Original" option, and leave other settings alone
-3. In Render Properties, turn on "Freestyle"
-4. In View Layer, turn on "Freestyle"
+2. Change the Thickness to 0.02m
+3. Uncheck the "Replace Original" option
+4. In Render Properties, turn on "Freestyle"
+5. In View Layer, turn on "Freestyle"
+
+# Choosing a Perspective
+
+Create at least one Camera object. Hit `Shift-a` and select Camera.
+
+In the Properties panel, look for the Camera properties. Inside, set the Lens Type to "Orthographic".
+This gives a "flat" effect that's important for use as a 2D battlemap.
+
+Next, decide whether you want to export an isometric image, or a top-down image.
+
+## Isometric (3D) view
+
+In the Item properties for the camera, set the camera Rotation to X = 54.7 degrees, Y = 0.000004 degrees, Z = 45 degrees.
+Set the Location to about X = 24m, Y = -24m, Z = 26m.
+
+In the Data properties for the camera object, set "Orthographic Scale" to 30 for an isometric view.
+This controls the "zoom" on the map.
+
+## Top-down (2D) view
+
+In the Item properties for the camera, set the camera Rotation to Z = 90 degrees, and the Location to about Z = 45m,
+with other Location and Rotation values set to zero.
+
+For Roll20, in the Output properties, set the camera resolution X and Y to 560px.
+In the Data properties for the camera object, set "Orthographic Scale" to 16.
+This will exactly match Roll20's default square grid of 70 pixels per square.
+
+# Rendering
 
 Finally, hit `F12` to render the image, and click the `Image > Save As` menu to save your map file!
