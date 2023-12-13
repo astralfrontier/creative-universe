@@ -36,7 +36,7 @@
     </div>
 </div>
 {% for row in [1, 2, 3, 4, 5, 6, 7] %}
-{% set offset = row * 10 %}
+{% set offset = row * 10 - 10 %}
 <div class="columns">
     <div class="column is-2">
         {% if row > 2 %}⯀ x {{row}}{% elif row == 2 %}⯀⯀{% else %}⯀{% endif %}
@@ -60,27 +60,27 @@
 {% endfor %}
 <div class="columns">
     <div class="column is-6">
-        Counters per Turn: {{counters[0]}}
+        <strong>Counters per Turn</strong>: {{counters[0]}}
     </div>
     <div class="column is-6">
-        Counters per Turn: {{counters[1]}}
+        <strong>Counters per Turn</strong>: {{counters[1]}}
     </div>
 </div>
 <div class="columns">
     <div class="column is-12 has-text-centered">
-        Vulnerabilities:
+        <strong>Vulnerabilities</strong>:
         {% set vuln_labels = ["FLM", "WAV", "FRS", "STN", "AER", "BLT", "BLM", "MTL", "NVR"] %}
-        {% for i in range(start=0, end=8) %}
+        {% for i in range(start=0, end=9) %}
         {% set v = vuln[i] %}
-        {{vuln_labels[i]}} {% if v == 1 %}⯀{% elif v == -1 %}▢{% else %}&dash;{% endif %},
+        {{vuln_labels[i]}} {% if v == 1 %}⯀{% elif v == -1 %}▢{% else %}&dash;{% endif %}{% if i < 8 %},{% endif %}
         {% endfor %}
     </div>
 </div>
 <div class="columns">
     <div class="column is-6">
-        HP: {% for i in range(start=1, end=hp[0]) %}⯀{% endfor %} ({{hp[0]}})
+        <strong>HP</strong>: {% for i in range(start=0, end=hp[0]) %}⯀{% endfor %} ({{hp[0]}})
     </div>
     <div class="column is-6">
-        HP: {% for i in range(start=1, end=hp[1]) %}⯀{% endfor %} ({{hp[1]}})
+        <strong>HP</strong>: {% for i in range(start=0, end=hp[1]) %}⯀{% endfor %} ({{hp[1]}})
     </div>
 </div>
