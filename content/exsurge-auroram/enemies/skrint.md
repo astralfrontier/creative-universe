@@ -5,7 +5,7 @@ date = "2023-12-13T10:17:00.000Z"
 authors = ["astralfrontier"]
 
 [taxonomies]
-tags = ["Arise", "Goblinkind"]
+tags = ["Arise", "Goblinkind", "Metal Aspect"]
 
 [extra]
 hide_toc = true
