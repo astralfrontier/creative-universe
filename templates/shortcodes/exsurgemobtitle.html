@@ -1,0 +1,12 @@
+{# The introductory text for an enemy #}
+{# Usage: exsurgestats(name=name, aspect=aspect, family=family, type=type eg. grunt) #}
+{# Any included body text is treated as Markdown and will be used for flavor #}
+<p class="is-size-3 title">
+    {% if name %}<strong>{{name}}</strong>{% else %}<strong>Unnamed</strong>{% endif %} &#9679; 
+    {% if aspect %}{{aspect}}{% else %}No Aspect{% endif %} &#9679; 
+    {% if family %}{{family}}{% else %}No Family{% endif %} &#9679; 
+    {% if type %}{{type}}{% else %}Grunt{% endif %}
+</p>
+<p class="subtitle">
+    <i>{{body | markdown | safe}}</i>
+</p>

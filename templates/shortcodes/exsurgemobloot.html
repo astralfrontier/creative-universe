@@ -1,0 +1,28 @@
+{# The loot list for a mob #}
+{# Usage: exsurgemobloot(loot=loot) #}
+{# Loot is an array of loot. Each element of the array is another array: range and description for basic and advanced mobs #}
+{# All values are required #}
+<div class="columns has-text-white has-background-grey">
+    <div class="column is-6">
+        1d6 - Loot Table
+    </div>
+    <div class="column is-6">
+        1d6 - Loot Table
+    </div>
+</div>
+{% for row in loot %}
+<div class="columns">
+    <div class="column is-1">
+        {{row[0]}}
+    </div>
+    <div class="column is-5">
+        {{row[1]}}
+    </div>
+    <div class="column is-1">
+        {{row[2]}}
+    </div>
+    <div class="column is-5">
+        {{row[3]}}
+    </div>
+</div>
+{% endfor %}
