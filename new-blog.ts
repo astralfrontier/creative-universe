@@ -27,6 +27,11 @@ const section = await select({
       description: "Alphabetical fiction posts",
     },
     {
+      name: "Exsurge Auroram",
+      value: "exsurge-auroram",
+      description: "Blog posts for the Exsurge Auroram setting",
+    },
+    {
       name: "Arise",
       value: "fiction/arise",
       description: "The Arise playtest",

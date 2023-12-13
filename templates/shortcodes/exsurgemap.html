@@ -1,0 +1,14 @@
+{# Usage:  images=["image-url"]  ratio=""  alt=""  #}
+<div class="columns">
+    <div class="column is-4">
+        {% for image in images %}
+        {# set image_path = get_url(path=image) #}
+        <figure class="image {% if ratio %}{{ratio}}{% endif %}">
+            <img src="{{image}}" alt="{{alt | default(value="No alt text supplied")}}"/>
+        </figure>
+        {% endfor %}    
+    </div>
+    <div class="column is-8">
+        {{body | markdown | safe}}
+    </div>
+</div>
