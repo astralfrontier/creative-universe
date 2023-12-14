@@ -4,7 +4,9 @@
         {% for image in images %}
         {# set image_path = get_url(path=image) #}
         <figure class="image {% if ratio %}{{ratio}}{% endif %}">
-            <img src="{{image}}" alt="{{alt | default(value="No alt text supplied")}}"/>
+            <a href="{{image}}" target="_blank">
+                <img src="{{image}}" alt="{{alt | default(value="No alt text supplied")}}"/>
+            </a>
         </figure>
         {% endfor %}    
     </div>

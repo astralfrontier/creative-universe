@@ -12,7 +12,7 @@ hide_toc = true
 banner_image = "/exsurge-auroram/maps/Ferry-ISO-Wheelhouse.png"
 +++
 
-{% exsurgemap(images=["/exsurge-auroram/maps/Ferry-Topdown.png", "/exsurge-auroram/maps/Ferry-ISO-Crane.png", "/exsurge-auroram/maps/Ferry-ISO-Wheelhouse.png"]) %}
+{% exsurgemap(images=["/exsurge-auroram/maps/Ferry-Topdown.png", "/exsurge-auroram/maps/Ferry-ISO-Crane.png", "/exsurge-auroram/maps/Ferry-ISO-Wheelhouse.png"], alt="A battlemap of a ferry docked at shore, being loaded with cargo") %}
 
 # Story
 
