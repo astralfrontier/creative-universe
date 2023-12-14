@@ -1,6 +1,3 @@
-{# The introductory text for an enemy #}
-{# Usage: exsurgestats(name=name, aspect=aspect, family=family, type=type eg. grunt) #}
-{# Any included body text is treated as Markdown and will be used for flavor #}
 <p class="is-size-3 title">
     {% if name %}<strong>{{name}}</strong>{% else %}<strong>Unnamed</strong>{% endif %} &#9679; 
     {% if aspect %}{{aspect}}{% else %}No Aspect{% endif %} &#9679; 
@@ -11,49 +8,31 @@
     <i>{{description}}</i>
 </p>
 
-{# The topline stat block, including rank and other things. #}
-{# Usage: exsurgemobstats(rank=rank, flavor=flavor, spd=spd, dash=dash, atk=atk, mgk=mgk, pdef=pdef, mdef=mdef, res=res) #}
-{# Values are arrays for the basic and advanced versions of the creature #}
-{# All values are required #}
 <div class="columns has-text-white has-background-grey">
+    {% set section_label = ["Basic", "Adv"] %}
+    {% for i in [0, 1] %}
     <div class="column is-2">
-        Basic (R{{rank[0]}})
+        {{section_label[i]}} (R{{rank[i]}})
     </div>
     <div class="column is-4">
-        <i>{{flavor[0]}}</i>
+        <i>{{flavor[i]}}</i>
     </div>
-    <div class="column is-2">
-        Adv (R{{rank[1]}})
-    </div>
-    <div class="column is-4">
-        <i>{{flavor[1]}}</i>
-    </div>
+    {% endfor %}
 </div>
 <div class="columns">
+    {% for i in [0, 1] %}
     <div class="column is-6 has-text-centered">
-        <strong>SPD</strong>:  {{spd[0]}},
-        <strong>DASH</strong>: {{dash[0]}},
-        <strong>ATK</strong>:  {{atk[0]}},
-        <strong>MGK</strong>:  {{mgk[0]}},
-        <strong>PDEF</strong>: {{pdef[0]}},
-        <strong>MDEF</strong>: {{mdef[0]}},
-        <strong>RES</strong>:  {{res[0]}}
+        <strong>SPD</strong>:  {{spd[i]}},
+        <strong>DASH</strong>: {{dash[i]}},
+        <strong>ATK</strong>:  {{atk[i]}},
+        <strong>MGK</strong>:  {{mgk[i]}},
+        <strong>PDEF</strong>: {{pdef[i]}},
+        <strong>MDEF</strong>: {{mdef[i]}},
+        <strong>RES</strong>:  {{res[i]}}
     </div>
-    <div class="column is-6 has-text-centered">
-        <strong>SPD</strong>:  {{spd[1]}},
-        <strong>DASH</strong>: {{dash[1]}},
-        <strong>ATK</strong>:  {{atk[1]}},
-        <strong>MGK</strong>:  {{mgk[1]}},
-        <strong>PDEF</strong>: {{pdef[1]}},
-        <strong>MDEF</strong>: {{mdef[1]}},
-        <strong>RES</strong>:  {{res[1]}}
-    </div>
+    {% endfor %}
 </div>
 
-{# The actions list for a mob #}
-{# Usage: exsurgemobactions(actions=actions) #}
-{# Actions is an array of actions. Each element of the array is another array: basic AI range, advanced AI range, name, and description #}
-{# All values are required #}
 <div class="columns has-text-white has-background-grey has-text-centered">
     <div class="column is-1">
         Basic
@@ -85,73 +64,51 @@
 </div>
 {% endfor %}
 
-{# HP, Counters, and defenses #}
-{# Usage: exsurgemobhp(pdef=pdef, mdef=mdef, counters=counters, vuln=vuln, hp=hp) #}
-{# Non-Vuln values are arrays for the basic and advanced versions of the creature #}
-{# Vuln is an array of FLM, WAV, FRS, STN, AER, BLT, BLM, MTL, NVR - values are -1, 0, or 1 #}
-{# All values are required #}
 <div class="columns has-text-white has-background-grey">
+    {% set section_label = ["BASIC", "ADV."] %}
+    {% for i in [0, 1] %}
     <div class="column is-2">
-        BASIC
+        {{section_label[i]}}
     </div>
-    <div class="column is-2">PDEF: {{pdef[0]}}</div>
-    <div class="column is-2">MDEF: {{mdef[0]}}</div>
-    <div class="column is-2">
-        ADV.
-    </div>
-    <div class="column is-2">PDEF: {{pdef[1]}}</div>
-    <div class="column is-2">MDEF: {{mdef[1]}}</div>
+    <div class="column is-2">PDEF: {{pdef[i]}}</div>
+    <div class="column is-2">MDEF: {{mdef[i]}}</div>
+    {% endfor %}
 </div>
 <div class="columns">
+    {% for i in [0, 1] %}
     <div class="column is-2">
         No Loss
     </div>
     <div class="column is-2">
-        0-{{pdef[0] - 1}}
+        0 - {{pdef[i] - 1}}
     </div>
     <div class="column is-2">
-        0-{{mdef[0] - 1}}
+        0 - {{mdef[i] - 1}}
     </div>
-    <div class="column is-2">
-        No Loss
-    </div>
-    <div class="column is-2">
-        0-{{pdef[1] - 1}}
-    </div>
-    <div class="column is-2">
-        0-{{mdef[1] - 1}}
-    </div>
+    {% endfor %}
 </div>
 {% for row in [1, 2, 3, 4, 5, 6, 7] %}
-{% set offset = row * 10 - 10 %}
+{% set offset = (row - 1) * 10 %}
 <div class="columns">
+    {% for i in [0, 1] %}
     <div class="column is-2">
         {% if row > 2 %}⯀ x {{row}}{% elif row == 2 %}⯀⯀{% else %}⯀{% endif %}
     </div>
     <div class="column is-2">
-        {% if row == 7 %}{{pdef[0] + offset}}+{% else %}{{pdef[0] + offset}} - {{pdef[0] + offset + 9}}{% endif %}
+        {% if row == 7 %}{{pdef[i] + offset}}+{% else %}{{pdef[i] + offset}} - {{pdef[i] + offset + 9}}{% endif %}
     </div>
     <div class="column is-2">
-        {% if row == 7 %}{{mdef[0] + offset}}+{% else %}{{mdef[0] + offset}} - {{mdef[0] + offset + 9}}{% endif %}
+        {% if row == 7 %}{{mdef[i] + offset}}+{% else %}{{mdef[i] + offset}} - {{mdef[i] + offset + 9}}{% endif %}
     </div>
-    <div class="column is-2">
-        {% if row > 3 %}⯀ x {{row}}{% elif row == 2 %}⯀⯀{% else %}⯀{% endif %}
-    </div>
-    <div class="column is-2">
-        {% if row == 7 %}{{pdef[1] + offset}}+{% else %}{{pdef[1] + offset}} - {{pdef[1] + offset + 9}}{% endif %}
-    </div>
-    <div class="column is-2">
-        {% if row == 7 %}{{mdef[1] + offset}}+{% else %}{{mdef[1] + offset}} - {{mdef[1] + offset + 9}}{% endif %}
-    </div>
+    {% endfor %}
 </div>
 {% endfor %}
 <div class="columns">
+    {% for i in [0, 1] %}
     <div class="column is-6">
-        <strong>Counters per Turn</strong>: {{counters[0]}}
+        <strong>Counters per Turn</strong>: {{counters[i]}}
     </div>
-    <div class="column is-6">
-        <strong>Counters per Turn</strong>: {{counters[1]}}
-    </div>
+    {% endfor %}
 </div>
 <div class="columns">
     <div class="column is-12 has-text-centered">
@@ -164,12 +121,11 @@
     </div>
 </div>
 <div class="columns">
+    {% for i in [0, 1] %}
     <div class="column is-6">
-        <strong>HP</strong>: {% for i in range(start=0, end=hp[0]) %}⯀{% endfor %} ({{hp[0]}})
+        <strong>HP</strong>: {% for j in range(start=0, end=hp[i]) %}⯀{% endfor %} ({{hp[i]}})
     </div>
-    <div class="column is-6">
-        <strong>HP</strong>: {% for i in range(start=0, end=hp[1]) %}⯀{% endfor %} ({{hp[1]}})
-    </div>
+    {% endfor %}
 </div>
 
 {# The loot list for a mob #}
