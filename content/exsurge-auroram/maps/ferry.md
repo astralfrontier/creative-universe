@@ -38,6 +38,11 @@ banner_image = "/exsurge-auroram/maps/Ferry-ISO-Wheelhouse.png"
 - The wheelhouse and cargo on deck offer defenders cover
 - There are few cover options on shore, but the height advantage may compensate for that
 
+# Tiles
+
+- The shallow water tiles around the ferry are **Slippery** and **Charged**
+- The wheelhouse tiles on the ferry are **Obcuring**
+
 Map download: [Ferry.blend](/exsurge-auroram/maps/Ferry.blend)
 
 Texture credit: Pixel Textures Pack by [FlakDeau](https://flakdeau19.itch.io/)
