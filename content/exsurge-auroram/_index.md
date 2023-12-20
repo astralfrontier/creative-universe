@@ -4,6 +4,9 @@ description = "Blog entries, enemies, and maps for a fantastical world using the
 sort_by = "date"
 generate_feed = false
 paginate_by = 10
+
+[extra]
+banner_image = "/exsurge-auroram/maps/ForestPath-ISO-South.png"
 +++
 
 Blog posts and fiction for the Exsurge Auroram setting.
