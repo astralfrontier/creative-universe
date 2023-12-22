@@ -5,7 +5,7 @@ date = "2023-12-20 06:31:50"
 authors = ["astralfrontier"]
 
 [taxonomies]
-tags = ["Recap"]
+tags = ["Arise", "Recap"]
 
 [extra]
 pullquote = """

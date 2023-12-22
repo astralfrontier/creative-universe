@@ -6,7 +6,7 @@ generate_feed = false
 paginate_by = 10
 
 [extra]
-banner_image = "/exsurge-auroram/maps/ForestPath-ISO-South.png"
+banner_image = "/exsurge-auroram/ExsurgeAuroramLogo.png"
 +++
 
 Blog posts and fiction for the Exsurge Auroram setting.
