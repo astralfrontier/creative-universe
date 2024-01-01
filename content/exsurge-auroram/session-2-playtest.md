@@ -27,6 +27,7 @@ We have the same four heroes: a Black Mage, a White Mage, a Hoplite, and a Raide
 Once again, Kenney's [Creature Mixer](https://kenney.itch.io/creature-mixer) gave me some neat little dudes.
 This time, the opposition was undead-flavored: 6 Grave Thralls (named after the Seven Dwarves, minus Doc),
 plus 4 Desolate (named after the Beatles).
+We used [The Forest Path](@/exsurge-auroram/maps/forest-path.md) map.
 
 Combat took almost two hours. Despite having charged tiles to reduce MP costs, our casters had 1-2 MP left
 from their totals. Everyone was near to full HP, but that's courtesy of a very active White Mage.
