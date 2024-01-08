@@ -16,6 +16,6 @@
     "gulp-cli": "^2.3.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-postcss": "^9.0.1",
-    "postcss": "^8.4.32"
+    "postcss": "^8.4.33"
   }
 }
