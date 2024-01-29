@@ -15,7 +15,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.1",
     "@modyfi/vite-plugin-yaml": "^1.0.4",
-    "@netlify/functions": "^2.4.1",
+    "@netlify/functions": "^2.5.1",
     "bulma": "^0.9.4",
     "js-yaml": "^4.1.0",
     "ramda": "^0.29.1",
