@@ -28,7 +28,7 @@
     "@types/ramda": "^0.29.10",
     "@types/react": "^18.2.56",
     "@types/react-dom": "^18.2.19",
-    "@vitejs/plugin-react-swc": "^3.5.0",
+    "@vitejs/plugin-react-swc": "^3.6.0",
     "cypress": "^13.6.4",
     "netlify-cli": "^17.17.1",
     "prettier": "^3.2.5",
