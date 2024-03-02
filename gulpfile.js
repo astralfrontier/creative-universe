@@ -1,9 +1,15 @@
 const { src, dest, series, parallel } = require("gulp");
 const htmlmin = require("gulp-htmlmin");
 const postcss = require("gulp-postcss");
-const cheerio = require("gulp-cheerio");
+// const cheerio = require("gulp-cheerio");
 const cp = require("child_process");
 const purgecss = require("@fullhuman/postcss-purgecss");
+const inquirer = require("inquirer");
+const moment = require("moment");
+const slugify = require("slugify");
+const toml = require("@iarna/toml");
+const fs = require("fs");
+const path = require("path");
 
 function fontAwesome(_cb) {
   return src("node_modules/@fortawesome/fontawesome-free/webfonts/*").pipe(
@@ -70,6 +76,72 @@ function css(_cb) {
 //     .pipe(dest("public/"));
 // }
 
+function newBlog(cb) {
+  //const date = format(new Date(), "yyyy-MM-dd HH:mm:ss");
+  const questions = [
+    {
+      type: "input",
+      name: "title",
+      message: "Blog title",
+    },
+    {
+      type: "input",
+      name: "description",
+      message: "Blog description",
+    },
+    {
+      type: "input",
+      name: "banner_image",
+      message: "Banner image path",
+    },
+    {
+      type: "input",
+      name: "tags",
+      message: "Comma-separated tags",
+    },
+    {
+      type: "list",
+      name: "path",
+      message: "Where does this post belong?",
+      choices: ["blog", "fiction", "exsurge-auroram"],
+    },
+  ];
+  inquirer
+    .prompt(questions)
+    .then((answers) => {
+      const date = moment().format("yyyy-MM-DD HH:mm:ss");
+      const title = answers["title"] || "No Title";
+      let tags = answers["tags"].split(",");
+      if (answers["path"] == "exsurge-auroram") {
+        tags.push("Arise");
+      }
+      tags = tags.filter((item) => item.length).map((item) => item.trim());
+      const metadata = {
+        title,
+        description: answers["description"],
+        date,
+        authors: ["astralfrontier"],
+      };
+      if (tags.length) {
+        metadata["taxonomies"] = { tags };
+      }
+      if (answers["banner_image"]) {
+        metadata["extra"] = { banner_image: answers["banner_image"] };
+      }
+      const filename = path.join(
+        "content",
+        answers["path"],
+        `${slugify(title).toLowerCase()}.md`
+      );
+      const text = `+++\n${toml.stringify(metadata)}+++\n\nNew blog post.`;
+      fs.writeFileSync(filename, text);
+      console.log(`Wrote ${filename}`);
+      cb();
+    })
+    .catch((e) => cb(e));
+}
+
+exports.newblog = newBlog;
 exports.preinstall = parallel(fontAwesome, jquery);
 exports.build = series(
   exports.preinstall,

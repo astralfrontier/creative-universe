@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "new-blog": "deno run --allow-sys --allow-read --allow-write new-blog.ts",
+    "new-blog": "gulp newblog",
     "gulp": "gulp",
     "gulp:serve": "gulp serve"
   },
@@ -10,12 +10,16 @@
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^5.0.0",
+    "@iarna/toml": "^2.2.5",
     "bulma-scss": "^0.9.4",
     "gulp": "^4.0.2",
     "gulp-cheerio": "^1.0.0",
     "gulp-cli": "^2.3.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-postcss": "^10.0.0",
-    "postcss": "^8.4.35"
+    "inquirer": "^8.0.0",
+    "moment": "^2.30.1",
+    "postcss": "^8.4.35",
+    "slugify": "^1.6.6"
   }
 }
