@@ -77,7 +77,6 @@ function css(_cb) {
 // }
 
 function newBlog(cb) {
-  //const date = format(new Date(), "yyyy-MM-dd HH:mm:ss");
   const questions = [
     {
       type: "input",
@@ -103,7 +102,7 @@ function newBlog(cb) {
       type: "list",
       name: "path",
       message: "Where does this post belong?",
-      choices: ["blog", "fiction", "exsurge-auroram"],
+      choices: ["blog", "fiction", "empyrean-diadem", "exsurge-auroram"],
     },
   ];
   inquirer
@@ -133,7 +132,9 @@ function newBlog(cb) {
         answers["path"],
         `${slugify(title).toLowerCase()}.md`
       );
-      const text = `+++\n${toml.stringify(metadata)}+++\n\nNew blog post.`;
+      const text = `+++\n${toml.stringify(
+        metadata
+      )}+++\n\nNew blog post.\n\n<!-- more -->More blog content.\n`;
       fs.writeFileSync(filename, text);
       console.log(`Wrote ${filename}`);
       cb();

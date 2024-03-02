@@ -12,9 +12,7 @@ compile_sass = true
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
-taxonomies = [
-    { name = "tags", feed = true}
-]
+taxonomies = [{ name = "tags", feed = true }]
 
 # For whatever reason, minifying breaks the banner image
 minify_html = false
@@ -39,26 +37,27 @@ index_format = "elasticlunr_json"
 [extra]
 default_banner = "/brand/shutterstock_2284544289.jpg"
 tag_banner_images = [
-    {tag="Constellation Cards", banner_image="blog/north-star-2869817_1280.jpg"},
-    {tag="Final Fantasy XIV", banner_image="quarto-decimo-novum/quarto-decimo-novum-introduction.jpg"},
-    {tag="Vampire", banner_image="blog/gothic-2097966_1280.jpg"}
+    { tag = "Constellation Cards", banner_image = "blog/north-star-2869817_1280.jpg" },
+    { tag = "Final Fantasy XIV", banner_image = "quarto-decimo-novum/quarto-decimo-novum-introduction.jpg" },
+    { tag = "Vampire", banner_image = "blog/gothic-2097966_1280.jpg" },
 ]
 navbar = [
-    {title="Home", url="/"},
-    {title="Fiction", url="/fiction/"},
-    {title="Projects", url="", items = [
-        {title="The Compleat Villain", url="/compleat-villain/"},
-        {title="Exsurge Auroram", url="/exsurge-auroram/"},
-        {title="MEGALOS", url="/megalos/"},
-        {title="Quarto Decimo Novum", url="/quarto-decimo-novum/"},
-        {title="Tosk", url="/tosk/"},
-    ]},
-    {title="All Tags", url="/tags/"},
-    {title="Itch.io", url="https://astralfrontier.itch.io/", external = true},
-    {title="@astralfrontier@dice.camp", url="https://dice.camp/@astralfrontier", icon="fa-brands fa-mastodon", external = true, mastodon = true},
-    {title="@astralfrontier@mstdn.social", url="https://mstdn.social/@astralfrontier", icon="fa-brands fa-mastodon", external = true, mastodon = true},
-    {title="@astralfrontier", url="https://twitter.com/astralfrontier", icon="fa-brands fa-twitter", external = true},
-    {title="astralfrontier @ Tumblr", url="https://www.tumblr.com/blog/astralfrontier", icon="fa-brands fa-tumblr", external = true},
-    {title="astralfrontier", url="https://www.youtube.com/channel/UCzP9xI_Qxw3SW853U_lMQ3g", icon="fa-brands fa-youtube", external = true},
-    {title="astralfrontier", url="https://github.com/astralfrontier", icon="fa-brands fa-github", external = true}
+    { title = "Home", url = "/" },
+    { title = "Fiction", url = "/fiction/" },
+    { title = "Projects", url = "", items = [
+        { title = "The Compleat Villain", url = "/compleat-villain/" },
+        { title = "The Empyrean Diadem", url = "/empyrean-diadem/" },
+        { title = "Exsurge Auroram", url = "/exsurge-auroram/" },
+        { title = "MEGALOS", url = "/megalos/" },
+        { title = "Quarto Decimo Novum", url = "/quarto-decimo-novum/" },
+        { title = "Tosk", url = "/tosk/" },
+    ] },
+    { title = "All Tags", url = "/tags/" },
+    { title = "Itch.io", url = "https://astralfrontier.itch.io/", external = true },
+    { title = "@astralfrontier@dice.camp", url = "https://dice.camp/@astralfrontier", icon = "fa-brands fa-mastodon", external = true, mastodon = true },
+    { title = "@astralfrontier@mstdn.social", url = "https://mstdn.social/@astralfrontier", icon = "fa-brands fa-mastodon", external = true, mastodon = true },
+    { title = "@astralfrontier", url = "https://twitter.com/astralfrontier", icon = "fa-brands fa-twitter", external = true },
+    { title = "astralfrontier @ Tumblr", url = "https://www.tumblr.com/blog/astralfrontier", icon = "fa-brands fa-tumblr", external = true },
+    { title = "astralfrontier", url = "https://www.youtube.com/channel/UCzP9xI_Qxw3SW853U_lMQ3g", icon = "fa-brands fa-youtube", external = true },
+    { title = "astralfrontier", url = "https://github.com/astralfrontier", icon = "fa-brands fa-github", external = true },
 ]
