@@ -134,7 +134,7 @@ function newBlog(cb) {
       );
       const text = `+++\n${toml.stringify(
         metadata
-      )}+++\n\nNew blog post.\n\n<!-- more -->More blog content.\n`;
+      )}+++\n\nNew blog post.\n\n<!-- more -->\n\nMore blog content.\n`;
       fs.writeFileSync(filename, text);
       console.log(`Wrote ${filename}`);
       cb();
