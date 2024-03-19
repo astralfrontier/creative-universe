@@ -105,16 +105,19 @@ function newBlog(cb) {
       choices: ["blog", "fiction", "empyrean-diadem", "exsurge-auroram"],
     },
   ];
+  const extra_tags = {
+    "exsurge-auroram": ["Arise"],
+  };
   inquirer
     .prompt(questions)
     .then((answers) => {
       const date = moment().format("yyyy-MM-DD HH:mm:ss");
       const title = answers["title"] || "No Title";
       let tags = answers["tags"].split(",");
-      if (answers["path"] == "exsurge-auroram") {
-        tags.push("Arise");
+      if (extra_tags[answers["path"]]) {
+        extra_tags[answers["path"]].map((tag) => tags.push(tag));
       }
-      tags = tags.filter((item) => item.length).map((item) => item.trim());
+      tags = tags.map((item) => item.trim()).filter((item) => item.length);
       const metadata = {
         title,
         description: answers["description"],
