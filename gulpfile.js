@@ -102,7 +102,13 @@ function newBlog(cb) {
       type: "list",
       name: "path",
       message: "Where does this post belong?",
-      choices: ["blog", "fiction", "empyrean-diadem", "exsurge-auroram"],
+      choices: [
+        "blog",
+        "reviews",
+        "fiction",
+        "empyrean-diadem",
+        "exsurge-auroram",
+      ],
     },
   ];
   const extra_tags = {

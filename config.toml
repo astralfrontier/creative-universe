@@ -43,6 +43,7 @@ tag_banner_images = [
 ]
 navbar = [
     { title = "Home", url = "/" },
+    { title = "Reviews", url = "/reviews/" },
     { title = "Fiction", url = "/fiction/" },
     { title = "Projects", url = "", items = [
         { title = "The Compleat Villain", url = "/compleat-villain/" },
