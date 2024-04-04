@@ -136,10 +136,13 @@ function newBlog(cb) {
       if (answers["banner_image"]) {
         metadata["extra"] = { banner_image: answers["banner_image"] };
       }
+      const options = {
+        remove: /[*+~.()'"!:@]/g,
+      };
       const filename = path.join(
         "content",
         answers["path"],
-        `${slugify(title).toLowerCase()}.md`
+        `${slugify(title, options).toLowerCase()}.md`
       );
       const text = `+++\n${toml.stringify(
         metadata
