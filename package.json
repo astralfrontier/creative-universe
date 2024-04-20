@@ -9,7 +9,7 @@
     "jquery": "^3.7.1"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "@fullhuman/postcss-purgecss": "^6.0.0",
     "@iarna/toml": "^2.2.5",
     "bulma-scss": "^0.9.4",
     "gulp": "^4.0.2",
