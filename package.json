@@ -22,7 +22,9 @@
     "gulp-htmlmin": "^5.0.1",
     "gulp-postcss": "^10.0.0",
     "gulp-typescript": "^6.0.0-alpha.1",
+    "image-type": "^5.2.0",
     "moment": "^2.30.1",
+    "open-graph-scraper": "^6.5.1",
     "postcss": "^8.4.38",
     "slugify": "^1.6.6",
     "ts-node": "^10.9.2"

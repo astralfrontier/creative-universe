@@ -9,6 +9,7 @@ import cp from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import slugify from "slugify";
+import ogs from "open-graph-scraper";
 // const cheerio = require("gulp-cheerio");
 
 function fontAwesome() {
@@ -135,22 +136,60 @@ async function newBlog() {
   if (tags.length) {
     metadata["taxonomies"] = { tags };
   }
-  if (answers["banner_image"]) {
-    metadata["extra"] = { banner_image: answers["banner_image"] };
-  }
+
   const options = {
     remove: /[*+~.()'"!:@]/g,
   };
   const filename = path.join(
     "content",
     answers["path"],
-    `${slugify(title, options).toLowerCase()}.md`
+    `${slugify(title, options).toLowerCase()}`
   );
+
+  // Accept banner images as local files or URLs
+  if (answers["banner_image"]) {
+    const bannerImagePath = await locateBannerImage(
+      filename,
+      answers["banner_image"]
+    );
+    if (bannerImagePath) {
+      const bannerImageRelative = path
+        .relative(path.join(__dirname, "content"), bannerImagePath)
+        .split(path.sep)
+        .join("/");
+      metadata["extra"] = { banner_image: bannerImageRelative };
+    } else {
+      metadata["extra"] = { banner_image: answers["banner_image"] };
+    }
+  }
+
   const text = `+++\n${toml.stringify(
     metadata
   )}+++\n\nNew blog post.\n\n<!-- more -->\n\nMore blog content.\n`;
-  fs.writeFileSync(filename, text);
-  console.log(`Wrote ${filename}`);
+  fs.writeFileSync(`${filename}.md`, text);
+  console.log(`Wrote ${filename}.md`);
+}
+
+async function locateBannerImage(filename: string, bannerImage: string) {
+  // Is the banner image a local file?
+  try {
+    fs.accessSync(bannerImage, fs.constants.R_OK);
+    return bannerImage;
+  } catch (e) {
+    // Nope, try something else
+  }
+
+  // Is the banner image a URL we can scrape for OG metadata?
+  const options = { url: bannerImage };
+  const { result } = await ogs(options);
+  if (result?.ogImage && result?.ogImage[0] && result?.ogImage[0].url) {
+    const response = await fetch(result.ogImage[0].url);
+    const buffer = Buffer.from(await response.arrayBuffer());
+    const bannerImage = `${filename}.${result?.ogImage[0].type || "jpg"}`;
+    fs.writeFileSync(bannerImage, buffer);
+    console.log(`Wrote ${bannerImage}`);
+    return bannerImage;
+  }
 }
 
 exports.newblog = newBlog;
