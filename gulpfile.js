@@ -77,6 +77,12 @@ function css(_cb) {
 // }
 
 function newBlog(cb) {
+  const contentFolders = fs
+    .readdirSync(path.join(__dirname, "content"), {
+      withFileTypes: true,
+    })
+    .filter((dirent) => dirent.isDirectory())
+    .map((dirent) => dirent.name);
   const questions = [
     {
       type: "input",
@@ -102,13 +108,7 @@ function newBlog(cb) {
       type: "list",
       name: "path",
       message: "Where does this post belong?",
-      choices: [
-        "blog",
-        "reviews",
-        "fiction",
-        "empyrean-diadem",
-        "exsurge-auroram",
-      ],
+      choices: contentFolders,
     },
   ];
   const extra_tags = {
