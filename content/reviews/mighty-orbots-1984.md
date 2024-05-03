@@ -8,6 +8,7 @@ authors = [ "astralfrontier" ]
 tags = [ "Animation" ]
 
 [extra]
+banner_image = "reviews/mighty-orbots-1984.jpg"
 hide_toc = true
 +++
 

@@ -8,6 +8,7 @@ authors = [ "astralfrontier" ]
 tags = [ "Serial" ]
 
 [extra]
+banner_image = "reviews/captain-america-1944.jpg"
 hide_toc = true
 +++
 
