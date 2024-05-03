@@ -1,27 +1,27 @@
-const { src, dest, series, parallel } = require("gulp");
-const htmlmin = require("gulp-htmlmin");
-const postcss = require("gulp-postcss");
+import purgeCSSPlugin from "@fullhuman/postcss-purgecss";
+import toml from "@iarna/toml";
+import { prompt } from "enquirer";
+import { dest, parallel, series, src } from "gulp";
+import htmlmin from "gulp-htmlmin";
+import postcss from "gulp-postcss";
+import moment from "moment";
+import cp from "node:child_process";
+import fs from "node:fs";
+import path from "node:path";
+import slugify from "slugify";
 // const cheerio = require("gulp-cheerio");
-const cp = require("child_process");
-const purgecss = require("@fullhuman/postcss-purgecss");
-const inquirer = require("inquirer");
-const moment = require("moment");
-const slugify = require("slugify");
-const toml = require("@iarna/toml");
-const fs = require("fs");
-const path = require("path");
 
-function fontAwesome(_cb) {
+function fontAwesome() {
   return src("node_modules/@fortawesome/fontawesome-free/webfonts/*").pipe(
     dest("static/webfonts/")
   );
 }
 
-function jquery(_cb) {
+function jquery() {
   return src("node_modules/jquery/dist/jquery.min.js").pipe(dest("static/"));
 }
 
-function zolaBuild(cb) {
+function zolaBuild(cb: (err?: any) => void) {
   const i = process.argv.indexOf("--base-url");
   let cmd = "zola build";
   if (i > -1 && process.argv[i + 1]) {
@@ -31,30 +31,30 @@ function zolaBuild(cb) {
     console.log(stdout);
     console.log(stderr);
     if (err) {
-      cb(new Error(err));
+      cb(new Error(err?.message));
     } else {
       cb();
     }
   });
 }
 
-function zolaServe(_cb) {
+function zolaServe() {
   return cp.exec("zola serve --open");
 }
 
-function minify(_cb) {
+function minify() {
   return src("public/**/*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(dest("public"));
 }
 
 const postcssPlugins = [
-  purgecss({
+  purgeCSSPlugin({
     content: ["public/**/*.html"],
   }),
 ];
 
-function css(_cb) {
+function css() {
   return src("public/**/*.css")
     .pipe(postcss(postcssPlugins))
     .pipe(dest("public"));
@@ -76,7 +76,8 @@ function css(_cb) {
 //     .pipe(dest("public/"));
 // }
 
-function newBlog(cb) {
+async function newBlog() {
+  prompt;
   const contentFolders = fs
     .readdirSync(path.join(__dirname, "content"), {
       withFileTypes: true,
@@ -105,53 +106,51 @@ function newBlog(cb) {
       message: "Comma-separated tags",
     },
     {
-      type: "list",
+      type: "select",
       name: "path",
       message: "Where does this post belong?",
       choices: contentFolders,
     },
   ];
-  const extra_tags = {
+  const extra_tags: any = {
     "exsurge-auroram": ["Arise"],
   };
-  inquirer
-    .prompt(questions)
-    .then((answers) => {
-      const date = moment().format("yyyy-MM-DD HH:mm:ss");
-      const title = answers["title"] || "No Title";
-      let tags = answers["tags"].split(",");
-      if (extra_tags[answers["path"]]) {
-        extra_tags[answers["path"]].map((tag) => tags.push(tag));
-      }
-      tags = tags.map((item) => item.trim()).filter((item) => item.length);
-      const metadata = {
-        title,
-        description: answers["description"],
-        date,
-        authors: ["astralfrontier"],
-      };
-      if (tags.length) {
-        metadata["taxonomies"] = { tags };
-      }
-      if (answers["banner_image"]) {
-        metadata["extra"] = { banner_image: answers["banner_image"] };
-      }
-      const options = {
-        remove: /[*+~.()'"!:@]/g,
-      };
-      const filename = path.join(
-        "content",
-        answers["path"],
-        `${slugify(title, options).toLowerCase()}.md`
-      );
-      const text = `+++\n${toml.stringify(
-        metadata
-      )}+++\n\nNew blog post.\n\n<!-- more -->\n\nMore blog content.\n`;
-      fs.writeFileSync(filename, text);
-      console.log(`Wrote ${filename}`);
-      cb();
-    })
-    .catch((e) => cb(e));
+  const answers: Record<any, any> = await prompt(questions);
+
+  const date = moment().format("yyyy-MM-DD HH:mm:ss");
+  const title = answers["title"] || "No Title";
+  let tags = answers["tags"].split(",");
+  if (extra_tags[answers["path"]]) {
+    extra_tags[answers["path"]].map((tag: string) => tags.push(tag));
+  }
+  tags = tags
+    .map((item: string) => item.trim())
+    .filter((item: string) => item.length);
+  const metadata: any = {
+    title,
+    description: answers["description"],
+    date,
+    authors: ["astralfrontier"],
+  };
+  if (tags.length) {
+    metadata["taxonomies"] = { tags };
+  }
+  if (answers["banner_image"]) {
+    metadata["extra"] = { banner_image: answers["banner_image"] };
+  }
+  const options = {
+    remove: /[*+~.()'"!:@]/g,
+  };
+  const filename = path.join(
+    "content",
+    answers["path"],
+    `${slugify(title, options).toLowerCase()}.md`
+  );
+  const text = `+++\n${toml.stringify(
+    metadata
+  )}+++\n\nNew blog post.\n\n<!-- more -->\n\nMore blog content.\n`;
+  fs.writeFileSync(filename, text);
+  console.log(`Wrote ${filename}`);
 }
 
 exports.newblog = newBlog;
