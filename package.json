@@ -1,6 +1,7 @@
 {
   "scripts": {
     "new-blog": "gulp newblog",
+    "add-banner": "gulp addBanner",
     "gulp": "gulp",
     "gulp:serve": "gulp serve"
   },

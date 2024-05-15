@@ -78,7 +78,6 @@ function css() {
 // }
 
 async function newBlog() {
-  prompt;
   const contentFolders = fs
     .readdirSync(path.join(__dirname, "content"), {
       withFileTypes: true,
@@ -99,7 +98,7 @@ async function newBlog() {
     {
       type: "input",
       name: "banner_image",
-      message: "Banner image path",
+      message: "Banner image",
     },
     {
       type: "input",
@@ -170,6 +169,33 @@ async function newBlog() {
   console.log(`Wrote ${filename}.md`);
 }
 
+async function addBanner() {
+  const questions = [
+    {
+      type: "input",
+      name: "filename",
+      message: "Post path (Copy Relative Path)",
+    },
+    {
+      type: "input",
+      name: "banner_image",
+      message: "Banner image",
+    },
+  ];
+  const metadata: any = await prompt(questions);
+  const bannerImagePath = await locateBannerImage(
+    metadata["filename"],
+    metadata["banner_image"]
+  );
+  if (bannerImagePath) {
+    const bannerImageRelative = path
+      .relative(path.join(__dirname, "content"), bannerImagePath)
+      .split(path.sep)
+      .join("/");
+    console.log(`Update banner image to: ${bannerImageRelative}`);
+  }
+}
+
 async function locateBannerImage(filename: string, bannerImage: string) {
   // Is the banner image a local file?
   try {
@@ -193,6 +219,7 @@ async function locateBannerImage(filename: string, bannerImage: string) {
 }
 
 exports.newblog = newBlog;
+exports.addBanner = addBanner;
 exports.preinstall = parallel(fontAwesome, jquery);
 exports.build = series(
   exports.preinstall,
