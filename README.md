@@ -21,9 +21,11 @@ You have two choices for images:
 1. Put them into `content/SECTION`, alongside Markdown files
 2. Put them into `static`, where they're available at the root URL
 
+To retroactively add an image from some URL, use `npm run add-banner`.
+
 ## Sass/CSS and JS components
 
-Libraries like Bulma and fontawesome are managed via NPM. Look at `package.json` to see the copyfiles command I had to use for fontawesome webfonts and jQuery.
+Libraries like Bulma and fontawesome are managed via NPM. Static files are copied over by a Gulp task.
 
 If I ever migrate past basic jQuery, I might include a JS build pipeline, but we don't need that right now.
 
