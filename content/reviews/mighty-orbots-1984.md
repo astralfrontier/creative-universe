@@ -5,7 +5,7 @@ date = "2024-05-02 23:43:09"
 authors = [ "astralfrontier" ]
 
 [taxonomies]
-tags = [ "Animation" ]
+tags = [ "Series", "Animation" ]
 
 [extra]
 banner_image = "reviews/mighty-orbots-1984.jpg"
