@@ -188,11 +188,15 @@ async function addBanner() {
     metadata["banner_image"]
   );
   if (bannerImagePath) {
-    const bannerImageRelative = path
-      .relative(path.join(__dirname, "content"), bannerImagePath)
-      .split(path.sep)
-      .join("/");
-    console.log(`Update banner image to: ${bannerImageRelative}`);
+    try {
+      const bannerImageRelative = path
+        .relative(path.join(__dirname, "content"), bannerImagePath)
+        .split(path.sep)
+        .join("/");
+      console.log(`Update banner image to: ${bannerImageRelative}`);
+    } catch (e) {
+      console.error(e);
+    }
   }
 }
 
@@ -207,15 +211,46 @@ async function locateBannerImage(filename: string, bannerImage: string) {
 
   // Is the banner image a URL we can scrape for OG metadata?
   const options = { url: bannerImage };
-  const { result } = await ogs(options);
-  if (result?.ogImage && result?.ogImage[0] && result?.ogImage[0].url) {
-    const response = await fetch(result.ogImage[0].url);
-    const buffer = Buffer.from(await response.arrayBuffer());
-    const bannerImage = `${filename}.${result?.ogImage[0].type || "jpg"}`;
-    fs.writeFileSync(bannerImage, buffer);
-    console.log(`Wrote ${bannerImage}`);
-    return bannerImage;
+  try {
+    const { error, result } = await ogs(options);
+    if (
+      !error &&
+      result?.ogImage &&
+      result?.ogImage[0] &&
+      result?.ogImage[0].url
+    ) {
+      const bannerImagePath = await downloadFileToPath(
+        result.ogImage[0].url || "",
+        `${filename}.${result?.ogImage[0].type || "jpg"}`
+      );
+      return bannerImagePath;
+    }
+  } catch (e) {
+    //console.error(e);
   }
+
+  // Banner image might be an actual URL
+  if (/^https?:\/\/.*/.test(bannerImage)) {
+    const bannerImagePath = await downloadFileToPath(bannerImage, filename);
+    return bannerImagePath;
+  }
+}
+
+async function downloadFileToPath(
+  url: string,
+  suggestedFilename: string
+): Promise<string> {
+  const { bannerImage }: { bannerImage: string } = await prompt({
+    type: "input",
+    name: "bannerImage",
+    message: "Destination filename for banner image",
+    initial: suggestedFilename,
+  });
+  const response = await fetch(url);
+  const buffer = Buffer.from(await response.arrayBuffer());
+  fs.writeFileSync(bannerImage, buffer);
+  console.log(`Wrote ${bannerImage}`);
+  return bannerImage;
 }
 
 exports.newblog = newBlog;
